@@ -15,130 +15,242 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Missing:USBLC6-2 U?
+L Missing:USBLC6-2 U1
 U 1 1 5F42C6D3
-P 2500 4100
-F 0 "U?" H 2500 4467 50  0000 C CNN
-F 1 "USBLC6-2" H 2500 4376 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 1600 3500 50  0001 L BNN
-F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 2500 4600 50  0001 C CNN
-	1    2500 4100
+P 2000 1650
+F 0 "U1" H 2000 2017 50  0000 C CNN
+F 1 "USBLC6-2" H 2000 1926 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 1100 1050 50  0001 L BNN
+F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 2000 2150 50  0001 C CNN
+	1    2000 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J?
+L Connector:USB_B_Micro J1
 U 1 1 5F42C876
-P 1500 3850
-F 0 "J?" H 1504 4330 50  0000 C CNN
-F 1 "USB_B_Micro" H 1500 4232 50  0000 C CNN
-F 2 "" H 1650 3800 50  0001 C CNN
-F 3 "~" H 1650 3800 50  0001 C CNN
-	1    1500 3850
+P 1000 1400
+F 0 "J1" H 1004 1880 50  0000 C CNN
+F 1 "USB_B_Micro" H 1000 1782 50  0000 C CNN
+F 2 "" H 1150 1350 50  0001 C CNN
+F 3 "~" H 1150 1350 50  0001 C CNN
+	1    1000 1400
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1400 4250
+NoConn ~ 900  1800
 $Comp
-L MCU_Microchip_PIC18:PIC18F45K50_QFP U?
+L MCU_Microchip_PIC18:PIC18F45K50_QFP U2
 U 1 1 5F42CA4A
-P 7350 3100
-F 0 "U?" H 7350 4678 50  0000 C CNN
-F 1 "PIC18F45K50_QFP" H 7350 4587 50  0000 C CNN
-F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 7350 3100 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/30000684B.pdf" H 7350 2800 50  0001 C CNN
-	1    7350 3100
+P 4050 5600
+F 0 "U2" H 4050 7178 50  0000 C CNN
+F 1 "PIC18F45K50_QFP" H 4050 7087 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 4050 5600 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/30000684B.pdf" H 4050 5300 50  0001 C CNN
+	1    4050 5600
 	1    0    0    -1  
 $EndComp
+NoConn ~ 1300 1600
+Wire Wire Line
+	1500 1650 1600 1650
+Wire Wire Line
+	2400 1650 2500 1650
+Wire Wire Line
+	2400 1550 2600 1550
+Wire Wire Line
+	2400 1750 2600 1750
 $Comp
-L Regulator_Linear:L78L05_SOT89 U?
-U 1 1 5F42CC5E
-P 3350 1550
-F 0 "U?" H 3350 1792 50  0000 C CNN
-F 1 "L78L05_SOT89" H 3350 1701 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3" H 3350 1750 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 3350 1500 50  0001 C CNN
-	1    3350 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F42CEFF
-P 3400 4650
-F 0 "#PWR?" H 3400 4400 50  0001 C CNN
-F 1 "GND" H 3405 4477 50  0000 C CNN
-F 2 "" H 3400 4650 50  0001 C CNN
-F 3 "" H 3400 4650 50  0001 C CNN
-	1    3400 4650
-	1    0    0    -1  
-$EndComp
-NoConn ~ 1800 4050
-Wire Wire Line
-	2000 4100 2100 4100
-Wire Wire Line
-	2900 4100 3000 4100
-Wire Wire Line
-	2900 4000 3100 4000
-Wire Wire Line
-	2900 4200 3100 4200
-$Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 5F42FA59
-P 2000 4600
-F 0 "#PWR?" H 2000 4350 50  0001 C CNN
-F 1 "GND" H 2005 4427 50  0000 C CNN
-F 2 "" H 2000 4600 50  0001 C CNN
-F 3 "" H 2000 4600 50  0001 C CNN
-	1    2000 4600
+P 1000 2150
+F 0 "#PWR01" H 1000 1900 50  0001 C CNN
+F 1 "GND" H 1005 1977 50  0000 C CNN
+F 2 "" H 1000 2150 50  0001 C CNN
+F 3 "" H 1000 2150 50  0001 C CNN
+	1    1000 2150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 5F4300CF
-P 2500 4500
-F 0 "C?" V 2327 4501 50  0000 C CNN
-F 1 "100nF" V 2237 4501 50  0000 C CNN
-F 2 "" H 2538 4350 50  0001 C CNN
-F 3 "~" H 2500 4500 50  0001 C CNN
-	1    2500 4500
+P 2000 2050
+F 0 "C1" V 1827 2051 50  0000 C CNN
+F 1 "100nF" V 1737 2051 50  0000 C CNN
+F 2 "" H 2038 1900 50  0001 C CNN
+F 3 "~" H 2000 2050 50  0001 C CNN
+	1    2000 2050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3000 4500 2650 4500
+	2500 2050 2150 2050
 Wire Wire Line
-	2350 4500 2000 4500
-Text GLabel 3100 4000 2    50   Input ~ 0
+	1850 2050 1500 2050
+Text GLabel 2600 1550 2    50   Input ~ 0
 USB_D+
-Text GLabel 3100 4200 2    50   Input ~ 0
+Text GLabel 2600 1750 2    50   Input ~ 0
 USB_D-
 Wire Wire Line
-	3000 4100 3100 4100
-Connection ~ 3000 4100
-Text GLabel 3100 4100 2    50   Input ~ 0
+	2500 1650 2600 1650
+Connection ~ 2500 1650
+Text GLabel 2600 1650 2    50   Input ~ 0
 USB_VBUS
 Wire Wire Line
-	3000 3650 3000 4100
+	2500 1200 2500 1650
 Wire Wire Line
-	3000 4100 3000 4500
+	2500 1650 2500 2050
 Wire Wire Line
-	2000 4100 2000 4500
-Connection ~ 2000 4500
+	1500 1650 1500 2050
+Connection ~ 1500 2050
 Wire Wire Line
-	2000 4600 2000 4500
+	1000 2150 1000 2050
 Wire Wire Line
-	1800 3650 3000 3650
+	1300 1200 2500 1200
 Wire Wire Line
-	2000 4500 1500 4500
+	1500 2050 1000 2050
 Wire Wire Line
-	1500 4250 1500 4500
+	1000 1800 1000 2050
 Wire Wire Line
-	2100 4200 1900 4200
+	1600 1750 1400 1750
 Wire Wire Line
-	1900 4200 1900 3950
+	1400 1750 1400 1500
 Wire Wire Line
-	1900 3950 1800 3950
+	1400 1500 1300 1500
 Wire Wire Line
-	1800 3850 2000 3850
+	1300 1400 1500 1400
 Wire Wire Line
-	2000 3850 2000 4000
+	1500 1400 1500 1550
 Wire Wire Line
-	2000 4000 2100 4000
+	1500 1550 1600 1550
+Wire Notes Line
+	700  800  700  2450
+Text Notes 700  750  0    50   ~ 0
+USB Connection & ESD Protection
+Wire Notes Line
+	700  2450 3100 2450
+Wire Notes Line
+	3100 800  3100 2450
+Wire Notes Line
+	700  800  3100 800 
+Text GLabel 2250 6600 0    50   Input ~ 0
+USB_D+
+Text GLabel 2250 6500 0    50   Input ~ 0
+USB_D-
+Wire Wire Line
+	2250 6600 2350 6600
+Wire Wire Line
+	2350 6500 2250 6500
+Text GLabel 2250 6400 0    50   Input ~ 0
+USB_VBUS
+Wire Wire Line
+	2350 6400 2250 6400
+$Comp
+L Regulator_Linear:LM317_3PinPackage U3
+U 1 1 5F43B134
+P 4750 1300
+F 0 "U3" H 4750 1542 50  0000 C CNN
+F 1 "LM317A" H 4750 1451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 4750 1550 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 4750 1300 50  0001 C CNN
+	1    4750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5F43DEFA
+P 4300 1800
+F 0 "C2" H 4415 1846 50  0000 L CNN
+F 1 "0.1μF" H 4415 1755 50  0000 L CNN
+F 2 "" H 4338 1650 50  0001 C CNN
+F 3 "~" H 4300 1800 50  0001 C CNN
+	1    4300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5F43DF4C
+P 5550 1800
+F 0 "C3" H 5665 1846 50  0000 L CNN
+F 1 "1μF" H 5665 1755 50  0000 L CNN
+F 2 "" H 5588 1650 50  0001 C CNN
+F 3 "~" H 5550 1800 50  0001 C CNN
+	1    5550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F4417D2
+P 5200 1550
+F 0 "R2" H 5270 1596 50  0000 L CNN
+F 1 "1k" H 5270 1505 50  0000 L CNN
+F 2 "" V 5130 1550 50  0001 C CNN
+F 3 "~" H 5200 1550 50  0001 C CNN
+	1    5200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F444855
+P 4750 2050
+F 0 "R1" H 4820 2096 50  0000 L CNN
+F 1 "1.5k" H 4820 2005 50  0000 L CNN
+F 2 "" V 4680 2050 50  0001 C CNN
+F 3 "~" H 4750 2050 50  0001 C CNN
+	1    4750 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2200 4750 2300
+Connection ~ 4750 2300
+Wire Wire Line
+	5200 1300 5200 1400
+Wire Wire Line
+	5200 1700 5200 1800
+Connection ~ 4300 1300
+Wire Wire Line
+	4300 2300 4750 2300
+Wire Wire Line
+	4300 1300 4450 1300
+Wire Wire Line
+	4200 1300 4300 1300
+Wire Wire Line
+	4750 1600 4750 1800
+Wire Wire Line
+	5050 1300 5200 1300
+Wire Wire Line
+	4750 1800 5200 1800
+Connection ~ 4750 1800
+Wire Wire Line
+	4750 1800 4750 1900
+Wire Wire Line
+	4300 1300 4300 1650
+Wire Wire Line
+	4300 1950 4300 2300
+Wire Wire Line
+	5550 1300 5550 1650
+Wire Wire Line
+	5550 1950 5550 2300
+Connection ~ 1000 2050
+Wire Wire Line
+	4750 2300 4750 2450
+$Comp
+L power:GND #PWR?
+U 1 1 5F45E674
+P 4750 2450
+F 0 "#PWR?" H 4750 2200 50  0001 C CNN
+F 1 "GND" H 4755 2277 50  0000 C CNN
+F 2 "" H 4750 2450 50  0001 C CNN
+F 3 "" H 4750 2450 50  0001 C CNN
+	1    4750 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 1300 5650 1300
+Text GLabel 5650 1300 2    50   Input ~ 0
+Vdd
+Text GLabel 4200 1300 0    50   Input ~ 0
+USB_VBUS
+Wire Wire Line
+	5550 2300 4750 2300
+Wire Wire Line
+	5550 1300 5200 1300
+Connection ~ 5550 1300
+Connection ~ 5200 1300
 $EndSCHEMATC
