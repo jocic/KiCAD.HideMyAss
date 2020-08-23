@@ -1,0 +1,144 @@
+EESchema Schematic File Version 4
+LIBS:hardware-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Missing:USBLC6-2 U?
+U 1 1 5F42C6D3
+P 2500 4100
+F 0 "U?" H 2500 4467 50  0000 C CNN
+F 1 "USBLC6-2" H 2500 4376 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 1600 3500 50  0001 L BNN
+F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 2500 4600 50  0001 C CNN
+	1    2500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5F42C876
+P 1500 3850
+F 0 "J?" H 1504 4330 50  0000 C CNN
+F 1 "USB_B_Micro" H 1500 4232 50  0000 C CNN
+F 2 "" H 1650 3800 50  0001 C CNN
+F 3 "~" H 1650 3800 50  0001 C CNN
+	1    1500 3850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1400 4250
+$Comp
+L MCU_Microchip_PIC18:PIC18F45K50_QFP U?
+U 1 1 5F42CA4A
+P 7350 3100
+F 0 "U?" H 7350 4678 50  0000 C CNN
+F 1 "PIC18F45K50_QFP" H 7350 4587 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 7350 3100 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/30000684B.pdf" H 7350 2800 50  0001 C CNN
+	1    7350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L78L05_SOT89 U?
+U 1 1 5F42CC5E
+P 3350 1550
+F 0 "U?" H 3350 1792 50  0000 C CNN
+F 1 "L78L05_SOT89" H 3350 1701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 3350 1750 50  0001 C CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf" H 3350 1500 50  0001 C CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F42CEFF
+P 3400 4650
+F 0 "#PWR?" H 3400 4400 50  0001 C CNN
+F 1 "GND" H 3405 4477 50  0000 C CNN
+F 2 "" H 3400 4650 50  0001 C CNN
+F 3 "" H 3400 4650 50  0001 C CNN
+	1    3400 4650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1800 4050
+Wire Wire Line
+	2000 4100 2100 4100
+Wire Wire Line
+	2900 4100 3000 4100
+Wire Wire Line
+	2900 4000 3100 4000
+Wire Wire Line
+	2900 4200 3100 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5F42FA59
+P 2000 4600
+F 0 "#PWR?" H 2000 4350 50  0001 C CNN
+F 1 "GND" H 2005 4427 50  0000 C CNN
+F 2 "" H 2000 4600 50  0001 C CNN
+F 3 "" H 2000 4600 50  0001 C CNN
+	1    2000 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F4300CF
+P 2500 4500
+F 0 "C?" V 2327 4501 50  0000 C CNN
+F 1 "100nF" V 2237 4501 50  0000 C CNN
+F 2 "" H 2538 4350 50  0001 C CNN
+F 3 "~" H 2500 4500 50  0001 C CNN
+	1    2500 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3000 4500 2650 4500
+Wire Wire Line
+	2350 4500 2000 4500
+Text GLabel 3100 4000 2    50   Input ~ 0
+USB_D+
+Text GLabel 3100 4200 2    50   Input ~ 0
+USB_D-
+Wire Wire Line
+	3000 4100 3100 4100
+Connection ~ 3000 4100
+Text GLabel 3100 4100 2    50   Input ~ 0
+USB_VBUS
+Wire Wire Line
+	3000 3650 3000 4100
+Wire Wire Line
+	3000 4100 3000 4500
+Wire Wire Line
+	2000 4100 2000 4500
+Connection ~ 2000 4500
+Wire Wire Line
+	2000 4600 2000 4500
+Wire Wire Line
+	1800 3650 3000 3650
+Wire Wire Line
+	2000 4500 1500 4500
+Wire Wire Line
+	1500 4250 1500 4500
+Wire Wire Line
+	2100 4200 1900 4200
+Wire Wire Line
+	1900 4200 1900 3950
+Wire Wire Line
+	1900 3950 1800 3950
+Wire Wire Line
+	1800 3850 2000 3850
+Wire Wire Line
+	2000 3850 2000 4000
+Wire Wire Line
+	2000 4000 2100 4000
+$EndSCHEMATC
