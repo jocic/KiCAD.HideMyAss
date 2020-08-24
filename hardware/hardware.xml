@@ -1,0 +1,40 @@
+value,footprint,datasheet,libsource/_lib,libsource/_part,libsource/_description,sheetpath/_names,sheetpath/_tstamps,tstamp,_ref
+USBLC6-2,Package_TO_SOT_SMD:SOT-23-6_Handsoldering,https://www.st.com/resource/en/datasheet/usblc6-2.pdf,Missing,USBLC6-2,,/,/,5F42C6D3,U3
+USB_B_Micro,Connector_USB:USB_Micro-B_Molex_47346-0001,~,Connector,USB_B_Micro,USB Micro Type B connector,/,/,5F42C876,J1
+PIC18F45K50_QFP,Package_QFP:TQFP-44_10x10mm_P0.8mm,http://ww1.microchip.com/downloads/en/DeviceDoc/30000684B.pdf,MCU_Microchip_PIC18,PIC18F45K50_QFP,"32K Flash, 2K RAM, 256B EEPROM, Microchip PIC18F series enhanced flash microcontroller with USB in TQFP-44 package",/,/,5F42CA4A,U5
+100nF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F4300CF,C3
+LM317A,Package_TO_SOT_SMD:TO-252-2,http://www.ti.com/lit/ds/symlink/lm317.pdf,Regulator_Linear,LM317_3PinPackage,"1A 35V Adjustable Linear Regulator, SOT-89/SOT-223/TO-220/TO-252/TO-263",/,/,5F43B134,U4
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F43DEFA,C5
+1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F43DF4C,C13
+1k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F4417D2,R7
+1.5k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F444855,R8
+M7,Diode_SMD:Diode_Bridge_Diotec_ABS,~,Device,D,Diode,/,/,5F44854E,D4
+10μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,CP,Polarized capacitor,/,/,5F466DD0,C12
+DW01+G,Package_TO_SOT_SMD:TSOT-23-6_HandSoldering,https://datasheet.lcsc.com/szlcsc/Fortune-Semicon-DW01-G_C14213.pdf,Missing,DW01,,/,/,5F49761B,U1
+3.7V,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal,~,Device,Battery_Cell,Single-cell battery,/,/,5F4978A6,BT1
+100,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F49CDDA,R4
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F49F544,C4
+TP4056,Package_SO:SSOP-8_2.95x2.8mm_P0.65mm,https://datasheet.lcsc.com/szlcsc/1906261508_Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581.pdf,Missing,TP4056,,/,/,5F4F6DD3,U2
+FS8205,Package_TO_SOT_SMD:TSOT-23-6_HandSoldering,https://datasheet.lcsc.com/szlcsc/Fortune-Semicon-FS8205_C32254.pdf,Missing,FS8205,,/,/,5F508BA9,Q1
+1k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F54F52E,R6
+180,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F584EE8,R1
+ZMM5V1,Diode_SMD:D_MiniMELF_Handsoldering,~,Device,D_Zener,Zener diode,/,/,5F587D40,D2
+GHC-YR,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,LED,Light emitting diode,/,/,5F59CA98,D1
+BHC-ZL,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,LED,Light emitting diode,/,/,5F59CE16,D3
+68,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F5C7FC3,R2
+68,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F5EC4EE,R3
+10μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F6246D5,C1
+2k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F6347C4,R5
+10μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F698C22,C2
+10μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,CP,Polarized capacitor,/,/,5F7C52BC,C6
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F7C5330,C7
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F7CEB17,C8
+10μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,CP,Polarized capacitor,/,/,5F8CE4BE,C11
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F8CE4C4,C10
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F8CE4D0,C9
+480,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F92ABB2,R10
+10k,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,R,Resistor,/,/,5F94DE40,R9
+0.1μF,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,Device,C,Unpolarized capacitor,/,/,5F94E036,C14
+Jumper,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,~,Device,Jumper_NC_Small,"Jumper, normally closed, small symbol",/,/,5F991ECA,JP1
+Breakout,Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical,~,Connector_Generic,Conn_02x20_Counter_Clockwise,"Generic connector, double row, 02x20, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)",/,/,5FA70074,J2
+
