@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name CVCO)(type KiCad)(uri /home/developer/KiCAD.HideMyAss/other/footprints/CVCO.pretty)(options "")(descr ""))
+)
