@@ -1,4 +1,4 @@
-15136152910738470
+15137751895029470
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -2015,6 +2015,13 @@ CVCO55
 0
 16
 16
+CVCO
+Micro-X-4
+
+
+0
+4
+4
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
