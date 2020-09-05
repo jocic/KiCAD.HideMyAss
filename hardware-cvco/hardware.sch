@@ -32,7 +32,7 @@ P 13600 4450
 F 0 "Y5" H 13600 4050 50  0000 C CNN
 F 1 "CV55CW500-1000" H 13600 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 13069 3978 50  0001 L BNN
-F 3 "None" H 13600 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0500-1000.pdf" H 13600 4450 50  0001 L BNN
 F 4 "549-CV55CW500-1000" H 13600 4450 50  0001 C CNN "Mouser Part #"
 	1    13600 4450
 	1    0    0    -1  
@@ -392,7 +392,7 @@ P 19100 4450
 F 0 "Y7" H 19100 4050 50  0000 C CNN
 F 1 "CVCO55CW-1000-2000" H 19100 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 18569 3978 50  0001 L BNN
-F 3 "None" H 19100 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1000-2000.pdf" H 19100 4450 50  0001 L BNN
 F 4 "549-CV55CW1000-2000" H 19100 4450 50  0001 C CNN "Mouser Part #"
 	1    19100 4450
 	1    0    0    -1  
@@ -764,8 +764,8 @@ P 2600 9500
 F 0 "Y2" H 2600 9100 50  0000 C CNN
 F 1 "CV55BE1600-3200" H 2600 9000 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 2069 9028 50  0001 L BNN
-F 3 "None" H 2600 9500 50  0001 L BNN
-F 4 "549-CV55CW1000-2000" H 2600 9500 50  0001 C CNN "Mouser Part #"
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1600-3200.pdf" H 2600 9500 50  0001 L BNN
+F 4 "549-CV55BE1600-3200" H 2600 9500 50  0001 C CNN "Mouser Part #"
 	1    2600 9500
 	1    0    0    -1  
 $EndComp
@@ -1124,7 +1124,7 @@ P 8100 9500
 F 0 "Y4" H 8100 9100 50  0000 C CNN
 F 1 "CVCO55CC-3180-3710" H 8100 9000 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 7569 9028 50  0001 L BNN
-F 3 "None" H 8100 9500 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CC-3180-3710.pdf" H 8100 9500 50  0001 L BNN
 F 4 "549-CVCO55CC31803710" H 8100 9500 50  0001 C CNN "Mouser Part #"
 	1    8100 9500
 	1    0    0    -1  
@@ -1496,7 +1496,7 @@ P 2600 4450
 F 0 "Y1" H 2600 4050 50  0000 C CNN
 F 1 "CVCO55CW-0100-0200" H 2600 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 2069 3978 50  0001 L BNN
-F 3 "None" H 2600 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0100-0200.pdf" H 2600 4450 50  0001 L BNN
 F 4 "549-CV55CW0100-0200" H 2600 4450 50  0001 C CNN "Mouser Part #"
 	1    2600 4450
 	1    0    0    -1  
@@ -1904,7 +1904,7 @@ P 8100 4450
 F 0 "Y3" H 8100 4050 50  0000 C CNN
 F 1 "CVCO55CW-0200-0500" H 8100 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 7569 3978 50  0001 L BNN
-F 3 "None" H 8100 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0200-0500.pdf" H 8100 4450 50  0001 L BNN
 F 4 "549-CV55CW0200-0500" H 8100 4450 50  0001 C CNN "Mouser Part #"
 	1    8100 4450
 	1    0    0    -1  
@@ -2287,7 +2287,7 @@ P 13650 9450
 F 0 "Y6" H 13650 9050 50  0000 C CNN
 F 1 "CVCO55CW-3500-4500" H 13650 8950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 13119 8978 50  0001 L BNN
-F 3 "None" H 13650 9450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-3500-4500.pdf" H 13650 9450 50  0001 L BNN
 F 4 "549-CVC55CW3500-4500" H 13650 9450 50  0001 C CNN "Mouser Part #"
 	1    13650 9450
 	1    0    0    -1  
@@ -3288,4 +3288,6 @@ F 4 "0805" H 5500 3700 50  0001 C CNN "LCSC Part #"
 	1    5500 3700
 	1    0    0    -1  
 $EndComp
+Text Notes 11850 11550 0    50   ~ 0
+To do:\n  - Source the best capacitors/resistors for the RF section\n  - Source the best voltage regulators & zenners for the RF section
 $EndSCHEMATC

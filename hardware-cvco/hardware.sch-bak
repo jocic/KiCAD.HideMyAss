@@ -32,7 +32,7 @@ P 13600 4450
 F 0 "Y5" H 13600 4050 50  0000 C CNN
 F 1 "CV55CW500-1000" H 13600 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 13069 3978 50  0001 L BNN
-F 3 "None" H 13600 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0500-1000.pdf" H 13600 4450 50  0001 L BNN
 F 4 "549-CV55CW500-1000" H 13600 4450 50  0001 C CNN "Mouser Part #"
 	1    13600 4450
 	1    0    0    -1  
@@ -392,7 +392,7 @@ P 19100 4450
 F 0 "Y7" H 19100 4050 50  0000 C CNN
 F 1 "CVCO55CW-1000-2000" H 19100 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 18569 3978 50  0001 L BNN
-F 3 "None" H 19100 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1000-2000.pdf" H 19100 4450 50  0001 L BNN
 F 4 "549-CV55CW1000-2000" H 19100 4450 50  0001 C CNN "Mouser Part #"
 	1    19100 4450
 	1    0    0    -1  
@@ -764,8 +764,8 @@ P 2600 9500
 F 0 "Y2" H 2600 9100 50  0000 C CNN
 F 1 "CV55BE1600-3200" H 2600 9000 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 2069 9028 50  0001 L BNN
-F 3 "None" H 2600 9500 50  0001 L BNN
-F 4 "549-CV55CW1000-2000" H 2600 9500 50  0001 C CNN "Mouser Part #"
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1600-3200.pdf" H 2600 9500 50  0001 L BNN
+F 4 "549-CV55BE1600-3200" H 2600 9500 50  0001 C CNN "Mouser Part #"
 	1    2600 9500
 	1    0    0    -1  
 $EndComp
@@ -1124,7 +1124,7 @@ P 8100 9500
 F 0 "Y4" H 8100 9100 50  0000 C CNN
 F 1 "CVCO55CC-3180-3710" H 8100 9000 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 7569 9028 50  0001 L BNN
-F 3 "None" H 8100 9500 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CC-3180-3710.pdf" H 8100 9500 50  0001 L BNN
 F 4 "549-CVCO55CC31803710" H 8100 9500 50  0001 C CNN "Mouser Part #"
 	1    8100 9500
 	1    0    0    -1  
@@ -1478,50 +1478,6 @@ F 4 "C351430" H 9050 6450 50  0001 C CNN "LCSC Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:LM358 U10
-U 1 1 5F6FCA12
-P 13350 14100
-F 0 "U10" H 13350 14467 50  0000 C CNN
-F 1 "LM358" H 13350 14376 50  0000 C CNN
-F 2 "" H 13350 14100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 13350 14100 50  0001 C CNN
-	1    13350 14100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U10
-U 2 1 5F6FDC65
-P 14450 14100
-F 0 "U10" H 14450 14467 50  0000 C CNN
-F 1 "LM358" H 14450 14376 50  0000 C CNN
-F 2 "" H 14450 14100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 14450 14100 50  0001 C CNN
-	2    14450 14100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:LM358 U10
-U 3 1 5F6FF171
-P 15500 14000
-F 0 "U10" H 15458 14046 50  0000 L CNN
-F 1 "LM358" H 15458 13955 50  0000 L CNN
-F 2 "" H 15500 14000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 15500 14000 50  0001 C CNN
-	3    15500 14000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:LM317_3PinPackage U15
-U 1 1 5F781E21
-P 16750 13850
-F 0 "U15" H 16750 14092 50  0000 C CNN
-F 1 "LM317_3PinPackage" H 16750 14001 50  0000 C CNN
-F 2 "" H 16750 14100 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 16750 13850 50  0001 C CNN
-	1    16750 13850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_Coaxial J1
 U 1 1 5FAC2FA1
 P 4950 4450
@@ -1540,7 +1496,7 @@ P 2600 4450
 F 0 "Y1" H 2600 4050 50  0000 C CNN
 F 1 "CVCO55CW-0100-0200" H 2600 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 2069 3978 50  0001 L BNN
-F 3 "None" H 2600 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0100-0200.pdf" H 2600 4450 50  0001 L BNN
 F 4 "549-CV55CW0100-0200" H 2600 4450 50  0001 C CNN "Mouser Part #"
 	1    2600 4450
 	1    0    0    -1  
@@ -1948,7 +1904,7 @@ P 8100 4450
 F 0 "Y3" H 8100 4050 50  0000 C CNN
 F 1 "CVCO55CW-0200-0500" H 8100 3950 50  0000 C CNN
 F 2 "CVCO:CVCO55" H 7569 3978 50  0001 L BNN
-F 3 "None" H 8100 4450 50  0001 L BNN
+F 3 "https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0200-0500.pdf" H 8100 4450 50  0001 L BNN
 F 4 "549-CV55CW0200-0500" H 8100 4450 50  0001 C CNN "Mouser Part #"
 	1    8100 4450
 	1    0    0    -1  
@@ -2672,29 +2628,6 @@ F 4 "C118582" V 12900 6700 50  0001 C CNN "LCSC Part #"
 $EndComp
 Text Notes 11950 7800 0    50   ~ 0
 VCO #7 (3500-4500 MHz)
-$Comp
-L Connector_Generic:Conn_01x02 J5
-U 1 1 5F7700C7
-P 10750 14350
-F 0 "J5" V 10622 14430 50  0000 L CNN
-F 1 "Conn_01x02" V 10713 14430 50  0000 L CNN
-F 2 "" H 10750 14350 50  0001 C CNN
-F 3 "~" H 10750 14350 50  0001 C CNN
-	1    10750 14350
-	0    1    1    0   
-$EndComp
-$Comp
-L Regulator_Linear:LM317_3PinPackage U5
-U 1 1 5F7B1F96
-P 4050 13200
-F 0 "U5" H 4050 13442 50  0000 C CNN
-F 1 "LM317DCYR" H 4050 13351 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4050 13450 50  0001 C CIN
-F 3 "https://datasheet.lcsc.com/szlcsc/1811032110_Texas-Instruments-LM317DCYR_C51466.pdf" H 4050 13200 50  0001 C CNN
-F 4 "C51466" H 4050 13200 50  0001 C CNN "LCSC Part #"
-	1    4050 13200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C25
 U 1 1 5F8512C0
