@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name CVCO)(type Legacy)(uri /home/developer/KiCAD.HideMyAss/other/symbols/CVCO.lib)(options "")(descr ""))
-  (lib (name Missing)(type Legacy)(uri /home/developer/KiCAD.NG2020/other/footprints/Missing.lib)(options "")(descr ""))
+  (lib (name CVCO)(type Legacy)(uri ${KIPRJMOD}/../other/symbols/CVCO.lib)(options "")(descr ""))
+  (lib (name Missing)(type Legacy)(uri ${KIPRJMOD}/../other/footprints/Missing.lib)(options "")(descr ""))
 )
