@@ -1,7 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 2SC3356
+F https://datasheet.lcsc.com/szlcsc/RENESAS-2SC3356-T1B-A_C9659.pdf
+$ENDCMP
+#
 $CMP CVCO55
 F None
+$ENDCMP
+#
+$CMP MAX1555EZK+T
+F https://datasheets.maximintegrated.com/en/ds/MAX1551-MAX1555.pdf
 $ENDCMP
 #
 #End Doc Library

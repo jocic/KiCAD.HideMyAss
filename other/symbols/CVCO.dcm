@@ -8,4 +8,8 @@ $CMP MAX1555EZK+T
 F https://datasheets.maximintegrated.com/en/ds/MAX1551-MAX1555.pdf
 $ENDCMP
 #
+$CMP TPS61040
+F https://datasheet.lcsc.com/szlcsc/Texas-Instruments-TI-TPS61040DBVR_C7722.pdf
+$ENDCMP
+#
 #End Doc Library
