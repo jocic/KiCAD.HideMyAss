@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name MAX)(type KiCad)(uri ${KIPRJMOD}/../other/footprints/MAX.pretty)(options "")(descr ""))
+)
