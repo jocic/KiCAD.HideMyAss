@@ -14,279 +14,12 @@ Comment3 "office@djordjejocic.com"
 Comment4 "Đorđe Jocić"
 $EndDescr
 $Comp
-L Missing:USBLC6-2 U2
-U 1 1 5F42C6D3
-P 4400 12700
-F 0 "U2" H 4400 13067 50  0000 C CNN
-F 1 "USBLC6-2" H 4400 12976 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 3500 12100 50  0001 L BNN
-F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 4400 13200 50  0001 C CNN
-	1    4400 12700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:USB_B_Micro J6
-U 1 1 5F42C876
-P 3400 12450
-F 0 "J6" H 3404 12930 50  0000 C CNN
-F 1 "USB_B_Micro" H 3400 12832 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 3550 12400 50  0001 C CNN
-F 3 "~" H 3550 12400 50  0001 C CNN
-	1    3400 12450
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3300 12850
-NoConn ~ 3700 12650
-Wire Wire Line
-	3900 12700 4000 12700
-Wire Wire Line
-	4800 12700 4900 12700
-Wire Wire Line
-	4800 12600 5000 12600
-Wire Wire Line
-	4800 12800 5000 12800
-$Comp
-L power:GND #PWR026
-U 1 1 5F42FA59
-P 3400 13200
-F 0 "#PWR026" H 3400 12950 50  0001 C CNN
-F 1 "GND" H 3405 13027 50  0000 C CNN
-F 2 "" H 3400 13200 50  0001 C CNN
-F 3 "" H 3400 13200 50  0001 C CNN
-	1    3400 13200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C28
-U 1 1 5F4300CF
-P 4400 13100
-F 0 "C28" V 4227 13101 50  0000 C CNN
-F 1 "0.1μF" V 4137 13101 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4438 12950 50  0001 C CNN
-F 3 "~" H 4400 13100 50  0001 C CNN
-	1    4400 13100
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4900 13100 4550 13100
-Wire Wire Line
-	4250 13100 3900 13100
-Text GLabel 5000 12600 2    50   Input ~ 0
-USB_D+
-Text GLabel 5000 12800 2    50   Input ~ 0
-USB_D-
-Wire Wire Line
-	4900 12700 5000 12700
-Connection ~ 4900 12700
-Text GLabel 5000 12700 2    50   Input ~ 0
-USB_VBUS
-Wire Wire Line
-	4900 12250 4900 12700
-Wire Wire Line
-	4900 12700 4900 13100
-Wire Wire Line
-	3900 12700 3900 13100
-Connection ~ 3900 13100
-Wire Wire Line
-	3400 13200 3400 13100
-Wire Wire Line
-	3700 12250 4900 12250
-Wire Wire Line
-	3900 13100 3400 13100
-Wire Wire Line
-	3400 12850 3400 13100
-Wire Wire Line
-	4000 12800 3800 12800
-Wire Wire Line
-	3800 12800 3800 12550
-Wire Wire Line
-	3800 12550 3700 12550
-Wire Wire Line
-	3700 12450 3900 12450
-Wire Wire Line
-	3900 12450 3900 12600
-Wire Wire Line
-	3900 12600 4000 12600
-Wire Notes Line
-	3100 11850 3100 13500
-Text Notes 3100 11800 0    50   ~ 0
-USB Connection & ESD Protection
-Wire Notes Line
-	3100 13500 5500 13500
-Wire Notes Line
-	5500 11850 5500 13500
-Wire Notes Line
-	3100 11850 5500 11850
-$Comp
-L Regulator_Linear:LM317_3PinPackage U3
-U 1 1 5F43B134
-P 4550 14550
-F 0 "U3" H 4550 14792 50  0000 C CNN
-F 1 "LM317A" H 4550 14701 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-252-2" H 4550 14800 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 4550 14550 50  0001 C CNN
-	1    4550 14550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C29
-U 1 1 5F43DEFA
-P 3750 14800
-F 0 "C29" H 3865 14846 50  0000 L CNN
-F 1 "0.1μF" H 3865 14755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3788 14650 50  0001 C CNN
-F 3 "~" H 3750 14800 50  0001 C CNN
-	1    3750 14800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C31
-U 1 1 5F43DF4C
-P 5650 15300
-F 0 "C31" H 5765 15346 50  0000 L CNN
-F 1 "1μF" H 5765 15255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5688 15150 50  0001 C CNN
-F 3 "~" H 5650 15300 50  0001 C CNN
-	1    5650 15300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R24
-U 1 1 5F4417D2
-P 4950 14800
-F 0 "R24" H 5020 14846 50  0000 L CNN
-F 1 "1k" H 5020 14755 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4880 14800 50  0001 C CNN
-F 3 "~" H 4950 14800 50  0001 C CNN
-	1    4950 14800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R25
-U 1 1 5F444855
-P 4550 15300
-F 0 "R25" H 4620 15346 50  0000 L CNN
-F 1 "1.5k" H 4620 15255 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4480 15300 50  0001 C CNN
-F 3 "~" H 4550 15300 50  0001 C CNN
-	1    4550 15300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4550 15450 4550 15550
-Connection ~ 4550 15550
-Wire Wire Line
-	4950 14550 4950 14650
-Wire Wire Line
-	4950 14950 4950 15050
-Wire Wire Line
-	4550 14850 4550 15050
-Wire Wire Line
-	4850 14550 4950 14550
-Wire Wire Line
-	4550 15050 4950 15050
-Connection ~ 4550 15050
-Wire Wire Line
-	4550 15050 4550 15150
-Connection ~ 3400 13100
-Wire Wire Line
-	4550 15550 4550 15700
-$Comp
-L power:GND #PWR027
-U 1 1 5F45E674
-P 4550 15700
-F 0 "#PWR027" H 4550 15450 50  0001 C CNN
-F 1 "GND" H 4555 15527 50  0000 C CNN
-F 2 "" H 4550 15700 50  0001 C CNN
-F 3 "" H 4550 15700 50  0001 C CNN
-	1    4550 15700
-	1    0    0    -1  
-$EndComp
-Text GLabel 5750 14550 2    50   Input ~ 0
-VDD
-Wire Wire Line
-	5300 14950 5300 15050
-Wire Wire Line
-	5300 14550 5300 14650
-$Comp
-L Device:D D1
-U 1 1 5F44854E
-P 5300 14800
-F 0 "D1" V 5254 14879 50  0000 L CNN
-F 1 "M7" V 5345 14879 50  0000 L CNN
-F 2 "Diode_SMD:D_MiniMELF_Handsoldering" H 5300 14800 50  0001 C CNN
-F 3 "~" H 5300 14800 50  0001 C CNN
-	1    5300 14800
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:CP C30
-U 1 1 5F466DD0
-P 4100 15300
-F 0 "C30" H 4218 15346 50  0000 L CNN
-F 1 "10μF" H 4218 15255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4138 15150 50  0001 C CNN
-F 3 "~" H 4100 15300 50  0001 C CNN
-	1    4100 15300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 15150 4100 15050
-Wire Wire Line
-	4100 15550 4100 15450
-Wire Wire Line
-	4100 15050 4550 15050
-Wire Wire Line
-	4100 15550 4550 15550
-Wire Notes Line
-	6050 16000 6050 14200
-Text Notes 3100 14150 0    50   ~ 0
-3.3V Voltage Regulator \w Improved Ripple Rejection
-Wire Notes Line
-	3100 14200 3100 16000
-Wire Wire Line
-	5650 14550 5750 14550
-Wire Wire Line
-	4950 14550 5300 14550
-Connection ~ 4950 14550
-Wire Wire Line
-	5650 14550 5300 14550
-Connection ~ 5650 14550
-Connection ~ 5300 14550
-Wire Wire Line
-	4950 15050 5300 15050
-Connection ~ 4950 15050
-Wire Wire Line
-	4550 15550 5650 15550
-Wire Wire Line
-	4100 15550 3750 15550
-Connection ~ 4100 15550
-Wire Wire Line
-	3750 15550 3750 14950
-Wire Wire Line
-	3750 14550 4250 14550
-Wire Wire Line
-	3750 14550 3650 14550
-Connection ~ 3750 14550
-Wire Wire Line
-	3750 14650 3750 14550
-Wire Wire Line
-	5650 14550 5650 15150
-Wire Wire Line
-	5650 15450 5650 15550
-Wire Notes Line
-	6050 16000 3100 16000
-Wire Notes Line
-	3100 14200 6050 14200
-Text GLabel 3650 14550 0    50   Input ~ 0
-BP_VDD
-$Comp
 L Connector:Conn_Coaxial J1
 U 1 1 5FC83A62
 P 15100 3350
 F 0 "J1" H 15199 3326 50  0000 L CNN
 F 1 "RF A-N" H 15199 3235 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132291_Vertical" H 15100 3350 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 15100 3350 50  0001 C CNN
 F 3 " ~" H 15100 3350 50  0001 C CNN
 	1    15100 3350
 	1    0    0    -1  
@@ -315,17 +48,6 @@ Wire Notes Line
 Wire Notes Line
 	12050 7950 14650 7950
 $Comp
-L Missing:SG-310SCF X1
-U 1 1 5F9A9C2A
-P 13150 6950
-F 0 "X1" H 12600 6600 50  0000 L CNN
-F 1 "SG-310SCF" H 12450 6500 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm_HandSoldering" H 13150 6100 50  0001 C CNN
-F 3 "https://datasheet.lcsc.com/szlcsc/Seiko-Epson-Q33310F70062200_C46327.pdf" H 13150 5950 50  0001 C CNN
-	1    13150 6950
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR025
 U 1 1 5F9BAC8F
 P 13150 7650
@@ -352,10 +74,10 @@ $EndComp
 Wire Wire Line
 	12250 7550 13150 7550
 Wire Wire Line
-	12650 6950 12800 6950
+	12650 6950 12850 6950
 Connection ~ 13150 6450
 Wire Wire Line
-	13150 6450 13150 6600
+	13150 6450 13150 6650
 Wire Wire Line
 	12250 6450 12650 6450
 Wire Wire Line
@@ -371,11 +93,11 @@ Connection ~ 13150 7550
 Wire Wire Line
 	13150 7550 13150 7650
 Wire Wire Line
-	13150 7300 13150 7550
+	13150 7250 13150 7550
 Wire Wire Line
 	12250 7150 12250 7550
 Wire Wire Line
-	13500 6950 13650 6950
+	13450 6950 13650 6950
 $Comp
 L Device:C C25
 U 1 1 5FD4947B
@@ -754,7 +476,7 @@ U 1 1 5F78D888
 P 15100 4550
 F 0 "J3" H 15199 4526 50  0000 L CNN
 F 1 "RF B-N" H 15199 4435 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132291_Vertical" H 15100 4550 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 15100 4550 50  0001 C CNN
 F 3 " ~" H 15100 4550 50  0001 C CNN
 	1    15100 4550
 	1    0    0    -1  
@@ -765,7 +487,7 @@ U 1 1 5F78DC9F
 P 13550 4950
 F 0 "J4" H 13649 4926 50  0000 L CNN
 F 1 "RF B-P" H 13649 4835 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132291_Vertical" H 13550 4950 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 13550 4950 50  0001 C CNN
 F 3 " ~" H 13550 4950 50  0001 C CNN
 	1    13550 4950
 	1    0    0    -1  
@@ -983,7 +705,7 @@ U 1 1 5F78D46D
 P 13550 3750
 F 0 "J2" H 13649 3726 50  0000 L CNN
 F 1 "RF A-P" H 13649 3635 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132291_Vertical" H 13550 3750 50  0001 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 13550 3750 50  0001 C CNN
 F 3 " ~" H 13550 3750 50  0001 C CNN
 	1    13550 3750
 	1    0    0    -1  
@@ -1185,7 +907,7 @@ U 1 1 5FC27F78
 P 3850 4100
 F 0 "U1" H 3850 5870 50  0000 C CNN
 F 1 "MAX2871ETJ+" H 3850 5779 50  0000 C CNN
-F 2 "MAX:MAX2871" H 3850 4100 50  0001 L BNN
+F 2 "MAX:MAX2871ETJ+" H 3850 4100 50  0001 L BNN
 F 3 "QFN-32 Maxim" H 3850 4100 50  0001 L BNN
 F 4 "Maxim Integrated" H 3850 4100 50  0001 L BNN "Field4"
 F 5 "Unavailable" H 3850 4100 50  0001 L BNN "Field5"
@@ -1594,17 +1316,6 @@ F 3 "~" H 8650 6500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8800 6850 8950 6850
-$Comp
-L Connector_Generic:Conn_01x06 J5
-U 1 1 60BF7078
-P 9250 7800
-F 0 "J5" V 9122 8080 50  0000 L CNN
-F 1 "Breakout" V 9213 8080 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9250 7800 50  0001 C CNN
-F 3 "~" H 9250 7800 50  0001 C CNN
-	1    9250 7800
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	9450 7600 9450 6850
 Wire Wire Line
@@ -1808,4 +1519,49 @@ F 3 "~" H 10100 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10100 5000 10100 4900
+$Comp
+L Oscillator:CXO_DIP14 X1
+U 1 1 5F714178
+P 13150 6950
+F 0 "X1" H 13450 6600 50  0000 L CNN
+F 1 "CXO_DIP14" H 13300 6500 50  0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-14" H 13600 6600 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 13050 6950 50  0001 C CNN
+	1    13150 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J5
+U 1 1 5F795B20
+P 9050 7800
+F 0 "J5" V 8922 7312 50  0000 R CNN
+F 1 "Breakout" V 9013 7312 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 9050 7800 50  0001 C CNN
+F 3 "~" H 9050 7800 50  0001 C CNN
+	1    9050 7800
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	8750 7600 8750 7450
+Wire Wire Line
+	8750 7450 8600 7450
+Wire Wire Line
+	8850 7600 8850 7350
+Text GLabel 8600 7450 0    50   Input ~ 0
+VDD
+$Comp
+L power:GND #PWR0101
+U 1 1 5F807CB4
+P 8200 7600
+F 0 "#PWR0101" H 8200 7350 50  0001 C CNN
+F 1 "GND" H 8205 7427 50  0000 C CNN
+F 2 "" H 8200 7600 50  0001 C CNN
+F 3 "" H 8200 7600 50  0001 C CNN
+	1    8200 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 7350 8200 7600
+Wire Wire Line
+	8200 7350 8850 7350
 $EndSCHEMATC
