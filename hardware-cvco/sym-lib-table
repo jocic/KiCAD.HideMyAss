@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name CVCO)(type Legacy)(uri ${KIPRJMOD}/../other/symbols/CVCO.lib)(options "")(descr ""))
+  (lib (name prototype-rescue)(type Legacy)(uri /home/developer/KiCAD.TempestBlast/prototype/prototype-rescue.lib)(options "")(descr ""))
+  (lib (name Missing)(type Legacy)(uri /home/developer/KiCAD.HideMyAss/other/footprints/Missing.lib)(options "")(descr ""))
 )
