@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/developer/KiCAD.HideMyAss/hardware-cvco/hardware.sch)
-    (date "Wed 30 Sep 2020 09:50:39 AM EDT")
+    (date "Wed 30 Sep 2020 10:01:53 AM EDT")
     (tool "Eeschema 5.1.6+dfsg1-1~bpo10+1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
