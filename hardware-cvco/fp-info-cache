@@ -1,4 +1,4 @@
-15139356046475470
+15140957677213470
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -2008,6 +2008,13 @@ SMD 8540
 0
 4
 4
+CVCO
+2-2.54mm-Horizontal-Molex
+
+
+0
+2
+2
 CVCO
 CVCO55
 
