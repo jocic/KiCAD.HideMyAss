@@ -1,0 +1,10 @@
+(module Lightning (layer F.Cu) (tedit 5F7852F9)
+  (fp_text reference G*** (at 0 -3) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3)))
+  )
+  (fp_text value Lightning (at 0 3.3) (layer F.SilkS) hide
+    (effects (font (size 1.524 1.524) (thickness 0.3)))
+  )
+  (fp_poly (pts (xy 0 0) (xy -0.4 -0.2) (xy 0.2 -1.4)) (layer F.SilkS) (width 0.1))
+  (fp_poly (pts (xy -0.2 1) (xy 0 -0.2) (xy 0.4 0)) (layer F.SilkS) (width 0.1))
+)
