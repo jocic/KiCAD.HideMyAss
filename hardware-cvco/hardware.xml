@@ -1,0 +1,2860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/developer/KiCAD.HideMyAss/hardware-cvco/hardware.sch</source>
+    <date>Sat Oct  3 08:53:44 2020</date>
+    <tool>Eeschema 5.1.6+dfsg1-1~bpo10+1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>HideMyAss</title>
+        <company>Pijedestal</company>
+        <rev>1.0.0</rev>
+        <date>2020-08-24</date>
+        <source>hardware.sch</source>
+        <comment number="1" value="RF jammer for all things known."/>
+        <comment number="2" value="- - - - - - - - - - - - - - -"/>
+        <comment number="3" value="office@djordjejocic.com"/>
+        <comment number="4" value="Đorđe Jocić"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J3">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F52127E</tstamp>
+    </comp>
+    <comp ref="Y3">
+      <value>CV55CW500-1000</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0500-1000.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CV55CW500-1000</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F523A21</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F557FBE</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1790</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F55DC46</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54B981</tstamp>
+    </comp>
+    <comp ref="Y4">
+      <value>CVCO55CW-1000-2000</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1000-2000.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CV55CW1000-2000</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54B98B</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54B9C4</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>47pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C107118</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54B9D9</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54E60E</tstamp>
+    </comp>
+    <comp ref="Y5">
+      <value>CV55BE1600-3200</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-1600-3200.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CV55BE1600-3200</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54E618</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54E651</tstamp>
+    </comp>
+    <comp ref="C33">
+      <value>33pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C157687</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F54E666</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FAEDE</tstamp>
+    </comp>
+    <comp ref="Y6">
+      <value>CVCO55CC-3180-3710</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CC-3180-3710.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CVCO55CC31803710</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FAEE8</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FAF21</tstamp>
+    </comp>
+    <comp ref="C34">
+      <value>27pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C8031</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F5FAF36</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC2FA1</tstamp>
+    </comp>
+    <comp ref="Y1">
+      <value>CVCO55CW-0100-0200</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0100-0200.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CV55CW0100-0200</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC2FAB</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC2FE4</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>470pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1743</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC2FF9</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC305B</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC3067</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC309D</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC30FE</tstamp>
+    </comp>
+    <comp ref="Y2">
+      <value>CVCO55CW-0200-0500</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-0200-0500.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CV55CW0200-0500</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC3108</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC3141</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>220pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1727</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC3156</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>SMA</value>
+      <footprint>CVCO:SMA-Edge</footprint>
+      <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C530661</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_Coaxial" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA427CC</tstamp>
+    </comp>
+    <comp ref="Y7">
+      <value>CVCO55CW-3500-4500</value>
+      <footprint>CVCO:CVCO55</footprint>
+      <datasheet>https://www.crystek.com/microwave/admin/webapps/welcome/files/vco/CVCO55CW-3500-4500.pdf</datasheet>
+      <fields>
+        <field name="Mouser Part #">549-CVC55CW3500-4500</field>
+      </fields>
+      <libsource lib="CVCO" part="CVCO55" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA427D6</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>NLB-310-T1</value>
+      <footprint>CVCO:Micro-X-4</footprint>
+      <fields>
+        <field name="Mouser Part #">772-NLB-310</field>
+      </fields>
+      <libsource lib="CVCO" part="NLB-310" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA4280F</tstamp>
+    </comp>
+    <comp ref="C35">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C24658</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA42824</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA2F044</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA2F04F</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA6EE76</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FA6EE81</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAB4B5E</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAB4B69</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAF41A2</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAF41AD</tstamp>
+    </comp>
+    <comp ref="C30">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB32676</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB32681</tstamp>
+    </comp>
+    <comp ref="C32">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB730FC</tstamp>
+    </comp>
+    <comp ref="C31">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB73107</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FD5849E</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FD584A9</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FD93ECC</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FD93ED7</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FDD0BC6</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FDD0BD1</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE143D6</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE143E1</tstamp>
+    </comp>
+    <comp ref="C42">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE5097E</tstamp>
+    </comp>
+    <comp ref="C41">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE50989</tstamp>
+    </comp>
+    <comp ref="C40">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE8D952</tstamp>
+    </comp>
+    <comp ref="C39">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE8D95D</tstamp>
+    </comp>
+    <comp ref="C38">
+      <value>0.1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C159771</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FEC9CE2</tstamp>
+    </comp>
+    <comp ref="C37">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1791</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FEC9CED</tstamp>
+    </comp>
+    <comp ref="C52">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C215803</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DD8E2B</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>1N4002</value>
+      <footprint>Diode_SMD:D_SMA_Handsoldering</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C433393</field>
+      </fields>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D0DB87</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C47010</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A58DFF</tstamp>
+    </comp>
+    <comp ref="R49">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C55866</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>608D6E34</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>LM317DCYR</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/1811032110_Texas-Instruments-LM317DCYR_C51466.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C51466</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LM317_3PinPackage" description="1A 35V Adjustable Linear Regulator, SOT-89/SOT-223/TO-220/TO-252/TO-263"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60750023</tstamp>
+    </comp>
+    <comp ref="C57">
+      <value>10μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C40894</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606E00E9</tstamp>
+    </comp>
+    <comp ref="C51">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C38141</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606DFB5C</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>10V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C398894</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>615F9BF3</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>DC</value>
+      <footprint>Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6065063C</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C55868</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6107C237</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>AOD403</value>
+      <footprint>Package_TO_SOT_SMD:TO-252-2</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/1811071514_Alpha-Omega-Semicon-AOD403_C28969.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C28969</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GDS" description="P-MOSFET transistor, gate/drain/source"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6101517F</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17798</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62EA1C05</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>3M</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17662</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65E1B724</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C149504</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65E1B72C</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>10μH</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1046</field>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65E1B744</tstamp>
+    </comp>
+    <comp ref="C43">
+      <value>4.7μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C37818</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65E1B751</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>TPS61046</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6_Handsoldering</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/2001152032_Texas-Instruments-TLV61046ADBVR_C464815.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C464815</field>
+      </fields>
+      <libsource lib="CVCO" part="TPS61040" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66093CD9</tstamp>
+    </comp>
+    <comp ref="C36">
+      <value>4.7μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C37818</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6633DDEA</tstamp>
+    </comp>
+    <comp ref="C53">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5AC3A</tstamp>
+    </comp>
+    <comp ref="C49">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5AC40</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C55866</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5AC49</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C55866</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5AC51</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C149504</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACCB</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACE4</tstamp>
+    </comp>
+    <comp ref="C44">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACF0</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACFA</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C55866</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5AD09</tstamp>
+    </comp>
+    <comp ref="R51">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>67DE8D9C</tstamp>
+    </comp>
+    <comp ref="R52">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>67DE9193</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C62912</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACC3</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C62912</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACBB</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17604</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACB3</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66A5ACA8</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C62912</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE20964</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FE2096F</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>PIC12F675-ISN</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C96100</field>
+      </fields>
+      <libsource lib="MCU_Microchip_PIC12" part="PIC12F675-ISN" description="PIC12F675, 1024W Flash, 64B SRAM, 128B EEPROM, SO8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606C7DF5</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C62912</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606D6AF6</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606D6B01</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Pickit 2</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C40877</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Counter_Clockwise" description="Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61AC74FE</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>74LS07</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS06</datasheet>
+      <fields>
+        <field name="LCSC Part #">C513513</field>
+      </fields>
+      <libsource lib="74xx" part="74LS06" description="Inverter Open Collect"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604AD42E</tstamp>
+    </comp>
+    <comp ref="U14">
+      <value>LM386</value>
+      <footprint>Package_SO:SO-8_5.3x6.2mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm386.pdf</datasheet>
+      <libsource lib="Amplifier_Audio" part="LM386" description="Low Voltage Audio Power Amplifier, DIP-8/SOIC-8/SSOP-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6798D2B2</tstamp>
+    </comp>
+    <comp ref="C58">
+      <value>10μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6B808B12</tstamp>
+    </comp>
+    <comp ref="C50">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6C06AB6A</tstamp>
+    </comp>
+    <comp ref="C48">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6C1753A6</tstamp>
+    </comp>
+    <comp ref="C47">
+      <value>0.1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6C1777F9</tstamp>
+    </comp>
+    <comp ref="C56">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6DA10EF4</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>MBT2222</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/1809272022_ON-Semiconductor-MMBT2222ALT1G_C82460.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C82460</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="PN2222A" description="1A Ic, 40V Vce, NPN Transistor, General Purpose Transistor, TO-92"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66B4E8E2</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>10V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C398894</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66C1E8E7</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>6.7k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6D90580A</tstamp>
+    </comp>
+    <comp ref="R40">
+      <value>3.3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6CB98337</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6F0D8CDE</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>27k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6F365179</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6F68248E</tstamp>
+    </comp>
+    <comp ref="C55">
+      <value>10μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6FEC0D47</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>220</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17557</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F825995</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>560</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C28636</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FB5E706</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17798</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FF080C2</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17710</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60243861</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>220</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17557</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60613800</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17590</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609BA253</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>470</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17710</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B5E3DD</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>3.9k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17614</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60F0CE27</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61093AD7</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61C969FD</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61D64A38</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>5.1V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C305343</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B9CDB0</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>20V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C398899</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66391788</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6639176F</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62F823E4</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>1.4k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17388</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62F2131F</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>16V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C313481</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66068AC1</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>66068AA8</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62C1F66B</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17604</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62BB96E2</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>20V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C398899</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65B9316E</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65B93155</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>629355E0</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>3.9k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17614</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>628D1DDC</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>20V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C398899</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65896B0F</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>65896AF6</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>626585D3</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1.4k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17388</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6258AF6B</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>622BB06B</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17513</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62250516</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>18V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C268731</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>655D7043</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>655D702A</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>18V</value>
+      <footprint>Diode_SMD:D_MiniMELF</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C268731</field>
+      </fields>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60EC513E</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>C17513</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FAC31FA</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>On/Off</value>
+      <footprint>CVCO:2-2.54mm-Horizontal-Molex</footprint>
+      <libsource lib="Switch" part="SW_SPST" description="Single Pole Single Throw (SPST) switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C7FD23</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>3A Fast</value>
+      <footprint>Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C163126</field>
+      </fields>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7D5CBC</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>BQ21040</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
+      <datasheet>https://datasheet.lcsc.com/szlcsc/1810101925_Texas-Instruments-BQ21040DBVR_C202311.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C202311</field>
+      </fields>
+      <libsource lib="CVCO" part="BQ21040" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60B455A2</tstamp>
+    </comp>
+    <comp ref="C46">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB6A91</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>Green</value>
+      <footprint>CVCO:2-2.54mm-Horizontal-Molex</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C99763</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>629E6AE0</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C111022</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62EA18F0</tstamp>
+    </comp>
+    <comp ref="TH1">
+      <value>10k</value>
+      <footprint>CVCO:2-2.54mm-Horizontal-Molex</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C13879</field>
+      </fields>
+      <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>61B2E98D</tstamp>
+    </comp>
+    <comp ref="C45">
+      <value>1μF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C116352</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB7941</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>Orange</value>
+      <footprint>CVCO:2-2.54mm-Horizontal-Molex</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C99759</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62D936E1</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C111022</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6237F3B0</tstamp>
+    </comp>
+    <comp ref="BT1">
+      <value>3.7V</value>
+      <footprint>CVCO:2-2.54mm-Horizontal-Molex</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60E1415B</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>LM324</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</datasheet>
+      <fields>
+        <field name="LCSC Part #">C71035</field>
+      </fields>
+      <libsource lib="Amplifier_Operational" part="LM324" description="Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64669F1A</tstamp>
+    </comp>
+    <comp ref="R54">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17604</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64C1321E</tstamp>
+    </comp>
+    <comp ref="R53">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C17604</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>64C6E666</tstamp>
+    </comp>
+    <comp ref="C54">
+      <value>50pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6B999272</tstamp>
+    </comp>
+    <comp ref="R50">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6A2553A3</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74LS05">
+      <aliases>
+        <alias>74LS06</alias>
+        <alias>74LS06N</alias>
+      </aliases>
+      <description>Inverter Open Collect</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS05</docs>
+      <footprints>
+        <fp>DIP?14*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="openCol"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="openCol"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="openCol"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="openCol"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="openCol"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="openCol"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Amplifier_Audio" part="LM386">
+      <description>Low Voltage Audio Power Amplifier, DIP-8/SOIC-8/SSOP-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm386.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>MSSOP*P0.65mm*</fp>
+        <fp>TSSOP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM386</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GAIN" type="input"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="~" type="output"/>
+        <pin num="6" name="V+" type="power_in"/>
+        <pin num="7" name="BYPASS" type="input"/>
+        <pin num="8" name="GAIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Amplifier_Operational" part="LM2902">
+      <aliases>
+        <alias>LM324</alias>
+        <alias>TLC274</alias>
+        <alias>TLC279</alias>
+        <alias>TL074</alias>
+        <alias>LM324A</alias>
+        <alias>MCP6004</alias>
+        <alias>TL084</alias>
+        <alias>TL064</alias>
+        <alias>LMV324</alias>
+        <alias>LMC6484</alias>
+        <alias>MCP604</alias>
+        <alias>MC33079</alias>
+        <alias>MC33174</alias>
+        <alias>MC33179</alias>
+        <alias>OPA1604</alias>
+        <alias>OPA4134</alias>
+        <alias>OPA4340UA</alias>
+        <alias>OPA4376</alias>
+        <alias>MCP6L94</alias>
+        <alias>TSV914</alias>
+        <alias>ADA4807-4</alias>
+      </aliases>
+      <description>Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x8.7mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SSOP*5.3x6.2mm*P0.65mm*</fp>
+        <fp>MSOP*3x3mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2902</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V+" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="-" type="input"/>
+        <pin num="10" name="+" type="input"/>
+        <pin num="11" name="V-" type="power_in"/>
+        <pin num="12" name="+" type="input"/>
+        <pin num="13" name="-" type="input"/>
+        <pin num="14" name="~" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="CVCO" part="BQ21040">
+      <docs>https://datasheet.lcsc.com/szlcsc/1810101925_Texas-Instruments-BQ21040DBVR_C202311.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BQ21040</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="LCSC Part #">C202311</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TS" type="input"/>
+        <pin num="2" name="OUT" type="output"/>
+        <pin num="3" name="~CHG~" type="output"/>
+        <pin num="4" name="ISET" type="input"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="VIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="CVCO" part="CVCO55">
+      <docs>None</docs>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">CVCO55</field>
+        <field name="Footprint">CVCO:CVCO55</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VT" type="passive"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="RF-OUT" type="output"/>
+        <pin num="11" name="GND" type="power_in"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VCC" type="power_in"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="CVCO" part="NLB-310">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NLB-310</field>
+        <field name="Footprint">CVCO:Micro-X-4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="input"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="~" type="output"/>
+        <pin num="4" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="CVCO" part="TPS61040">
+      <docs>https://datasheet.lcsc.com/szlcsc/Texas-Instruments-TI-TPS61040DBVR_C7722.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS61040</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5_HandSoldering</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SW" type="input"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="FB" type="input"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="Vin" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_Coaxial">
+      <description>coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)</description>
+      <docs> ~</docs>
+      <footprints>
+        <fp>*BNC*</fp>
+        <fp>*SMA*</fp>
+        <fp>*SMB*</fp>
+        <fp>*SMC*</fp>
+        <fp>*Cinch*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_Coaxial</field>
+      </fields>
+      <pins>
+        <pin num="1" name="In" type="passive"/>
+        <pin num="2" name="Ext" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Counter_Clockwise">
+      <description>Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP packge numbering), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Counter_Clockwise</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_PMOS_GDS">
+      <description>P-MOSFET transistor, gate/drain/source</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GDS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="D" type="passive"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Thermistor_NTC">
+      <description>Temperature dependent resistor, negative temperature coefficient</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*NTC*</fp>
+        <fp>*Thermistor*</fp>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>*Terminal?Block*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TH</field>
+        <field name="Value">Thermistor_NTC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_PIC12" part="PIC12F675-IP">
+      <aliases>
+        <alias>PIC12F675-ISN</alias>
+        <alias>PIC12F675-IMS</alias>
+        <alias>PIC12F675-IMC</alias>
+      </aliases>
+      <description>1024W Flash, 64B SRAM, 128B EEPROM, PDIP8</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/41190G.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PIC12F675-IP</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="GP5" type="BiDi"/>
+        <pin num="3" name="GP4" type="BiDi"/>
+        <pin num="4" name="GP3" type="input"/>
+        <pin num="5" name="GP2" type="BiDi"/>
+        <pin num="6" name="GP1" type="BiDi"/>
+        <pin num="7" name="GP0" type="BiDi"/>
+        <pin num="8" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM317_3PinPackage">
+      <aliases>
+        <alias>AZ1117-ADJ</alias>
+      </aliases>
+      <description>1A 35V Adjustable Linear Regulator, SOT-89/SOT-223/TO-220/TO-252/TO-263</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm317.pdf</docs>
+      <footprints>
+        <fp>SOT?223*</fp>
+        <fp>SOT?89*</fp>
+        <fp>TO?220*</fp>
+        <fp>TO?252*</fp>
+        <fp>TO?263*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM317_3PinPackage</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="input"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPST">
+      <description>Single Pole Single Throw (SPST) switch</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPST</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="PN2222A">
+      <description>1A Ic, 40V Vce, NPN Transistor, General Purpose Transistor, TO-92</description>
+      <docs>http://www.fairchildsemi.com/ds/PN/PN2222A.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">PN2222A</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>/usr/share/kicad/library/74xx.lib</uri>
+    </library>
+    <library logical="Amplifier_Audio">
+      <uri>/usr/share/kicad/library/Amplifier_Audio.lib</uri>
+    </library>
+    <library logical="Amplifier_Operational">
+      <uri>/usr/share/kicad/library/Amplifier_Operational.lib</uri>
+    </library>
+    <library logical="CVCO">
+      <uri>/home/developer/KiCAD.HideMyAss/hardware-cvco/../other/symbols/CVCO.lib</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="MCU_Microchip_PIC12">
+      <uri>/usr/share/kicad/library/MCU_Microchip_PIC12.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad/library/Switch.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Noise">
+      <node ref="C22" pin="2"/>
+      <node ref="C54" pin="1"/>
+      <node ref="U14" pin="5"/>
+    </net>
+    <net code="2" name="Net-(C58-Pad2)">
+      <node ref="U14" pin="1"/>
+      <node ref="C58" pin="2"/>
+    </net>
+    <net code="3" name="Net-(C58-Pad1)">
+      <node ref="U14" pin="8"/>
+      <node ref="C58" pin="1"/>
+    </net>
+    <net code="4" name="Net-(U14-Pad7)">
+      <node ref="U14" pin="7"/>
+    </net>
+    <net code="5" name="Net-(D12-Pad2)">
+      <node ref="D12" pin="2"/>
+      <node ref="Q2" pin="2"/>
+    </net>
+    <net code="6" name="Net-(C47-Pad1)">
+      <node ref="C47" pin="1"/>
+      <node ref="C48" pin="1"/>
+      <node ref="U14" pin="6"/>
+    </net>
+    <net code="7" name="GP1">
+      <node ref="J8" pin="5"/>
+      <node ref="U6" pin="6"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="8" name="GP2">
+      <node ref="U6" pin="5"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="9" name="GP5">
+      <node ref="U1" pin="13"/>
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="10" name="GP4">
+      <node ref="U1" pin="11"/>
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="11" name="Net-(J8-Pad4)">
+      <node ref="J8" pin="4"/>
+    </net>
+    <net code="12" name="Net-(C50-Pad1)">
+      <node ref="U14" pin="3"/>
+      <node ref="C50" pin="1"/>
+    </net>
+    <net code="13" name="P2_VDD">
+      <node ref="U12" pin="4"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R7" pin="2"/>
+      <node ref="U12" pin="12"/>
+      <node ref="R35" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="R5" pin="2"/>
+      <node ref="U1" pin="10"/>
+      <node ref="R23" pin="2"/>
+      <node ref="R39" pin="1"/>
+      <node ref="R22" pin="2"/>
+      <node ref="R24" pin="2"/>
+      <node ref="U1" pin="12"/>
+      <node ref="C26" pin="1"/>
+      <node ref="C25" pin="1"/>
+      <node ref="C36" pin="1"/>
+      <node ref="R31" pin="1"/>
+      <node ref="C49" pin="1"/>
+      <node ref="C24" pin="1"/>
+      <node ref="C23" pin="1"/>
+      <node ref="R51" pin="2"/>
+      <node ref="R38" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="J8" pin="2"/>
+      <node ref="U1" pin="8"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="14" name="GP0">
+      <node ref="J8" pin="6"/>
+      <node ref="U6" pin="7"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="15" name="Net-(C31-Pad1)">
+      <node ref="J7" pin="1"/>
+      <node ref="C32" pin="1"/>
+      <node ref="R30" pin="1"/>
+      <node ref="U9" pin="3"/>
+      <node ref="Y7" pin="14"/>
+      <node ref="C31" pin="1"/>
+    </net>
+    <net code="16" name="Net-(C29-Pad1)">
+      <node ref="Y6" pin="14"/>
+      <node ref="J6" pin="1"/>
+      <node ref="U8" pin="3"/>
+      <node ref="C29" pin="1"/>
+      <node ref="R29" pin="1"/>
+      <node ref="C30" pin="1"/>
+    </net>
+    <net code="17" name="VCC_1">
+      <node ref="R9" pin="1"/>
+      <node ref="R13" pin="2"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="18" name="VCC_2">
+      <node ref="R6" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="19" name="Net-(C50-Pad2)">
+      <node ref="C56" pin="2"/>
+      <node ref="C50" pin="2"/>
+      <node ref="R45" pin="1"/>
+    </net>
+    <net code="20" name="Net-(Q2-Pad3)">
+      <node ref="R45" pin="2"/>
+      <node ref="R44" pin="1"/>
+      <node ref="R39" pin="2"/>
+      <node ref="Q2" pin="3"/>
+    </net>
+    <net code="21" name="Net-(C47-Pad2)">
+      <node ref="R35" pin="1"/>
+      <node ref="C48" pin="2"/>
+      <node ref="C47" pin="2"/>
+      <node ref="R40" pin="1"/>
+    </net>
+    <net code="22" name="Net-(C55-Pad2)">
+      <node ref="R44" pin="2"/>
+      <node ref="D12" pin="1"/>
+      <node ref="C55" pin="2"/>
+    </net>
+    <net code="23" name="P2_VSS">
+      <node ref="Y2" pin="11"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U7" pin="4"/>
+      <node ref="U5" pin="2"/>
+      <node ref="U5" pin="4"/>
+      <node ref="Y6" pin="9"/>
+      <node ref="Y6" pin="8"/>
+      <node ref="Y6" pin="6"/>
+      <node ref="Y6" pin="5"/>
+      <node ref="Y6" pin="4"/>
+      <node ref="Y6" pin="3"/>
+      <node ref="Y1" pin="7"/>
+      <node ref="Y2" pin="16"/>
+      <node ref="Y2" pin="8"/>
+      <node ref="Y2" pin="3"/>
+      <node ref="Y2" pin="4"/>
+      <node ref="Y1" pin="3"/>
+      <node ref="Y1" pin="8"/>
+      <node ref="Y2" pin="15"/>
+      <node ref="Y1" pin="6"/>
+      <node ref="Y1" pin="5"/>
+      <node ref="Y1" pin="4"/>
+      <node ref="Y1" pin="9"/>
+      <node ref="Y1" pin="16"/>
+      <node ref="Y2" pin="12"/>
+      <node ref="Y5" pin="9"/>
+      <node ref="Y5" pin="8"/>
+      <node ref="Y2" pin="13"/>
+      <node ref="C39" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C21" pin="2"/>
+      <node ref="C37" pin="2"/>
+      <node ref="C42" pin="2"/>
+      <node ref="C41" pin="2"/>
+      <node ref="C40" pin="2"/>
+      <node ref="C38" pin="2"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R26" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C52" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="J6" pin="2"/>
+      <node ref="Y6" pin="15"/>
+      <node ref="Y6" pin="13"/>
+      <node ref="Y6" pin="12"/>
+      <node ref="Y6" pin="11"/>
+      <node ref="Y6" pin="1"/>
+      <node ref="Y6" pin="16"/>
+      <node ref="Y2" pin="1"/>
+      <node ref="U3" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="Y6" pin="7"/>
+      <node ref="R25" pin="2"/>
+      <node ref="Y2" pin="9"/>
+      <node ref="D5" pin="2"/>
+      <node ref="C43" pin="2"/>
+      <node ref="Y3" pin="13"/>
+      <node ref="Y3" pin="12"/>
+      <node ref="Y3" pin="11"/>
+      <node ref="Y4" pin="9"/>
+      <node ref="R48" pin="2"/>
+      <node ref="Y3" pin="1"/>
+      <node ref="J3" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="U4" pin="4"/>
+      <node ref="U4" pin="2"/>
+      <node ref="Y5" pin="1"/>
+      <node ref="Y4" pin="6"/>
+      <node ref="Y4" pin="1"/>
+      <node ref="J4" pin="2"/>
+      <node ref="Y4" pin="7"/>
+      <node ref="Y3" pin="15"/>
+      <node ref="Y3" pin="6"/>
+      <node ref="Y3" pin="5"/>
+      <node ref="Y3" pin="4"/>
+      <node ref="Y4" pin="8"/>
+      <node ref="Y3" pin="3"/>
+      <node ref="Y3" pin="16"/>
+      <node ref="J5" pin="2"/>
+      <node ref="Y5" pin="4"/>
+      <node ref="R32" pin="2"/>
+      <node ref="Y5" pin="5"/>
+      <node ref="R34" pin="2"/>
+      <node ref="Y5" pin="6"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="Y5" pin="11"/>
+      <node ref="Y5" pin="12"/>
+      <node ref="Y5" pin="13"/>
+      <node ref="C8" pin="2"/>
+      <node ref="Y3" pin="9"/>
+      <node ref="Y5" pin="15"/>
+      <node ref="Y3" pin="8"/>
+      <node ref="Y3" pin="7"/>
+      <node ref="Y5" pin="16"/>
+      <node ref="C5" pin="2"/>
+      <node ref="Y5" pin="3"/>
+      <node ref="C31" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="R49" pin="2"/>
+      <node ref="C57" pin="2"/>
+      <node ref="C32" pin="2"/>
+      <node ref="C51" pin="2"/>
+      <node ref="C29" pin="2"/>
+      <node ref="U8" pin="4"/>
+      <node ref="U8" pin="2"/>
+      <node ref="Y1" pin="15"/>
+      <node ref="Y2" pin="5"/>
+      <node ref="Y1" pin="13"/>
+      <node ref="Y1" pin="12"/>
+      <node ref="Y2" pin="6"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U2" pin="2"/>
+      <node ref="Y2" pin="7"/>
+      <node ref="Y1" pin="11"/>
+      <node ref="Y4" pin="15"/>
+      <node ref="Y4" pin="13"/>
+      <node ref="Y4" pin="12"/>
+      <node ref="Y4" pin="4"/>
+      <node ref="Y4" pin="11"/>
+      <node ref="Y4" pin="5"/>
+      <node ref="Y5" pin="7"/>
+      <node ref="Y1" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C30" pin="2"/>
+      <node ref="Y4" pin="16"/>
+      <node ref="Y4" pin="3"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C36" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="R40" pin="2"/>
+      <node ref="R50" pin="2"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="Y7" pin="16"/>
+      <node ref="U9" pin="4"/>
+      <node ref="U12" pin="11"/>
+      <node ref="U9" pin="2"/>
+      <node ref="C45" pin="2"/>
+      <node ref="TH1" pin="2"/>
+      <node ref="R36" pin="2"/>
+      <node ref="C46" pin="2"/>
+      <node ref="R46" pin="1"/>
+      <node ref="D2" pin="2"/>
+      <node ref="U6" pin="8"/>
+      <node ref="C53" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="R54" pin="2"/>
+      <node ref="Y7" pin="11"/>
+      <node ref="C55" pin="1"/>
+      <node ref="U10" pin="2"/>
+      <node ref="BT1" pin="2"/>
+      <node ref="D3" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="Y7" pin="8"/>
+      <node ref="Y7" pin="7"/>
+      <node ref="Y7" pin="6"/>
+      <node ref="Y7" pin="5"/>
+      <node ref="Y7" pin="4"/>
+      <node ref="R43" pin="1"/>
+      <node ref="J8" pin="3"/>
+      <node ref="R52" pin="1"/>
+      <node ref="U14" pin="2"/>
+      <node ref="D4" pin="2"/>
+      <node ref="U1" pin="7"/>
+      <node ref="Y7" pin="9"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="D7" pin="2"/>
+      <node ref="Y7" pin="12"/>
+      <node ref="U14" pin="4"/>
+      <node ref="R27" pin="2"/>
+      <node ref="Y7" pin="13"/>
+      <node ref="Y7" pin="15"/>
+      <node ref="U11" pin="5"/>
+      <node ref="C56" pin="1"/>
+      <node ref="Y7" pin="3"/>
+      <node ref="D6" pin="2"/>
+      <node ref="Y7" pin="1"/>
+      <node ref="J7" pin="2"/>
+    </net>
+    <net code="24" name="Net-(R37-Pad2)">
+      <node ref="R41" pin="1"/>
+      <node ref="U12" pin="1"/>
+      <node ref="R37" pin="2"/>
+    </net>
+    <net code="25" name="Net-(C44-Pad2)">
+      <node ref="R37" pin="1"/>
+      <node ref="U12" pin="5"/>
+      <node ref="C44" pin="2"/>
+    </net>
+    <net code="26" name="VGND">
+      <node ref="U12" pin="2"/>
+      <node ref="R38" pin="1"/>
+      <node ref="R46" pin="2"/>
+      <node ref="C49" pin="2"/>
+      <node ref="C53" pin="1"/>
+    </net>
+    <net code="27" name="Sweep">
+      <node ref="R47" pin="1"/>
+      <node ref="R43" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C44" pin="1"/>
+      <node ref="U12" pin="7"/>
+    </net>
+    <net code="28" name="Net-(R41-Pad2)">
+      <node ref="U12" pin="3"/>
+      <node ref="R47" pin="2"/>
+      <node ref="R41" pin="2"/>
+    </net>
+    <net code="29" name="Net-(L1-Pad1)">
+      <node ref="L1" pin="1"/>
+      <node ref="U10" pin="1"/>
+    </net>
+    <net code="30" name="Net-(C25-Pad2)">
+      <node ref="U6" pin="1"/>
+      <node ref="C26" pin="2"/>
+      <node ref="C25" pin="2"/>
+    </net>
+    <net code="31" name="GP3">
+      <node ref="U6" pin="4"/>
+      <node ref="U1" pin="9"/>
+      <node ref="J8" pin="1"/>
+    </net>
+    <net code="32" name="Net-(R51-Pad1)">
+      <node ref="R52" pin="2"/>
+      <node ref="R51" pin="1"/>
+      <node ref="U12" pin="6"/>
+    </net>
+    <net code="33" name="Net-(R17-Pad1)">
+      <node ref="U12" pin="10"/>
+      <node ref="R18" pin="1"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="34" name="Net-(C23-Pad2)">
+      <node ref="C24" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="35" name="Net-(C13-Pad1)">
+      <node ref="C13" pin="1"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="36" name="Net-(C22-Pad1)">
+      <node ref="C22" pin="1"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="37" name="Net-(F1-Pad2)">
+      <node ref="F1" pin="2"/>
+      <node ref="Q1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(R34-Pad1)">
+      <node ref="U11" pin="4"/>
+      <node ref="R34" pin="1"/>
+    </net>
+    <net code="39" name="Net-(D9-Pad1)">
+      <node ref="U11" pin="3"/>
+      <node ref="D9" pin="1"/>
+    </net>
+    <net code="40" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+      <node ref="J9" pin="1"/>
+    </net>
+    <net code="41" name="Net-(J9-Pad2)">
+      <node ref="SW1" pin="1"/>
+      <node ref="J9" pin="2"/>
+    </net>
+    <net code="42" name="Net-(TH1-Pad1)">
+      <node ref="TH1" pin="1"/>
+      <node ref="U11" pin="1"/>
+    </net>
+    <net code="43" name="DC">
+      <node ref="U13" pin="2"/>
+      <node ref="R42" pin="1"/>
+      <node ref="C46" pin="1"/>
+      <node ref="U11" pin="6"/>
+      <node ref="D11" pin="1"/>
+      <node ref="C52" pin="1"/>
+      <node ref="D8" pin="2"/>
+    </net>
+    <net code="44" name="Net-(D8-Pad1)">
+      <node ref="R36" pin="1"/>
+      <node ref="D8" pin="1"/>
+    </net>
+    <net code="45" name="VCC_3">
+      <node ref="R15" pin="2"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="46" name="VT_2">
+      <node ref="C17" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="C16" pin="1"/>
+      <node ref="Y2" pin="2"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="47" name="VT_3">
+      <node ref="C19" pin="1"/>
+      <node ref="Y3" pin="2"/>
+      <node ref="D3" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="C18" pin="1"/>
+    </net>
+    <net code="48" name="Tuner">
+      <node ref="R20" pin="2"/>
+      <node ref="U12" pin="8"/>
+      <node ref="R21" pin="2"/>
+      <node ref="R19" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="R53" pin="1"/>
+    </net>
+    <net code="49" name="Net-(R53-Pad2)">
+      <node ref="R54" pin="1"/>
+      <node ref="R53" pin="2"/>
+      <node ref="U12" pin="9"/>
+    </net>
+    <net code="50" name="Net-(U12-Pad13)">
+      <node ref="U12" pin="13"/>
+      <node ref="U12" pin="14"/>
+    </net>
+    <net code="51" name="Net-(C54-Pad2)">
+      <node ref="C54" pin="2"/>
+      <node ref="R50" pin="1"/>
+    </net>
+    <net code="52" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2"/>
+      <node ref="R33" pin="1"/>
+    </net>
+    <net code="53" name="VCC_7">
+      <node ref="R27" pin="1"/>
+      <node ref="R30" pin="2"/>
+      <node ref="R24" pin="1"/>
+    </net>
+    <net code="54" name="VT_7">
+      <node ref="Y7" pin="2"/>
+      <node ref="D7" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="C42" pin="1"/>
+      <node ref="C41" pin="1"/>
+    </net>
+    <net code="55" name="VT_6">
+      <node ref="R20" pin="1"/>
+      <node ref="Y6" pin="2"/>
+      <node ref="C39" pin="1"/>
+      <node ref="C40" pin="1"/>
+      <node ref="D6" pin="1"/>
+    </net>
+    <net code="56" name="VT_4">
+      <node ref="Y4" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="C21" pin="1"/>
+      <node ref="C20" pin="1"/>
+    </net>
+    <net code="57" name="VCC_5">
+      <node ref="R28" pin="2"/>
+      <node ref="R22" pin="1"/>
+      <node ref="R25" pin="1"/>
+    </net>
+    <net code="58" name="VCC_4">
+      <node ref="R16" pin="2"/>
+      <node ref="R12" pin="1"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="59" name="VCC_6">
+      <node ref="R29" pin="2"/>
+      <node ref="R26" pin="1"/>
+      <node ref="R23" pin="1"/>
+    </net>
+    <net code="60" name="VT_5">
+      <node ref="C37" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="R19" pin="1"/>
+      <node ref="C38" pin="1"/>
+      <node ref="Y5" pin="2"/>
+    </net>
+    <net code="61" name="Net-(C33-Pad1)">
+      <node ref="C33" pin="1"/>
+      <node ref="U7" pin="1"/>
+    </net>
+    <net code="62" name="Net-(C33-Pad2)">
+      <node ref="Y5" pin="10"/>
+      <node ref="C33" pin="2"/>
+    </net>
+    <net code="63" name="Net-(C27-Pad1)">
+      <node ref="R28" pin="1"/>
+      <node ref="U7" pin="3"/>
+      <node ref="C27" pin="1"/>
+      <node ref="C28" pin="1"/>
+      <node ref="Y5" pin="14"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="64" name="Net-(C9-Pad1)">
+      <node ref="C9" pin="1"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="65" name="Net-(C34-Pad2)">
+      <node ref="Y6" pin="10"/>
+      <node ref="C34" pin="2"/>
+    </net>
+    <net code="66" name="Net-(C34-Pad1)">
+      <node ref="C34" pin="1"/>
+      <node ref="U8" pin="1"/>
+    </net>
+    <net code="67" name="Net-(C9-Pad2)">
+      <node ref="C9" pin="2"/>
+      <node ref="Y1" pin="10"/>
+    </net>
+    <net code="68" name="Net-(C5-Pad1)">
+      <node ref="R15" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="Y3" pin="14"/>
+      <node ref="U4" pin="3"/>
+      <node ref="J3" pin="1"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="69" name="Net-(C11-Pad2)">
+      <node ref="Y3" pin="10"/>
+      <node ref="C11" pin="2"/>
+    </net>
+    <net code="70" name="Net-(C11-Pad1)">
+      <node ref="U4" pin="1"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="71" name="Net-(C12-Pad2)">
+      <node ref="C12" pin="2"/>
+      <node ref="Y4" pin="10"/>
+    </net>
+    <net code="72" name="Net-(C7-Pad1)">
+      <node ref="U5" pin="3"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R16" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="Y4" pin="14"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="73" name="Net-(C12-Pad1)">
+      <node ref="U5" pin="1"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="74" name="Net-(C35-Pad1)">
+      <node ref="U9" pin="1"/>
+      <node ref="C35" pin="1"/>
+    </net>
+    <net code="75" name="Net-(C35-Pad2)">
+      <node ref="Y7" pin="10"/>
+      <node ref="C35" pin="2"/>
+    </net>
+    <net code="76" name="Net-(R31-Pad2)">
+      <node ref="R32" pin="1"/>
+      <node ref="U10" pin="3"/>
+      <node ref="R31" pin="2"/>
+    </net>
+    <net code="77" name="BAT">
+      <node ref="U10" pin="5"/>
+      <node ref="U10" pin="4"/>
+      <node ref="C45" pin="1"/>
+      <node ref="R33" pin="2"/>
+      <node ref="BT1" pin="1"/>
+      <node ref="U11" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="C43" pin="1"/>
+    </net>
+    <net code="78" name="Net-(C57-Pad1)">
+      <node ref="R42" pin="2"/>
+      <node ref="C57" pin="1"/>
+      <node ref="U13" pin="1"/>
+      <node ref="D11" pin="2"/>
+      <node ref="R49" pin="1"/>
+    </net>
+    <net code="79" name="Net-(D10-Pad2)">
+      <node ref="Q1" pin="1"/>
+      <node ref="D10" pin="2"/>
+      <node ref="R48" pin="1"/>
+    </net>
+    <net code="80" name="Net-(C51-Pad1)">
+      <node ref="U13" pin="3"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="C51" pin="1"/>
+      <node ref="D10" pin="1"/>
+    </net>
+    <net code="81" name="Net-(C1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="R13" pin="1"/>
+      <node ref="Y1" pin="14"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="82" name="VT_1">
+      <node ref="R1" pin="1"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C14" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="Y1" pin="2"/>
+    </net>
+    <net code="83" name="Net-(C3-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="Y2" pin="14"/>
+      <node ref="U3" pin="3"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="84" name="Net-(C10-Pad1)">
+      <node ref="C10" pin="1"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="85" name="Net-(C10-Pad2)">
+      <node ref="Y2" pin="10"/>
+      <node ref="C10" pin="2"/>
+    </net>
+  </nets>
+</export>
