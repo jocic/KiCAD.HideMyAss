@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP BQ21040
+F https://datasheet.lcsc.com/szlcsc/1810101925_Texas-Instruments-BQ21040DBVR_C202311.pdf
+$ENDCMP
+#
 $CMP CVCO55
 F None
 $ENDCMP
