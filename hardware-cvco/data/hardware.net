@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/developer/KiCAD.HideMyAss/hardware-cvco/hardware.sch)
-    (date "Sat Oct  3 07:27:58 2020")
+    (date "Sun Oct  4 06:44:34 2020")
     (tool "Eeschema 5.1.6+dfsg1-1~bpo10+1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1258,11 +1258,11 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 60C7FD23))
     (comp (ref F1)
-      (value "3A Fast")
+      (value "2.5A Fast")
       (footprint Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder)
       (datasheet ~)
       (fields
-        (field (name "LCSC Part #") C163126))
+        (field (name "LCSC Part #") C163125))
       (libsource (lib Device) (part Fuse) (description Fuse))
       (sheetpath (names /) (tstamps /))
       (tstamp 5F7D5CBC))
