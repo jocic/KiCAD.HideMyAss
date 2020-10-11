@@ -4096,4 +4096,6 @@ Text GLabel 12500 9850 3    50   Input ~ 0
 INV5
 Text GLabel 11050 10250 3    50   Input ~ 0
 INV5
+Text GLabel 16300 4100 3    50   Input ~ 0
+INV2
 $EndSCHEMATC
