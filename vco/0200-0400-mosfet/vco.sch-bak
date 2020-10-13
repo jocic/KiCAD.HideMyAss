@@ -1,0 +1,272 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_FET:BS250 Q1
+U 1 1 5F84FB06
+P 5150 2800
+F 0 "Q1" H 5356 2754 50  0000 L CNN
+F 1 "BS250" H 5356 2845 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 5350 2725 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 5150 2800 50  0001 L CNN
+	1    5150 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:BS250 Q2
+U 1 1 5F84FFC7
+P 6150 2800
+F 0 "Q2" H 6356 2754 50  0000 L CNN
+F 1 "BS250" H 6356 2845 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 6350 2725 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/70209/70209.pdf" H 6150 2800 50  0001 L CNN
+	1    6150 2800
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q3
+U 1 1 5F851B0A
+P 5150 4500
+F 0 "Q3" H 5356 4546 50  0000 L CNN
+F 1 "2N7000" H 5356 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 5350 4425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 5150 4500 50  0001 L CNN
+	1    5150 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q4
+U 1 1 5F852289
+P 6150 4500
+F 0 "Q4" H 6356 4546 50  0000 L CNN
+F 1 "2N7000" H 6356 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 6350 4425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6150 4500 50  0001 L CNN
+	1    6150 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2600 5050 2450
+Wire Wire Line
+	5050 2450 5650 2450
+Wire Wire Line
+	5650 2450 5650 2300
+Wire Wire Line
+	5650 2450 6250 2450
+Wire Wire Line
+	6250 2600 6250 2450
+Wire Wire Line
+	6250 3000 6250 3150
+Wire Wire Line
+	5050 3000 5050 3150
+Wire Wire Line
+	5050 3150 5950 2800
+Wire Wire Line
+	6250 3150 5750 2950
+Wire Wire Line
+	5750 2950 5350 2800
+Connection ~ 6250 3150
+$Comp
+L Device:L L1
+U 1 1 5F85CC27
+P 5650 3450
+F 0 "L1" V 5469 3450 50  0000 C CNN
+F 1 "L" V 5560 3450 50  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L6.6mm_D2.7mm_P10.16mm_Horizontal_Vishay_IM-2" H 5650 3450 50  0001 C CNN
+F 3 "~" H 5650 3450 50  0001 C CNN
+	1    5650 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5500 3450 5050 3450
+$Comp
+L Device:D_Capacitance D2
+U 1 1 5F85D8FA
+P 5350 3850
+F 0 "D2" H 5350 3595 50  0000 C CNN
+F 1 "BB121" H 5350 3686 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 5350 3850 50  0001 C CNN
+F 3 "~" H 5350 3850 50  0001 C CNN
+	1    5350 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Capacitance D3
+U 1 1 5F85F380
+P 5950 3850
+F 0 "D3" H 5950 4066 50  0000 C CNN
+F 1 "BB121" H 5950 3975 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 5950 3850 50  0001 C CNN
+F 3 "~" H 5950 3850 50  0001 C CNN
+	1    5950 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3850 6250 3850
+Wire Wire Line
+	5200 3850 5050 3850
+Connection ~ 5050 3450
+Wire Wire Line
+	5050 3450 5050 3850
+Wire Wire Line
+	5800 3450 6250 3450
+Wire Wire Line
+	6250 3450 6250 3850
+Wire Wire Line
+	5050 3150 5050 3450
+Connection ~ 6250 3450
+Wire Wire Line
+	6250 3150 6250 3450
+Connection ~ 5050 3150
+Connection ~ 5650 2450
+Wire Wire Line
+	5650 3850 5650 4000
+Wire Wire Line
+	5650 4000 6400 4000
+$Comp
+L Device:R R2
+U 1 1 5F881F70
+P 6550 4000
+F 0 "R2" V 6343 4000 50  0000 C CNN
+F 1 "1k" V 6434 4000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal" V 6480 4000 50  0001 C CNN
+F 3 "~" H 6550 4000 50  0001 C CNN
+	1    6550 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6700 4000 6850 4000
+Wire Wire Line
+	5500 3850 5650 3850
+Connection ~ 5650 3850
+Wire Wire Line
+	5650 3850 5800 3850
+Wire Wire Line
+	5050 4300 5050 4150
+Wire Wire Line
+	5050 4700 5050 4850
+Wire Wire Line
+	6250 4700 6250 4850
+Wire Wire Line
+	6250 4850 5650 4850
+Wire Wire Line
+	5650 4850 5650 5000
+Connection ~ 5650 4850
+Wire Wire Line
+	5650 4850 5050 4850
+Wire Wire Line
+	5950 4500 5050 4150
+Connection ~ 5050 4150
+Wire Wire Line
+	5050 4150 5050 3850
+Wire Wire Line
+	5350 4500 6250 4150
+Connection ~ 6250 4150
+Wire Wire Line
+	6250 4150 6250 4300
+Wire Wire Line
+	6250 3850 6250 4150
+Connection ~ 6250 3850
+Connection ~ 5050 3850
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5F8BC587
+P 3600 3450
+F 0 "J1" V 3472 3630 50  0000 L CNN
+F 1 "Terminal" V 3563 3630 50  0000 L CNN
+F 2 "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x03_P3.50mm_Horizontal" H 3600 3450 50  0001 C CNN
+F 3 "~" H 3600 3450 50  0001 C CNN
+	1    3600 3450
+	0    1    1    0   
+$EndComp
+Text GLabel 5650 5000 3    50   Input ~ 0
+VSS
+Text GLabel 6850 4000 2    50   Input ~ 0
+TUNE
+Text GLabel 5050 1850 0    50   Input ~ 0
+VDD
+Text GLabel 3600 3250 1    50   Input ~ 0
+TUNE
+Text GLabel 3500 3250 1    50   Input ~ 0
+VDD
+Text GLabel 3700 3250 1    50   Input ~ 0
+VSS
+$Comp
+L Connector:Conn_Coaxial J2
+U 1 1 5F852A80
+P 3550 3950
+F 0 "J2" H 3478 4188 50  0000 C CNN
+F 1 "Antenna" H 3478 4097 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 3550 3950 50  0001 C CNN
+F 3 " ~" H 3550 3950 50  0001 C CNN
+	1    3550 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3850 4900 3850
+$Comp
+L Device:C C1
+U 1 1 5F85C2A3
+P 4750 3850
+F 0 "C1" V 4498 3850 50  0000 C CNN
+F 1 "470pF" V 4589 3850 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4788 3700 50  0001 C CNN
+F 3 "~" H 4750 3850 50  0001 C CNN
+	1    4750 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 3850 4450 3850
+Text GLabel 4450 3850 0    50   Input ~ 0
+OUT
+Text GLabel 3750 3950 2    50   Input ~ 0
+OUT
+Text GLabel 3550 4150 3    50   Input ~ 0
+VSS
+Wire Wire Line
+	5650 1850 5650 2000
+$Comp
+L Device:R R1
+U 1 1 5F866AE4
+P 5650 2150
+F 0 "R1" H 5720 2196 50  0000 L CNN
+F 1 "150" H 5720 2105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_Power_L25.0mm_W9.0mm_P27.94mm" V 5580 2150 50  0001 C CNN
+F 3 "~" H 5650 2150 50  0001 C CNN
+	1    5650 2150
+	1    0    0    -1  
+$EndComp
+Text Notes 3800 2500 0    50   ~ 0
+VDD: 24
+Text Notes 3800 2600 0    50   ~ 0
+Tune: 0-30
+Text Notes 3800 2700 0    50   ~ 0
+Output: 10dB
+$Comp
+L Diode:1N4148 D1
+U 1 1 5F883863
+P 5350 1850
+F 0 "D1" H 5350 1634 50  0000 C CNN
+F 1 "1N4148" H 5350 1725 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5350 1675 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf" H 5350 1850 50  0001 C CNN
+	1    5350 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5200 1850 5050 1850
+Wire Wire Line
+	5650 1850 5500 1850
+$EndSCHEMATC
