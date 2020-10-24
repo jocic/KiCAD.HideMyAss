@@ -1,0 +1,13 @@
+- Fix the BAT|DAT|CLK label - DAT & CLK labels are not in the correct position X
+- Footprint for D11 should be smaller X
+- Battery management is not connected to anything. Replace label DC with VDD, connect D11 (N1) to D8 (N1) X
+- Voltage regulator should be placed after the boost circuit to limit the voltage to 20
+- If voltage dividers remain, remove current limiting resistors from the VCO sections X
+- Reverse voltage protection circuit can be replaced with a diode
+- Use thicker boards - 1.6mm
+- Power switch works only when there's no battery, move it between the battary management section and vdd out   
+
+
+Rev 1.0.2
+- Replace battery management if the existing one isn't working - 
+- Use a single VCO & double the frequency 6 times (rev 1.0.2)
