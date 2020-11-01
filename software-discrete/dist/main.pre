@@ -1016,19 +1016,17 @@ extern __bank0 __bit __timeout;
 # 87
 #pragma config CPD = OFF
 
-# 202
-unsigned int voltage = 0x0;
+# 210
+unsigned int voltage = 0x00;
 
-unsigned char indicator = 0x2;
+unsigned char indicator = 0x0;
 
+unsigned volatile int ticks_t0 = 0x00;
 
+# 220
+unsigned int i = 0x00, j = 0x00;
 
-unsigned volatile int ticks_t0 = 0x0;
-
-# 216
-unsigned int i = 0, j = 0;
-
-# 245
+# 249
 void main()
 {
 
@@ -1037,71 +1035,86 @@ _delay((unsigned long)((1000)*(4000000/4000.0)));
 
 
 
-T0IE = 0x1;
-GIE = 0x1;
+T0IE = 0x01;
+GIE = 0x01;
 
 
 
-T0CS = 0x0;
-TMR0 = 0x0;
-PSA = 0x0;
+T0CS = 0x00;
+TMR0 = 0x00;
+PSA = 0x00;
 
 
 
-PS2 = 0x0;
-PS1 = 0x0;
-PS0 = 0x1;
+PS2 = 0x00;
+PS1 = 0x00;
+PS0 = 0x01;
 
 
 
-ANSEL = 0x0;
+ANSEL = 0x00;
 CMCON = 0x07;
 VRCON = 0x00;
-ADFM = 0x1;
-VCFG = 0x0;
+ADFM = 0x01;
+VCFG = 0x00;
 
-# 280
-TRISIO0 = 0x1;
-GP0 = 0x0;
-ANS2 = 0x1;
-CHS0 = 0x0;
-CHS1 = 0x0;
-ADCS0 = 0x1;
-ADCS1 = 0x1;
-ADCS2 = 0x0;
+# 284
+TRISIO0 = 0x01;
+GP0 = 0x00;
+ANS0 = 0x01;
+CHS0 = 0x00;
+CHS1 = 0x00;
+ADCS0 = 0x01;
+ADCS1 = 0x01;
+ADCS2 = 0x00;
 
-# 293
-TRISIO1 = 0x0;
-GP1 = 0x0;
+# 297
+TRISIO1 = 0x00;
+GP1 = 0x00;
 
-# 300
-TRISIO2 = 0x0;
-GP2 = 0x0;
+# 304
+TRISIO2 = 0x00;
+GP2 = 0x00;
 
-# 307
-TRISIO3 = 0x0;
-GP3 = 0x0;
+# 311
+TRISIO3 = 0x00;
+GP3 = 0x00;
 
-# 314
-TRISIO4 = 0x0;
-GP4 = 0x0;
+# 318
+TRISIO4 = 0x00;
+GP4 = 0x00;
 
 
+
+ADON = 0x1;
 
 while (0x1)
 {
-_delay((unsigned long)((100)*(4000000/4000.0)));
+
+
+GP1 = 0x0;
+GP2 = 0x0;
+GP3 = 0x0;
+
+
 
 GO = 0x1;
 
 while (GO == 0x1)
 {
-_delay((unsigned long)((0x1)*(4000000/4000.0)));
+_delay((unsigned long)((0x100)*(4000000/4000.0)));
 }
 
-voltage = ((ADRESL & 0xFF) + (ADRESH & 0x2));
+voltage = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
 
-if (voltage < 0x25B) {
+
+
+if (voltage == 0) {
+
+indicator = 4;;
+
+}
+else if (voltage < 0x25B) {
 
 GP1 = 0x1;
 GP2 = 0x0;
@@ -1132,13 +1145,17 @@ else {
 
 indicator = 0x0;
 
-_delay((unsigned long)((30000)*(4000000/4000.0)));
+_delay((unsigned long)((450)*(4000000/4000.0)));
 
 }
+
+
+
+_delay((unsigned long)((1000)*(4000000/4000.0)));
 }
 }
 
-# 390
+# 413
 void __interrupt() status_routine()
 {
 
@@ -1147,24 +1164,24 @@ if (T0IF)
 {
 ticks_t0 ++;
 
-TMR0 = 0x5;
-T0IF = 0x0;
+TMR0 = 0x05;
+T0IF = 0x00;
 
 if (ticks_t0 >= 2000)
 {
-for (i = 0x0; i < indicator; i ++) {
+for (i = 0x00; i < indicator; i ++) {
 
-GP4 = 0x1;
+GP4 = 0x01;
 
-_delay((unsigned long)((250)*(4000000/4000.0)));
+_delay((unsigned long)((200)*(4000000/4000.0)));
 
-GP4 = 0x0;
+GP4 = 0x00;
 
-_delay((unsigned long)((250)*(4000000/4000.0)));
+_delay((unsigned long)((200)*(4000000/4000.0)));
 
 }
 
-ticks_t0 = 0x0;
+ticks_t0 = 0x00;
 }
 }
 }

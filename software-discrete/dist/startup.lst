@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                                           Sun Nov  1 07:17:26 2020
+                                                                                                           Sun Nov  1 16:16:30 2020
 
 
      1                           	processor	12F675
@@ -85,7 +85,7 @@ Microchip MPLAB XC8 Assembler V2.20 build 20200408173844
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                               Sun Nov  1 07:17:26 2020
+Symbol Table                                                                                               Sun Nov  1 16:16:30 2020
 
                ___sp 0000                 _main 001C                 start 000B                STATUS 0003  
        ___osccal_val 03FF  start_initialization 0010            ___stackhi 0000            ___stacklo 0000  

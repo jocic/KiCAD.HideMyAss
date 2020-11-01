@@ -113,7 +113,7 @@
  * @type integer
  */
 
-#define STS_DELAY 250
+#define STS_DELAY 200
 
 /*********************\
 |* BATTERY CONSTANTS *|
@@ -176,6 +176,14 @@
 
 #define FLOAT_INDICATOR 3
 
+/**
+ * Number of LED "blinks" that will be used to indicate
+ * that there is a dead batter connected, or that there
+ * is no battery at all.
+ */
+
+#define DEAD_INDICATOR 4;
+
 /*********************\
 |* BATTERY CONSTANTS *|
 \*********************/
@@ -185,7 +193,7 @@
  * intervals. Length of that interval in milliseconds.
  */
 
-#define MONITOR_INTERVAL 100
+#define MONITOR_INTERVAL 1000
 
 /**
  * Number of milliseconds that the battery charging will be
@@ -193,27 +201,23 @@
  * has been reached/passed.
  */
 
-#define CHARGING_TIMEOUT 30000
+#define CHARGING_TIMEOUT 450
 
 /******************\
 |* CORE VARIABLES *|
 \******************/
 
-unsigned int voltage = 0x0;
+unsigned int voltage = 0x00;
 
-unsigned char indicator = 0x2;
+unsigned char indicator = 0x0;
 
-
-
-unsigned volatile int ticks_t0 = 0x0;
+unsigned volatile int ticks_t0 = 0x00;
 
 /*******************\
 |* OTHER VARIABLES *|
 \*******************/
 
-
-
-unsigned int i = 0, j = 0;
+unsigned int i = 0x00, j = 0x00;
 
 /*****************\
 |* GET FUNCTIONS *|
@@ -250,86 +254,101 @@ void main()
     
     // Interrupts
     
-    T0IE = 0x1; // Enable TMR0 Interrupts
-    GIE  = 0x1; // Enable Global Interrupts
+    T0IE = 0x01; // Enable TMR0 Interrupts
+    GIE  = 0x01; // Enable Global Interrupts
     
     // Timer 0
     
-    T0CS = 0x0; // Internal Clock Source For T0
-    TMR0 = 0x0; // Clear T0
-    PSA  = 0x0; // Assign Prescaler To T0
+    T0CS = 0x00; // Internal Clock Source For T0
+    TMR0 = 0x00; // Clear T0
+    PSA  = 0x00; // Assign Prescaler To T0
     
     // Prescaler
     
-    PS2 = 0x0;
-    PS1 = 0x0;
-    PS0 = 0x1;
+    PS2 = 0x00;
+    PS1 = 0x00;
+    PS0 = 0x01;
     
     // General
     
-    ANSEL = 0x0; // Disable Analog Inputs
+    ANSEL = 0x00; // Disable Analog Inputs
     CMCON = 0x07; // Comparator Module Off - CM2:CM0 (Comparator Mode Bits)
     VRCON = 0x00; // Voltage Reference Off
-    ADFM  = 0x1; // Right Justified Results - ADRESL (8-bit) + ADRESH (2-bit)
-    VCFG  = 0x0; // Vdd As Voltage Reference
+    ADFM  = 0x01; // Right Justified Results - ADRESL (8-bit) + ADRESH (2-bit)
+    VCFG  = 0x00; // Vdd As Voltage Reference
     
     /**
      * Battery reference.
      */
     
-    TRISIO0 = 0x1; // Make GPIO An Innput
-    GP0     = 0x0; // Not Needed, Good Practice
-    ANS2    = 0x1; // Analog Input Pin Selection
-    CHS0    = 0x0; // ADC Channel 00 (AN0 Port)
-    CHS1    = 0x0; // ADC Channel 00 (AN0 Port)
-    ADCS0   = 0x1; // ADC Clock Bit 0
-    ADCS1   = 0x1; // ADC Clock Bit 1
-    ADCS2   = 0x0; // ADC Clock Bit 2
+    TRISIO0 = 0x01; // Make GPIO An Input
+    GP0     = 0x00; // Not Needed, Good Practice
+    ANS0    = 0x01; // Analog Input Pin Selection
+    CHS0    = 0x00; // ADC Channel 00 (AN0 Port)
+    CHS1    = 0x00; // ADC Channel 00 (AN0 Port)
+    ADCS0   = 0x01; // ADC Clock Bit 0
+    ADCS1   = 0x01; // ADC Clock Bit 1
+    ADCS2   = 0x00; // ADC Clock Bit 2
     
     /**
      * Switch for CCCV stage.
      */
     
-    TRISIO1 = 0x0; // Make GPIO An Output
-    GP1     = 0x0; // Set GPIO To Low
+    TRISIO1 = 0x00; // Make GPIO An Output
+    GP1     = 0x00; // Set GPIO To Low
     
     /**
      * Switch for Topping stage.
      */
     
-    TRISIO2 = 0x0; // Make GPIO An Output
-    GP2     = 0x0; // Set GPIO To Low
+    TRISIO2 = 0x00; // Make GPIO An Output
+    GP2     = 0x00; // Set GPIO To Low
     
     /**
      * Switch for Float stage.
      */
     
-    TRISIO3 = 0x0; // Make GPIO An Output
-    GP3     = 0x0; // Set GPIO To Low
+    TRISIO3 = 0x00; // Make GPIO An Output
+    GP3     = 0x00; // Set GPIO To Low
     
     /**
      * Indicator status.
      */
     
-    TRISIO4 = 0x0; // Make GPIO An Output
-    GP4     = 0x0; // Set GPIO To Low
+    TRISIO4 = 0x00; // Make GPIO An Output
+    GP4     = 0x00; // Set GPIO To Low
 
     // Logic
     
+    ADON = 0x1; // Enable ADC
+    
     while (0x1)
     {
-        __delay_ms(MONITOR_INTERVAL);
+        // Turn Off Charging
         
-        GO = 0x1; // Start Conversion
+        GP1 = 0x0;
+        GP2 = 0x0;
+        GP3 = 0x0;
+        
+        // Start Conversion & Check Voltage
+        
+        GO = 0x1;
         
         while (GO == 0x1) // Pause Execution During Conversion
         {
-            __delay_ms(0x1);
+            __delay_ms(0x100);
         }
         
-        voltage = ((ADRESL & 0xFF) + (ADRESH & 0x2)); // 0x00 -> 0xFF
+        voltage = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
         
-        if (voltage < CCCV_VOLTAGE) {
+        // Turn On Charging
+        
+        if (voltage == 0) {
+            
+            indicator = DEAD_INDICATOR;
+            
+        }
+        else if (voltage < CCCV_VOLTAGE) {
             
             GP1 = 0x1;
             GP2 = 0x0;
@@ -363,6 +382,10 @@ void main()
             __delay_ms(CHARGING_TIMEOUT);
             
         }
+        
+        // Leave Charging On/Off During An Interval
+        
+        __delay_ms(MONITOR_INTERVAL);
     }
 }
 
@@ -395,24 +418,24 @@ void __interrupt() status_routine()
     {
         ticks_t0 ++;
         
-        TMR0 = 0x5; // Preload Timer For 1 MS Interrupt
-        T0IF = 0x0; // Clear Interrupt Flag
+        TMR0 = 0x05; // Preload Timer For 1 MS Interrupt
+        T0IF = 0x00; // Clear Interrupt Flag
         
         if (ticks_t0 >= STS_TIMEOUT) // Time For Visual Indicator
         {
-            for (i = 0x0; i < indicator; i ++) { // Flash LED X Times
+            for (i = 0x00; i < indicator; i ++) { // Flash LED X Times
                 
-                GP4 = 0x1;
+                GP4 = 0x01;
                 
                 __delay_ms(STS_DELAY);
                 
-                GP4 = 0x0;
+                GP4 = 0x00;
                 
                 __delay_ms(STS_DELAY);
             
             }
             
-            ticks_t0 = 0x0;
+            ticks_t0 = 0x00;
         }
     }
 }

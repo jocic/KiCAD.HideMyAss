@@ -225,18 +225,10 @@ ANSEL equ 09Fh ;#
 	FNCALL	intlevel1,_status_routine
 	global	intlevel1
 	FNROOT	intlevel1
-	global	_indicator
-psect	idataBANK0,class=CODE,space=0,delta=2,noexec
-global __pidataBANK0
-__pidataBANK0:
-	file	"source/main.c"
-	line	204
-
-;initializer for _indicator
-	retlw	02h
 	global	_i
 	global	_ticks_t0
 	global	_voltage
+	global	_indicator
 	global	_ADRESH
 _ADRESH	set	0x1E
 	global	_CMCON
@@ -247,6 +239,8 @@ _TMR0	set	0x1
 _T0IF	set	0x5A
 	global	_GO
 _GO	set	0xF9
+	global	_ADON
+_ADON	set	0xF8
 	global	_GP4
 _GP4	set	0x2C
 	global	_GP3
@@ -289,8 +283,8 @@ _ADCS2	set	0x4FE
 _ADCS1	set	0x4FD
 	global	_ADCS0
 _ADCS0	set	0x4FC
-	global	_ANS2
-_ANS2	set	0x4FA
+	global	_ANS0
+_ANS0	set	0x4F8
 	global	_TRISIO0
 _TRISIO0	set	0x428
 	global	_PS0
@@ -339,24 +333,14 @@ _ticks_t0:
 _voltage:
        ds      2
 
-psect	dataBANK0,class=BANK0,space=1,noexec
-global __pdataBANK0
-__pdataBANK0:
-	file	"source/main.c"
-	line	204
 _indicator:
        ds      1
 
 	file	"dist/main.as"
 	line	#
-; Initialize objects allocated to BANK0
-	global __pidataBANK0
-psect cinit,class=CODE,delta=2,merge=1
-	fcall	__pidataBANK0+0		;fetch initializer
-	movwf	__pdataBANK0+0&07fh		
-	line	#
 ; Clear objects allocated to BANK0
 psect cinit,class=CODE,delta=2,merge=1
+	bcf	status, 5	;RP0=0, select bank0
 	clrf	((__pbssBANK0)+0)&07Fh
 	clrf	((__pbssBANK0)+1)&07Fh
 	clrf	((__pbssBANK0)+2)&07Fh
@@ -365,6 +349,7 @@ psect cinit,class=CODE,delta=2,merge=1
 	clrf	((__pbssBANK0)+5)&07Fh
 	clrf	((__pbssBANK0)+6)&07Fh
 	clrf	((__pbssBANK0)+7)&07Fh
+	clrf	((__pbssBANK0)+8)&07Fh
 psect cinit,class=CODE,delta=2,merge=1
 global end_of_initialization,__end_of__initialization
 
@@ -387,8 +372,8 @@ __pcstackBANK0:
 ;!Data Sizes:
 ;!    Strings     0
 ;!    Constant    0
-;!    Data        1
-;!    BSS         8
+;!    Data        0
+;!    BSS         9
 ;!    Persistent  0
 ;!    Stack       0
 ;!
@@ -453,26 +438,26 @@ __pcstackBANK0:
 ;! Address spaces:
 
 ;!Name               Size   Autos  Total    Cost      Usage
-;!SFR1                 0      0       0       2        0.0%
-;!BITSFR1              0      0       0       2        0.0%
-;!BANK0               3E      8      11       4       27.4%
-;!BITBANK0            3E      0       0       3        0.0%
-;!SFR0                 0      0       0       1        0.0%
-;!BITSFR0              0      0       0       1        0.0%
-;!COMMON               0      0       0       1        0.0%
 ;!BITCOMMON            0      0       0       0        0.0%
-;!CODE                 0      0       0       0        0.0%
-;!DATA                 0      0      11       6        0.0%
-;!ABS                  0      0      11       5        0.0%
-;!NULL                 0      0       0       0        0.0%
-;!STACK                0      0       0       2        0.0%
 ;!EEDATA              80      0       0       0        0.0%
+;!NULL                 0      0       0       0        0.0%
+;!CODE                 0      0       0       0        0.0%
+;!BITSFR0              0      0       0       1        0.0%
+;!SFR0                 0      0       0       1        0.0%
+;!COMMON               0      0       0       1        0.0%
+;!BITSFR1              0      0       0       2        0.0%
+;!SFR1                 0      0       0       2        0.0%
+;!STACK                0      0       0       2        0.0%
+;!BITBANK0            3E      0       0       3        0.0%
+;!BANK0               3E      8      11       4       27.4%
+;!ABS                  0      0      11       5        0.0%
+;!DATA                 0      0      11       6        0.0%
 
 	global	_main
 
 ;; *************** function _main *****************
 ;; Defined at:
-;;		line 245 in file "source/main.c"
+;;		line 249 in file "source/main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -500,12 +485,12 @@ __pcstackBANK0:
 ;;
 psect	maintext,global,class=CODE,delta=2,split=1,group=0
 	file	"source/main.c"
-	line	245
+	line	249
 global __pmaintext
 __pmaintext:	;psect for function _main
 psect	maintext
 	file	"source/main.c"
-	line	245
+	line	249
 	global	__size_of_main
 	__size_of_main	equ	__end_of_main-_main
 	
@@ -513,9 +498,9 @@ _main:
 ;incstack = 0
 	callstack 7
 ; Regs used in _main: [wreg+status,2+status,0+btemp+1]
-	line	249
+	line	253
 	
-l738:	
+l752:	
 	asmopt push
 asmopt off
 movlw  6
@@ -524,320 +509,182 @@ movlw	19
 movwf	((??_main+0)+0+1),f
 	movlw	173
 movwf	((??_main+0)+0),f
-	u157:
+	u177:
 decfsz	((??_main+0)+0),f
-	goto	u157
+	goto	u177
 	decfsz	((??_main+0)+0+1),f
-	goto	u157
+	goto	u177
 	decfsz	((??_main+0)+0+2),f
-	goto	u157
+	goto	u177
 	nop2
 asmopt pop
 
-	line	253
-	
-l740:	
-	bsf	(93/8),(93)&7	;volatile
-	line	254
-	
-l742:	
-	bsf	(95/8),(95)&7	;volatile
-	line	258
-	
-l744:	
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	(1037/8)^080h,(1037)&7	;volatile
-	line	259
-	
-l746:	
-	bcf	status, 5	;RP0=0, select bank0
-	clrf	(1)	;volatile
-	line	260
-	
-l748:	
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	(1035/8)^080h,(1035)&7	;volatile
-	line	264
-	
-l750:	
-	bcf	(1034/8)^080h,(1034)&7	;volatile
-	line	265
-	
-l752:	
-	bcf	(1033/8)^080h,(1033)&7	;volatile
-	line	266
+	line	257
 	
 l754:	
-	bsf	(1032/8)^080h,(1032)&7	;volatile
-	line	270
+	bsf	(93/8),(93)&7	;volatile
+	line	258
 	
 l756:	
-	clrf	(159)^080h	;volatile
-	line	271
-	movlw	low(07h)
-	bcf	status, 5	;RP0=0, select bank0
-	movwf	(25)	;volatile
-	line	272
+	bsf	(95/8),(95)&7	;volatile
+	line	262
 	
 l758:	
 	bsf	status, 5	;RP0=1, select bank1
-	clrf	(153)^080h	;volatile
-	line	273
+	bcf	(1037/8)^080h,(1037)&7	;volatile
+	line	263
 	
 l760:	
 	bcf	status, 5	;RP0=0, select bank0
-	bsf	(255/8),(255)&7	;volatile
-	line	274
+	clrf	(1)	;volatile
+	line	264
 	
 l762:	
-	bcf	(254/8),(254)&7	;volatile
-	line	280
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	(1035/8)^080h,(1035)&7	;volatile
+	line	268
 	
 l764:	
-	bsf	status, 5	;RP0=1, select bank1
-	bsf	(1064/8)^080h,(1064)&7	;volatile
-	line	281
+	bcf	(1034/8)^080h,(1034)&7	;volatile
+	line	269
 	
 l766:	
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	(40/8),(40)&7	;volatile
-	line	282
+	bcf	(1033/8)^080h,(1033)&7	;volatile
+	line	270
 	
 l768:	
-	bsf	status, 5	;RP0=1, select bank1
-	bsf	(1274/8)^080h,(1274)&7	;volatile
-	line	283
+	bsf	(1032/8)^080h,(1032)&7	;volatile
+	line	274
 	
 l770:	
+	clrf	(159)^080h	;volatile
+	line	275
+	movlw	low(07h)
 	bcf	status, 5	;RP0=0, select bank0
-	bcf	(250/8),(250)&7	;volatile
-	line	284
+	movwf	(25)	;volatile
+	line	276
 	
 l772:	
-	bcf	(251/8),(251)&7	;volatile
-	line	285
+	bsf	status, 5	;RP0=1, select bank1
+	clrf	(153)^080h	;volatile
+	line	277
 	
 l774:	
-	bsf	status, 5	;RP0=1, select bank1
-	bsf	(1276/8)^080h,(1276)&7	;volatile
-	line	286
+	bcf	status, 5	;RP0=0, select bank0
+	bsf	(255/8),(255)&7	;volatile
+	line	278
 	
 l776:	
-	bsf	(1277/8)^080h,(1277)&7	;volatile
-	line	287
+	bcf	(254/8),(254)&7	;volatile
+	line	284
 	
 l778:	
-	bcf	(1278/8)^080h,(1278)&7	;volatile
-	line	293
+	bsf	status, 5	;RP0=1, select bank1
+	bsf	(1064/8)^080h,(1064)&7	;volatile
+	line	285
 	
 l780:	
-	bcf	(1065/8)^080h,(1065)&7	;volatile
-	line	294
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	(40/8),(40)&7	;volatile
+	line	286
 	
 l782:	
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	(41/8),(41)&7	;volatile
-	line	300
+	bsf	status, 5	;RP0=1, select bank1
+	bsf	(1272/8)^080h,(1272)&7	;volatile
+	line	287
 	
 l784:	
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	(1066/8)^080h,(1066)&7	;volatile
-	line	301
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	(250/8),(250)&7	;volatile
+	line	288
 	
 l786:	
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	(42/8),(42)&7	;volatile
-	line	307
+	bcf	(251/8),(251)&7	;volatile
+	line	289
 	
 l788:	
 	bsf	status, 5	;RP0=1, select bank1
-	bcf	(1067/8)^080h,(1067)&7	;volatile
-	line	308
+	bsf	(1276/8)^080h,(1276)&7	;volatile
+	line	290
 	
 l790:	
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	(43/8),(43)&7	;volatile
-	line	314
+	bsf	(1277/8)^080h,(1277)&7	;volatile
+	line	291
 	
 l792:	
-	bsf	status, 5	;RP0=1, select bank1
-	bcf	(1068/8)^080h,(1068)&7	;volatile
-	line	315
+	bcf	(1278/8)^080h,(1278)&7	;volatile
+	line	297
 	
 l794:	
-	bcf	status, 5	;RP0=0, select bank0
-	bcf	(44/8),(44)&7	;volatile
-	line	321
+	bcf	(1065/8)^080h,(1065)&7	;volatile
+	line	298
 	
 l796:	
-	asmopt push
-asmopt off
-movlw	130
 	bcf	status, 5	;RP0=0, select bank0
-movwf	((??_main+0)+0+1),f
-	movlw	221
-movwf	((??_main+0)+0),f
-	u167:
-decfsz	((??_main+0)+0),f
-	goto	u167
-	decfsz	((??_main+0)+0+1),f
-	goto	u167
-	nop2
-asmopt pop
-
-	line	323
+	bcf	(41/8),(41)&7	;volatile
+	line	304
 	
 l798:	
-	bcf	status, 5	;RP0=0, select bank0
-	bsf	(249/8),(249)&7	;volatile
-	line	325
-	goto	l802
-	line	327
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	(1066/8)^080h,(1066)&7	;volatile
+	line	305
 	
 l800:	
-	asmopt push
-asmopt off
-	movlw	199
-movwf	((??_main+0)+0),f
-	u177:
-	nop2
-decfsz	(??_main+0)+0,f
-	goto	u177
-	nop2
-	nop2
-asmopt pop
-
-	line	325
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	(42/8),(42)&7	;volatile
+	line	311
 	
 l802:	
-	bcf	status, 5	;RP0=0, select bank0
-	btfsc	(249/8),(249)&7	;volatile
-	goto	u81
-	goto	u80
-u81:
-	goto	l800
-u80:
-	line	330
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	(1067/8)^080h,(1067)&7	;volatile
+	line	312
 	
 l804:	
-	movlw	low(02h)
-	andwf	(30),w	;volatile
-	movwf	(??_main+0)+0
-	bsf	status, 5	;RP0=1, select bank1
-	movf	(158)^080h,w	;volatile
 	bcf	status, 5	;RP0=0, select bank0
-	addwf	0+(??_main+0)+0,w
-	movwf	(??_main+1)+0
-	clrf	(??_main+1)+0+1
-	rlf	1+(??_main+1)+0,f
-	
-	movf	0+(??_main+1)+0,w
-	movwf	(_voltage)
-	movf	1+(??_main+1)+0,w
-	movwf	(_voltage+1)
-	line	332
+	bcf	(43/8),(43)&7	;volatile
+	line	318
 	
 l806:	
-	movlw	02h
-	subwf	(_voltage+1),w
-	movlw	05Bh
-	skipnz
-	subwf	(_voltage),w
-	skipnc
-	goto	u91
-	goto	u90
-u91:
-	goto	l810
-u90:
-	line	334
+	bsf	status, 5	;RP0=1, select bank1
+	bcf	(1068/8)^080h,(1068)&7	;volatile
+	line	319
 	
 l808:	
-	bsf	(41/8),(41)&7	;volatile
-	line	335
-	bcf	(42/8),(42)&7	;volatile
-	line	336
-	bcf	(43/8),(43)&7	;volatile
-	line	338
-	clrf	(_indicator)
-	incf	(_indicator),f
-	line	340
-	goto	l796
-	line	341
+	bcf	status, 5	;RP0=0, select bank0
+	bcf	(44/8),(44)&7	;volatile
+	line	323
 	
 l810:	
-	movlw	02h
-	subwf	(_voltage+1),w
-	movlw	0E1h
-	skipnz
-	subwf	(_voltage),w
-	skipnc
-	goto	u101
-	goto	u100
-u101:
-	goto	l816
-u100:
-	line	343
+	bsf	(248/8),(248)&7	;volatile
+	line	329
 	
 l812:	
+	bcf	status, 5	;RP0=0, select bank0
 	bcf	(41/8),(41)&7	;volatile
-	line	344
-	bsf	(42/8),(42)&7	;volatile
-	line	345
-	bcf	(43/8),(43)&7	;volatile
-	line	347
+	line	330
 	
 l814:	
-	movlw	low(02h)
-	movwf	btemp+1
-	movf	btemp+1,w
-	movwf	(_indicator)
-	line	349
-	goto	l796
-	line	350
+	bcf	(42/8),(42)&7	;volatile
+	line	331
 	
 l816:	
-	movlw	02h
-	subwf	(_voltage+1),w
-	movlw	0FFh
-	skipnz
-	subwf	(_voltage),w
-	skipnc
-	goto	u111
-	goto	u110
-u111:
-	goto	l822
-u110:
-	line	352
+	bcf	(43/8),(43)&7	;volatile
+	line	335
 	
 l818:	
-	bcf	(41/8),(41)&7	;volatile
-	line	353
-	bcf	(42/8),(42)&7	;volatile
-	line	354
-	bsf	(43/8),(43)&7	;volatile
-	line	356
+	bsf	(249/8),(249)&7	;volatile
+	line	337
+	goto	l822
+	line	339
 	
 l820:	
-	movlw	low(03h)
-	movwf	btemp+1
-	movf	btemp+1,w
-	movwf	(_indicator)
-	line	358
-	goto	l796
-	line	361
-	
-l822:	
-	clrf	(_indicator)
-	line	363
-	
-l824:	
 	asmopt push
 asmopt off
-movlw  153
+movlw  2
 movwf	((??_main+0)+0+2),f
-movlw	49
+movlw	77
 movwf	((??_main+0)+0+1),f
-	movlw	162
+	movlw	116
 movwf	((??_main+0)+0),f
 	u187:
 decfsz	((??_main+0)+0),f
@@ -849,11 +696,187 @@ decfsz	((??_main+0)+0),f
 	nop
 asmopt pop
 
-	goto	l796
+	line	337
+	
+l822:	
+	bcf	status, 5	;RP0=0, select bank0
+	btfsc	(249/8),(249)&7	;volatile
+	goto	u91
+	goto	u90
+u91:
+	goto	l820
+u90:
+	line	342
+	
+l824:	
+	movlw	low(03h)
+	andwf	(30),w	;volatile
+	movwf	(??_main+0)+0
+	movf	0+(??_main+0)+0,w
+	movwf	(_voltage+1)
+	bsf	status, 5	;RP0=1, select bank1
+	movf	(158)^080h,w	;volatile
+	bcf	status, 5	;RP0=0, select bank0
+	movwf	(_voltage)
+	line	346
+	movf	((_voltage)),w
+iorwf	((_voltage+1)),w
+	btfss	status,2
+	goto	u101
+	goto	u100
+u101:
+	goto	l828
+u100:
+	line	348
+	
+l826:	
+	movlw	low(04h)
+	movwf	btemp+1
+	movf	btemp+1,w
+	movwf	(_indicator)
+	line	350
+	goto	l848
+	line	351
+	
+l828:	
+	movlw	02h
+	subwf	(_voltage+1),w
+	movlw	05Bh
+	skipnz
+	subwf	(_voltage),w
+	skipnc
+	goto	u111
+	goto	u110
+u111:
+	goto	l832
+u110:
+	line	353
+	
+l830:	
+	bsf	(41/8),(41)&7	;volatile
+	line	354
+	bcf	(42/8),(42)&7	;volatile
+	line	355
+	bcf	(43/8),(43)&7	;volatile
+	line	357
+	clrf	(_indicator)
+	incf	(_indicator),f
+	line	359
+	goto	l848
+	line	360
+	
+l832:	
+	movlw	02h
+	subwf	(_voltage+1),w
+	movlw	0E1h
+	skipnz
+	subwf	(_voltage),w
+	skipnc
+	goto	u121
+	goto	u120
+u121:
+	goto	l838
+u120:
+	line	362
+	
+l834:	
+	bcf	(41/8),(41)&7	;volatile
+	line	363
+	bsf	(42/8),(42)&7	;volatile
+	line	364
+	bcf	(43/8),(43)&7	;volatile
+	line	366
+	
+l836:	
+	movlw	low(02h)
+	movwf	btemp+1
+	movf	btemp+1,w
+	movwf	(_indicator)
+	line	368
+	goto	l848
+	line	369
+	
+l838:	
+	movlw	02h
+	subwf	(_voltage+1),w
+	movlw	0FFh
+	skipnz
+	subwf	(_voltage),w
+	skipnc
+	goto	u131
+	goto	u130
+u131:
+	goto	l844
+u130:
+	line	371
+	
+l840:	
+	bcf	(41/8),(41)&7	;volatile
+	line	372
+	bcf	(42/8),(42)&7	;volatile
+	line	373
+	bsf	(43/8),(43)&7	;volatile
+	line	375
+	
+l842:	
+	movlw	low(03h)
+	movwf	btemp+1
+	movf	btemp+1,w
+	movwf	(_indicator)
+	line	377
+	goto	l848
+	line	380
+	
+l844:	
+	clrf	(_indicator)
+	line	382
+	
+l846:	
+	asmopt push
+asmopt off
+movlw  3
+movwf	((??_main+0)+0+2),f
+movlw	73
+movwf	((??_main+0)+0+1),f
+	movlw	102
+movwf	((??_main+0)+0),f
+	u197:
+decfsz	((??_main+0)+0),f
+	goto	u197
+	decfsz	((??_main+0)+0+1),f
+	goto	u197
+	decfsz	((??_main+0)+0+2),f
+	goto	u197
+	nop
+asmopt pop
+
+	line	388
+	
+l848:	
+	asmopt push
+asmopt off
+movlw  6
+	bcf	status, 5	;RP0=0, select bank0
+movwf	((??_main+0)+0+2),f
+movlw	19
+movwf	((??_main+0)+0+1),f
+	movlw	173
+movwf	((??_main+0)+0),f
+	u207:
+decfsz	((??_main+0)+0),f
+	goto	u207
+	decfsz	((??_main+0)+0+1),f
+	goto	u207
+	decfsz	((??_main+0)+0+2),f
+	goto	u207
+	nop2
+asmopt pop
+
+	goto	l812
 	global	start
 	ljmp	start
 	callstack 0
-	line	367
+	line	390
 GLOBAL	__end_of_main
 	__end_of_main:
 	signat	_main,89
@@ -861,7 +884,7 @@ GLOBAL	__end_of_main
 
 ;; *************** function _status_routine *****************
 ;; Defined at:
-;;		line 390 in file "source/main.c"
+;;		line 413 in file "source/main.c"
 ;; Parameters:    Size  Location     Type
 ;;		None
 ;; Auto vars:     Size  Location     Type
@@ -888,12 +911,12 @@ GLOBAL	__end_of_main
 ;; This function uses a non-reentrant model
 ;;
 psect	text1,local,class=CODE,delta=2,merge=1,group=0
-	line	390
+	line	413
 global __ptext1
 __ptext1:	;psect for function _status_routine
 psect	text1
 	file	"source/main.c"
-	line	390
+	line	413
 	global	__size_of_status_routine
 	__size_of_status_routine	equ	__end_of_status_routine-_status_routine
 	
@@ -916,99 +939,99 @@ interrupt_function:
 	movwf	(??_status_routine+4)
 	ljmp	_status_routine
 psect	text1
-	line	394
+	line	417
 	
-i1l826:	
+i1l850:	
 	btfss	(90/8),(90)&7	;volatile
-	goto	u12_21
-	goto	u12_20
-u12_21:
-	goto	i1l105
-u12_20:
-	line	396
+	goto	u14_21
+	goto	u14_20
+u14_21:
+	goto	i1l109
+u14_20:
+	line	419
 	
-i1l828:	
+i1l852:	
 	movlw	01h
 	addwf	(_ticks_t0),f	;volatile
 	skipnc
 	incf	(_ticks_t0+1),f	;volatile
 	movlw	0
 	addwf	(_ticks_t0+1),f	;volatile
-	line	398
+	line	421
 	movlw	low(05h)
 	movwf	(1)	;volatile
-	line	399
+	line	422
 	
-i1l830:	
+i1l854:	
 	bcf	(90/8),(90)&7	;volatile
-	line	401
+	line	424
 	movlw	07h
 	subwf	(_ticks_t0+1),w	;volatile
 	movlw	0D0h
 	skipnz
 	subwf	(_ticks_t0),w	;volatile
 	skipc
-	goto	u13_21
-	goto	u13_20
-u13_21:
-	goto	i1l105
-u13_20:
-	line	403
+	goto	u15_21
+	goto	u15_20
+u15_21:
+	goto	i1l109
+u15_20:
+	line	426
 	
-i1l832:	
+i1l856:	
 	clrf	(_i)
 	clrf	(_i+1)
-	goto	i1l102
+	goto	i1l106
 	
-i1l103:	
-	line	405
+i1l107:	
+	line	428
 	bsf	(44/8),(44)&7	;volatile
-	line	407
+	line	430
 	
-i1l834:	
+i1l858:	
 	asmopt push
 asmopt off
 movlw  2
 movwf	((??_status_routine+0)+0+2),f
-movlw	69
+movlw	4
 movwf	((??_status_routine+0)+0+1),f
-	movlw	169
+	movlw	186
 movwf	((??_status_routine+0)+0),f
-	u19_27:
+	u21_27:
 decfsz	((??_status_routine+0)+0),f
-	goto	u19_27
+	goto	u21_27
 	decfsz	((??_status_routine+0)+0+1),f
-	goto	u19_27
+	goto	u21_27
 	decfsz	((??_status_routine+0)+0+2),f
-	goto	u19_27
-	nop2
+	goto	u21_27
+	nop
 asmopt pop
 
-	line	409
+	line	432
 	
-i1l836:	
+i1l860:	
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(44/8),(44)&7	;volatile
-	line	411
+	line	434
 	asmopt push
 asmopt off
 movlw  2
 movwf	((??_status_routine+0)+0+2),f
-movlw	69
+movlw	4
 movwf	((??_status_routine+0)+0+1),f
-	movlw	169
+	movlw	186
 movwf	((??_status_routine+0)+0),f
-	u20_27:
+	u22_27:
 decfsz	((??_status_routine+0)+0),f
-	goto	u20_27
+	goto	u22_27
 	decfsz	((??_status_routine+0)+0+1),f
-	goto	u20_27
+	goto	u22_27
 	decfsz	((??_status_routine+0)+0+2),f
-	goto	u20_27
-	nop2
+	goto	u22_27
+	nop
 asmopt pop
 
-	line	403
+	line	426
 	movlw	01h
 	bcf	status, 5	;RP0=0, select bank0
 	addwf	(_i),f
@@ -1017,31 +1040,31 @@ asmopt pop
 	movlw	0
 	addwf	(_i+1),f
 	
-i1l102:	
+i1l106:	
 	movf	(_indicator),w
 	movwf	(??_status_routine+0)+0
 	clrf	(??_status_routine+0)+0+1
 	movf	1+(??_status_routine+0)+0,w
 	subwf	(_i+1),w
 	skipz
-	goto	u14_25
+	goto	u16_25
 	movf	0+(??_status_routine+0)+0,w
 	subwf	(_i),w
-u14_25:
+u16_25:
 	skipc
-	goto	u14_21
-	goto	u14_20
-u14_21:
-	goto	i1l103
-u14_20:
-	line	415
+	goto	u16_21
+	goto	u16_20
+u16_21:
+	goto	i1l107
+u16_20:
+	line	438
 	
-i1l838:	
+i1l862:	
 	clrf	(_ticks_t0)	;volatile
 	clrf	(_ticks_t0+1)	;volatile
-	line	418
+	line	441
 	
-i1l105:	
+i1l109:	
 	movf	(??_status_routine+4),w
 	movwf	pclath
 	swapf	(??_status_routine+3)^00h,w
