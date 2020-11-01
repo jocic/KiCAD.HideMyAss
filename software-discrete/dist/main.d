@@ -1,0 +1,1 @@
+ dist/main.d  dist/main.p1:  source/main.c

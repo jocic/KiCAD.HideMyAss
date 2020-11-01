@@ -1,0 +1,101 @@
+[p GLOBOPT AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F675 ]
+[d frameptr 0 ]
+"62 /opt/microchip/xc8/v2.20/pic/sources/c90/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v2.20/pic/sources/c90/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v2.20/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"245 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+[v _main main `(v  1 e 1 0 ]
+"390
+[v _status_routine status_routine `II(v  1 e 1 0 ]
+"72 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"564
+[v _CMCON CMCON `VEuc  1 e 1 @25 ]
+"623
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1208
+[v _VRCON VRCON `VEuc  1 e 1 @153 ]
+"1384
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"1404
+[v _ANSEL ANSEL `VEuc  1 e 1 @159 ]
+"1480
+[v _ADCS0 ADCS0 `VEb  1 e 0 @1276 ]
+"1483
+[v _ADCS1 ADCS1 `VEb  1 e 0 @1277 ]
+"1486
+[v _ADCS2 ADCS2 `VEb  1 e 0 @1278 ]
+"1489
+[v _ADFM ADFM `VEb  1 e 0 @255 ]
+"1507
+[v _ANS2 ANS2 `VEb  1 e 0 @1274 ]
+"1534
+[v _CHS0 CHS0 `VEb  1 e 0 @250 ]
+"1537
+[v _CHS1 CHS1 `VEb  1 e 0 @251 ]
+"1573
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"1576
+[v _GO GO `VEb  1 e 0 @249 ]
+"1585
+[v _GP0 GP0 `VEb  1 e 0 @40 ]
+"1588
+[v _GP1 GP1 `VEb  1 e 0 @41 ]
+"1591
+[v _GP2 GP2 `VEb  1 e 0 @42 ]
+"1594
+[v _GP3 GP3 `VEb  1 e 0 @43 ]
+"1597
+[v _GP4 GP4 `VEb  1 e 0 @44 ]
+"1678
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"1681
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"1684
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"1687
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"1699
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"1702
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"1705
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"1747
+[v _TRISIO0 TRISIO0 `VEb  1 e 0 @1064 ]
+"1750
+[v _TRISIO1 TRISIO1 `VEb  1 e 0 @1065 ]
+"1753
+[v _TRISIO2 TRISIO2 `VEb  1 e 0 @1066 ]
+"1756
+[v _TRISIO3 TRISIO3 `VEb  1 e 0 @1067 ]
+"1759
+[v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
+"1765
+[v _VCFG VCFG `VEb  1 e 0 @254 ]
+"202 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+[v _voltage voltage `ui  1 e 2 0 ]
+"204
+[v _indicator indicator `uc  1 e 1 0 ]
+"208
+[v _ticks_t0 ticks_t0 `VEui  1 e 2 0 ]
+"216
+[v _i i `ui  1 e 2 0 ]
+"245
+[v _main main `(v  1 e 1 0 ]
+{
+"367
+} 0
+"390
+[v _status_routine status_routine `II(v  1 e 1 0 ]
+{
+"418
+} 0

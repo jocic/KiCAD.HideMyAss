@@ -1,0 +1,212 @@
+<!-- Version 2.20 -->
+<!-- Generated 09/04/2020 GMT -->
+
+<!--
+ Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+ All rights reserved.
+ 
+ This software is developed by Microchip Technology Inc. and its subsidiaries ("Microchip").
+ 
+ Redistribution and use in source and binary forms, with or without modification, are
+ permitted provided that the following conditions are met:
+ 
+     1. Redistributions of source code must retain the above copyright notice, this list of
+        conditions and the following disclaimer.
+ 
+     2. Redistributions in binary form must reproduce the above copyright notice, this list
+        of conditions and the following disclaimer in the documentation and/or other
+        materials provided with the distribution.
+ 
+     3. Microchip's name may not be used to endorse or promote products derived from this
+        software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Microchip MPLAB XC8 C Compiler: 12F675 Support Information</TITLE>
+</HEAD>
+<BODY>
+<h2>12F675 Support Information</h2>
+<h3>#pragma config Usage</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;named value&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection bits : RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN<br/>// Watchdog Timer Enable bit : WDT enabled<br/>// Power-Up Timer Enable bit : PWRT disabled<br/>// GP3/MCLR pin function select : GP3/MCLR pin function is MCLR<br/>// Brown-out Detect Enable bit : BOD enabled<br/>// Code Protection bit : Program Memory code protection is disabled<br/>// Data Code Protection bit : Data memory code protection is disabled<br/>#pragma config FOSC = EXTRCCLK, WDTE = ON, PWRTE = OFF, MCLRE = ON, BOREN = ON, CP = OFF, CPD = OFF</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;setting&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection bits : RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN<br/>// Watchdog Timer Enable bit : WDT enabled<br/>// Power-Up Timer Enable bit : PWRT disabled<br/>// GP3/MCLR pin function select : GP3/MCLR pin function is MCLR<br/>// Brown-out Detect Enable bit : BOD enabled<br/>// Code Protection bit : Program Memory code protection is disabled<br/>// Data Code Protection bit : Data memory code protection is disabled<br/>#pragma config FOSC = 0x7, WDTE = 0x1, PWRTE = 0x1, MCLRE = 0x1, BOREN = 0x1, CP = 0x1, CPD = 0x1</code></td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="10">
+<tbody>
+<th colspan="1">
+<div align="left"><tt>#pragma config &lt;register&gt;=&lt;literal constant&gt;</tt></div>
+</th>
+<tr bgcolor="white">
+<td>For example:<br/><code>// Oscillator Selection bits : RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN<br/>// Watchdog Timer Enable bit : WDT enabled<br/>// Power-Up Timer Enable bit : PWRT disabled<br/>// GP3/MCLR pin function select : GP3/MCLR pin function is MCLR<br/>// Brown-out Detect Enable bit : BOD enabled<br/>// Code Protection bit : Program Memory code protection is disabled<br/>// Data Code Protection bit : Data memory code protection is disabled<br/>#pragma config CONFIG = 0x31FF</code></td>
+</tr>
+<tr bgcolor="white">
+<td>For example:<br/><code>// IDLOC @ 0x2000<br/>#pragma config IDLOC0 = 0x127</code></td>
+</tr>
+</tbody></table>
+<br/>
+<h3>#pragma config Settings</h3>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: CONFIG @ 0x2007</div>
+</th>
+<tr bgcolor="white">
+<td width="20%"><b><tt>FOSC</tt></b></td>
+<td><b>Oscillator Selection bits</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>EXTRCCLK</tt></td>
+<td>RC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>EXTRCIO</tt></td>
+<td>RC oscillator: I/O function on GP4/OSC2/CLKOUT pin, RC on GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>INTRCCLK</tt></td>
+<td>INTOSC oscillator: CLKOUT function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>INTRCIO</tt></td>
+<td>INTOSC oscillator: I/O function on GP4/OSC2/CLKOUT pin, I/O function on GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>EC</tt></td>
+<td>EC: I/O function on GP4/OSC2/CLKOUT pin, CLKIN on GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>HS</tt></td>
+<td>HS oscillator: High speed crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>XT</tt></td>
+<td>XT oscillator: Crystal/resonator on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>LP</tt></td>
+<td>LP oscillator: Low power crystal on GP4/OSC2/CLKOUT and GP5/OSC1/CLKIN</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>WDTE</tt></b></td>
+<td><b>Watchdog Timer Enable bit</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>WDT enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>WDT disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>PWRTE</tt></b></td>
+<td><b>Power-Up Timer Enable bit</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>PWRT disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>PWRT enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>MCLRE</tt></b></td>
+<td><b>GP3/MCLR pin function select</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>GP3/MCLR pin function is MCLR</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>GP3/MCLR pin function is digital I/O, MCLR internally tied to VDD</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>BOREN</tt></b></td>
+<td><b>Brown-out Detect Enable bit</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>BOD enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>BOD disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CP</tt></b></td>
+<td><b>Code Protection bit</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Program Memory code protection is disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Program Memory code protection is enabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><b><tt>CPD</tt></b></td>
+<td><b>Data Code Protection bit</b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>OFF</tt></td>
+<td>Data memory code protection is disabled</td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><tt>ON</tt></td>
+<td>Data memory code protection is enabled</td>
+</tr>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC0 @ 0x2000</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC1 @ 0x2001</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC2 @ 0x2002</div>
+</th>
+</tbody></table>
+<table bgcolor="lightgray" width="100%" cellpadding="2">
+<tbody>
+<th colspan="2">
+<div align="left">Register: IDLOC3 @ 0x2003</div>
+</th>
+</tbody></table>
+<br/>
+</BODY>
+</HTML>
