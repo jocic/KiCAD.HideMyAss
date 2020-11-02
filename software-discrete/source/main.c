@@ -120,16 +120,26 @@
 \*********************/
 
 /**
- * Voltage threshold up to which the CCCV (S1) charging
- * current will be used.
+ * Voltage threshold up to which the battery will be considered
+ * dead, or disconnected.
  * 
- * Original Value: 5.25
- * Converted Value: 0x25B
+ * Threshold: 5.25
  * 
  * @type integer
  */
 
-#define CCCV_VOLTAGE 0x25B
+#define DEAD_VOLTAGE 80
+
+/**
+ * Voltage threshold up to which the CCCV (S1) charging
+ * current will be used.
+ * 
+ * Threshold: 5.25
+ * 
+ * @type integer
+ */
+
+#define CCCV_VOLTAGE 820
 
 /**
  * Number of LED "blinks" that will be used to indicate
@@ -142,13 +152,12 @@
  * Voltage threshold up to which the TOPPING (S2) charging
  * current will be used.
  * 
- * Original Value: 6.50
- * Converted Value: 0x2E1
+ * Threshold: 6.50
  * 
  * @type integer
  */
 
-#define TOPPING_VOLTAGE 0x2E1
+#define TOPPING_VOLTAGE 990
 
 /**
  * Number of LED "blinks" that will be used to indicate
@@ -161,13 +170,12 @@
  * Voltage threshold up to which the FLOAT (S3) charging
  * current will be used.
  * 
- * Original Value: 6.75
- * Converted Value: 0x2FF
+ * Threshold: 6.75
  * 
  * @type integer
  */
 
-#define FLOAT_VOLTAGE 0x2FF
+#define FLOAT_VOLTAGE 1020
 
 /**
  * Number of LED "blinks" that will be used to indicate
@@ -193,7 +201,7 @@
  * intervals. Length of that interval in milliseconds.
  */
 
-#define MONITOR_INTERVAL 1000
+#define MONITOR_INTERVAL 15000
 
 /**
  * Number of milliseconds that the battery charging will be
@@ -201,21 +209,51 @@
  * has been reached/passed.
  */
 
-#define CHARGING_TIMEOUT 450
+#define CHARGING_TIMEOUT 45000
+
+/*********************\
+|* CONTROL CONSTANTS *|
+\*********************/
+
+#define DEBUG 0x00
 
 /******************\
 |* CORE VARIABLES *|
 \******************/
 
-unsigned int voltage = 0x00;
+/**
+ * Last ADC value ranging from 0 to 1024.
+ * 
+ * @type unsigned int
+ */
 
-unsigned char indicator = 0x0;
+ int conversion = 0x00;
+
+/**
+ * Current number of "blinks" of an indicator.
+ * 
+ * @type unsigned char
+ */
+
+unsigned char indicator = 0x00;
+
+/**
+ * Number of <i>timer 0</i> ticks, each representing a millisecond.
+ * 
+ * @type unsigned volatile int
+ */
 
 unsigned volatile int ticks_t0 = 0x00;
 
 /*******************\
 |* OTHER VARIABLES *|
 \*******************/
+
+/**
+ * Temporary variables for program's loops.
+ * 
+ * @type unsigned int
+ */
 
 unsigned int i = 0x00, j = 0x00;
 
@@ -250,7 +288,7 @@ void main()
 {
     // Mandatory Delay To Avoid OSCCAL Value Corruption
     
-    __delay_ms(1000);
+    __delay_ms(0x3E8);
     
     // Interrupts
     
@@ -320,73 +358,131 @@ void main()
 
     // Logic
     
-    ADON = 0x1; // Enable ADC
+    ADON = 0x01; // Enable ADC
     
-    while (0x1)
-    {
-        // Turn Off Charging
+    if (DEBUG) { // DEBUG MODE
         
-        GP1 = 0x0;
-        GP2 = 0x0;
-        GP3 = 0x0;
-        
-        // Start Conversion & Check Voltage
-        
-        GO = 0x1;
-        
-        while (GO == 0x1) // Pause Execution During Conversion
-        {
-            __delay_ms(0x100);
-        }
-        
-        voltage = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
-        
-        // Turn On Charging
-        
-        if (voltage == 0) {
+        while (0x1) {
             
-            indicator = DEAD_INDICATOR;
+            j++;
             
-        }
-        else if (voltage < CCCV_VOLTAGE) {
+            if (j == 1) {
+                
+                GP1 = 0x00;
+                GP2 = 0x00;
+                GP3 = 0x00;
+                
+                indicator = 1; // Blink 1x Time When All GPIO Pins Are Down
+                
+            }
+            else if (j == 2) {
+                
+                GP1 = 0x01;
+                GP2 = 0x00;
+                GP3 = 0x00;
+                
+                indicator = 2; // Blink 2x Times When GPIO1 Pin Is Up
+                
+            }
+            else if (j == 3) {
+                
+                GP1 = 0x00;
+                GP2 = 0x01;
+                GP3 = 0x00;
+                
+                indicator = 3; // Blink 3x Times When GPIO2 Pin Is Up
+                
+            }
+            else if (j == 4) {
+                
+                GP1 = 0x00;
+                GP2 = 0x00;
+                GP3 = 0x01;
+                
+                indicator = 4; // Blink 4x Times When GPIO3 Pin Is Up
+                
+                j = 0x0;
+                
+            }
             
-            GP1 = 0x1;
-            GP2 = 0x0;
-            GP3 = 0x0;
-            
-            indicator = CCCV_INDICATOR;
-            
-        }
-        else if (voltage < TOPPING_VOLTAGE) {
-            
-            GP1 = 0x0;
-            GP2 = 0x1;
-            GP3 = 0x0;
-            
-            indicator = TOPPING_INDICATOR;
-            
-        }
-        else if (voltage < FLOAT_VOLTAGE) {
-            
-            GP1 = 0x0;
-            GP2 = 0x0;
-            GP3 = 0x1;
-            
-            indicator = FLOAT_INDICATOR;
+            __delay_ms(0x2710); // 10s Delay
             
         }
-        else {
-            
-            indicator = 0x0;
-            
-            __delay_ms(CHARGING_TIMEOUT);
-            
-        }
-        
-        // Leave Charging On/Off During An Interval
-        
-        __delay_ms(MONITOR_INTERVAL);
+    
     }
+    else { // REGULAR MODE
+        
+        while (0x1) {
+            
+            // Turn Off Charging
+            
+            GP1 = 0x00;
+            GP2 = 0x00;
+            GP3 = 0x00;
+            
+            // Start Conversion & Check Voltage
+            
+            __delay_ms(0x64); // Take Into The Account GPIO & BJT Turn Off Time
+            
+            GO = 0x01;
+            
+            while (GO == 0x01) // Pause Execution During Conversion
+            {
+                __delay_ms(0x1);
+            }
+            
+            conversion = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
+            
+            // Turn On Charging
+            
+            if (conversion < DEAD_VOLTAGE) {
+                
+                indicator = DEAD_INDICATOR;
+                
+            }
+            else if (conversion < CCCV_VOLTAGE) {
+                
+                GP1 = 0x01;
+                GP2 = 0x00;
+                GP3 = 0x00;
+                
+                indicator = CCCV_INDICATOR;
+                
+            }
+            else if (conversion < TOPPING_VOLTAGE) {
+                
+                GP1 = 0x00;
+                GP2 = 0x01;
+                GP3 = 0x00;
+                
+                indicator = TOPPING_INDICATOR;
+                
+            }
+            else if (conversion < FLOAT_VOLTAGE) {
+                
+                GP1 = 0x00;
+                GP2 = 0x00;
+                GP3 = 0x01;
+                
+                indicator = FLOAT_INDICATOR;
+                
+            }
+            else {
+                
+                indicator = 0x00;
+                
+                __delay_ms(CHARGING_TIMEOUT);
+                
+            }
+            
+            // Leave Charging On/Off During An Interval
+            
+            __delay_ms(MONITOR_INTERVAL);
+            
+        }
+        
+    }
+
 }
 
 /*******************\

@@ -29,4 +29,4 @@ LAST_VOLTAGE:
 
 FLASH:
 	pk2cmd -B./$(DEVICE_FILE) -PPIC$(CHIP) -E -MC -MP \
-		 -F./$(DIST_FILE) -U$(OSCCAL_VALUE) -T -R 
+		 -F./$(DIST_FILE) -U$(OSCCAL_VALUE) -A4.5 -T -R 

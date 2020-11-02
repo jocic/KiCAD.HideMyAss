@@ -11,9 +11,9 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"249 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+"287 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 [v _main main `(v  1 e 1 0 ]
-"413
+"510
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 "72 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -83,21 +83,22 @@
 [v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
 "1765
 [v _VCFG VCFG `VEb  1 e 0 @254 ]
-"210 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-[v _voltage voltage `ui  1 e 2 0 ]
-"212
+"230 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+[v _conversion conversion `i  1 e 2 0 ]
+"238
 [v _indicator indicator `uc  1 e 1 0 ]
-"214
+"246
 [v _ticks_t0 ticks_t0 `VEui  1 e 2 0 ]
-"220
+"258
 [v _i i `ui  1 e 2 0 ]
-"249
+[v _j j `ui  1 e 2 0 ]
+"287
 [v _main main `(v  1 e 1 0 ]
 {
-"390
+"487
 } 0
-"413
+"510
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 {
-"441
+"538
 } 0
