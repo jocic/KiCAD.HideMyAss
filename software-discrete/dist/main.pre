@@ -1090,53 +1090,32 @@ GP4 = 0x00;
 
 ADON = 0x01;
 
-if (0x01) {
+if (0x00) {
 
 while (0x1) {
 
-if (j == 0) {
-
-GP1 = 0x00;
-GP2 = 0x00;
-GP3 = 0x00;
-
-indicator = 1;
-
-}
-else if (j == 1) {
-
-GP1 = 0x01;
-GP2 = 0x00;
-GP3 = 0x00;
-
-indicator = 2;
-
-}
-else if (j == 2) {
-
-GP1 = 0x00;
-GP2 = 0x01;
-GP3 = 0x00;
-
-indicator = 3;
-
-}
-else if (j == 3) {
-
-GP1 = 0x00;
-GP2 = 0x00;
-GP3 = 0x01;
-
-indicator = 4;
-}
-
 j++;
 
-if (j > 3) {
-j = 0;
+if (j == 1) {
+GPIO = 0x00;
+}
+else if (j == 2) {
+GPIO = 0x02;
+}
+else if (j == 3) {
+GPIO = 0x04;
+}
+else if (j == 4) {
+GPIO = 0x08;
 }
 
-_delay((unsigned long)((10000)*(4000000/4000.0)));
+indicator = j;
+
+_delay((unsigned long)((0x2710)*(4000000/4000.0)));
+
+if (j > 4) {
+j = 0;
+}
 
 }
 
@@ -1144,12 +1123,6 @@ _delay((unsigned long)((10000)*(4000000/4000.0)));
 else {
 
 while (0x1) {
-
-
-
-GP1 = 0x00;
-GP2 = 0x00;
-GP3 = 0x00;
 
 
 
@@ -1202,13 +1175,13 @@ else {
 
 indicator = 0x00;
 
-_delay((unsigned long)((45000)*(4000000/4000.0)));
+_delay((unsigned long)((4500)*(4000000/4000.0)));
 
 }
 
 
 
-_delay((unsigned long)((15000)*(4000000/4000.0)));
+_delay((unsigned long)((1500)*(4000000/4000.0)));
 
 }
 
@@ -1216,7 +1189,7 @@ _delay((unsigned long)((15000)*(4000000/4000.0)));
 
 }
 
-# 510
+# 483
 void __interrupt() status_routine()
 {
 

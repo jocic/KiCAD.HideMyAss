@@ -123,7 +123,7 @@
  * Voltage threshold up to which the battery will be considered
  * dead, or disconnected.
  * 
- * Threshold: 5.25
+ * Threshold: 1.00
  * 
  * @type integer
  */
@@ -201,7 +201,7 @@
  * intervals. Length of that interval in milliseconds.
  */
 
-#define MONITOR_INTERVAL 15000
+#define MONITOR_INTERVAL 1500
 
 /**
  * Number of milliseconds that the battery charging will be
@@ -209,7 +209,7 @@
  * has been reached/passed.
  */
 
-#define CHARGING_TIMEOUT 45000
+#define CHARGING_TIMEOUT 4500
 
 /*********************\
 |* CONTROL CONSTANTS *|
@@ -350,7 +350,7 @@ void main()
     GP3     = 0x00; // Set GPIO To Low
     
     /**
-     * Indicator status.
+     * Indicator Status.
      */
     
     TRISIO4 = 0x00; // Make GPIO An Output
@@ -367,45 +367,25 @@ void main()
             j++;
             
             if (j == 1) {
-                
-                GP1 = 0x00;
-                GP2 = 0x00;
-                GP3 = 0x00;
-                
-                indicator = 1; // Blink 1x Time When All GPIO Pins Are Down
-                
+                GPIO = 0x00; // All D I/O Low
             }
             else if (j == 2) {
-                
-                GP1 = 0x01;
-                GP2 = 0x00;
-                GP3 = 0x00;
-                
-                indicator = 2; // Blink 2x Times When GPIO1 Pin Is Up
-                
+                GPIO = 0x02;  // GPIO1 High
             }
             else if (j == 3) {
-                
-                GP1 = 0x00;
-                GP2 = 0x01;
-                GP3 = 0x00;
-                
-                indicator = 3; // Blink 3x Times When GPIO2 Pin Is Up
-                
+                GPIO = 0x04; // GPIO2 High
             }
             else if (j == 4) {
-                
-                GP1 = 0x00;
-                GP2 = 0x00;
-                GP3 = 0x01;
-                
-                indicator = 4; // Blink 4x Times When GPIO3 Pin Is Up
-                
-                j = 0x0;
-                
+                GPIO = 0x08; // GPIO3 High
             }
             
+            indicator = j;
+            
             __delay_ms(0x2710); // 10s Delay
+            
+            if (j > 4) {
+                j = 0;
+            }
             
         }
     
@@ -413,12 +393,6 @@ void main()
     else { // REGULAR MODE
         
         while (0x1) {
-            
-            // Turn Off Charging
-            
-            GP1 = 0x00;
-            GP2 = 0x00;
-            GP3 = 0x00;
             
             // Start Conversion & Check Voltage
             
@@ -433,7 +407,7 @@ void main()
             
             conversion = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
             
-            // Turn On Charging
+            // Turn On Charging & Set Current
             
             if (conversion < DEAD_VOLTAGE) {
                 

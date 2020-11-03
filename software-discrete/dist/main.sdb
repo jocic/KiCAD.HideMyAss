@@ -13,10 +13,12 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "287 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 [v _main main `(v  1 e 1 0 ]
-"510
+"483
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 "72 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"218
+[v _GPIO GPIO `VEuc  1 e 1 @5 ]
 "564
 [v _CMCON CMCON `VEuc  1 e 1 @25 ]
 "623
@@ -95,10 +97,10 @@
 "287
 [v _main main `(v  1 e 1 0 ]
 {
-"487
+"460
 } 0
-"510
+"483
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 {
-"538
+"511
 } 0
