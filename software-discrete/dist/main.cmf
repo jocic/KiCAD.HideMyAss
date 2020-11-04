@@ -17,8 +17,8 @@ end_init CODE 0 B B 5 2
 config CONFIG 4 2007 2007 1 2
 $dist/main.obj
 cinit CODE 0 10 10 C 2
-text1 CODE 0 E2 E2 4D 2
-maintext CODE 0 1C 1C C6 2
+text1 CODE 0 E6 E6 4D 2
+maintext CODE 0 1C 1C CA 2
 cstackBANK0 BANK0 1 29 29 8 1
 intentry CODE 0 4 4 7 2
 bssBANK0 BANK0 1 20 20 9 1
@@ -32,20 +32,20 @@ config CONFIG 4 2007 2007 1 2
 RAM 31-5D 1
 BANK0 31-5D 1
 CONST 1-3 2
-CONST 12F-3FE 2
+CONST 133-3FE 2
 ENTRY 1-3 2
-ENTRY 12F-3FE 2
+ENTRY 133-3FE 2
 IDLOC 2000-2003 2
 STACK 31-5D 1
 CODE 1-3 2
-CODE 12F-3FE 2
+CODE 133-3FE 2
 SFR0 0-1F 1
 SFR1 80-DD 1
 EEDATA 2100-217F 2
 STRCODE 1-3 2
-STRCODE 12F-3FE 2
+STRCODE 133-3FE 2
 STRING 1-3 2
-STRING 12F-3FE 2
+STRING 133-3FE 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -76,36 +76,36 @@ B init CODE >73:/home/developer/KiCAD.HideMyAss/software-discrete/dist/startup.a
 0 reset_vec CODE >63:/home/developer/KiCAD.HideMyAss/software-discrete/dist/startup.as
 0 reset_vec CODE >68:/home/developer/KiCAD.HideMyAss/software-discrete/dist/startup.as
 $dist/main.obj
-10 cinit CODE >312:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-10 cinit CODE >315:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-10 cinit CODE >338:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-11 cinit CODE >339:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-12 cinit CODE >340:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-13 cinit CODE >341:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-14 cinit CODE >342:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-15 cinit CODE >343:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-16 cinit CODE >344:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-17 cinit CODE >345:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-18 cinit CODE >346:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-19 cinit CODE >347:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-1A cinit CODE >353:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-1A cinit CODE >355:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-1B cinit CODE >356:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
-4 intentry CODE >483:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-E2 text1 CODE >483:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-E2 text1 CODE >487:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-E4 text1 CODE >489:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-EA text1 CODE >491:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-EC text1 CODE >492:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-ED text1 CODE >494:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-F4 text1 CODE >496:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-101 text1 CODE >498:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-102 text1 CODE >500:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-10F text1 CODE >502:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-111 text1 CODE >504:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-11E text1 CODE >496:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-126 text1 CODE >508:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-128 text1 CODE >511:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+10 cinit CODE >316:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+10 cinit CODE >319:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+10 cinit CODE >342:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+11 cinit CODE >343:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+12 cinit CODE >344:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+13 cinit CODE >345:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+14 cinit CODE >346:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+15 cinit CODE >347:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+16 cinit CODE >348:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+17 cinit CODE >349:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+18 cinit CODE >350:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+19 cinit CODE >351:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+1A cinit CODE >357:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+1A cinit CODE >359:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+1B cinit CODE >360:/home/developer/KiCAD.HideMyAss/software-discrete/dist/main.as
+4 intentry CODE >500:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+E6 text1 CODE >500:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+E6 text1 CODE >504:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+E8 text1 CODE >506:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+EE text1 CODE >508:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+F0 text1 CODE >509:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+F1 text1 CODE >511:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+F8 text1 CODE >513:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+105 text1 CODE >515:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+106 text1 CODE >517:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+113 text1 CODE >519:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+115 text1 CODE >521:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+122 text1 CODE >513:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+12A text1 CODE >525:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+12C text1 CODE >528:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 1C maintext CODE >287:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 1C maintext CODE >291:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 29 maintext CODE >295:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
@@ -137,35 +137,43 @@ F4 text1 CODE >496:/home/developer/KiCAD.HideMyAss/software-discrete/source/main
 53 maintext CODE >350:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 55 maintext CODE >356:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 57 maintext CODE >357:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-59 maintext CODE >361:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-5A maintext CODE >399:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-64 maintext CODE >401:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-66 maintext CODE >403:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-69 maintext CODE >405:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-70 maintext CODE >403:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-71 maintext CODE >408:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-7A maintext CODE >412:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-85 maintext CODE >414:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-8A maintext CODE >417:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-96 maintext CODE >419:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-98 maintext CODE >420:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-99 maintext CODE >421:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-9A maintext CODE >423:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-9C maintext CODE >425:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-9D maintext CODE >426:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-A9 maintext CODE >428:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-AB maintext CODE >429:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-AC maintext CODE >430:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-AD maintext CODE >432:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-AF maintext CODE >435:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-BB maintext CODE >437:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-BD maintext CODE >438:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-BE maintext CODE >439:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-BF maintext CODE >441:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-C3 maintext CODE >443:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-C4 maintext CODE >446:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-C6 maintext CODE >448:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
-D3 maintext CODE >454:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+59 maintext CODE >363:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+5B maintext CODE >364:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+5D maintext CODE >368:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+5E maintext CODE >402:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+5E maintext CODE >406:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+60 maintext CODE >408:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+61 maintext CODE >409:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+62 maintext CODE >410:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+63 maintext CODE >414:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+6C maintext CODE >416:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+6E maintext CODE >418:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+71 maintext CODE >420:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+78 maintext CODE >418:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+79 maintext CODE >423:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+82 maintext CODE >427:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+83 maintext CODE >429:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+8E maintext CODE >431:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+93 maintext CODE >434:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+9F maintext CODE >436:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+A1 maintext CODE >437:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+A2 maintext CODE >438:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+A3 maintext CODE >440:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+A5 maintext CODE >442:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+A6 maintext CODE >443:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+B2 maintext CODE >445:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+B4 maintext CODE >446:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+B5 maintext CODE >447:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+B6 maintext CODE >449:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+B8 maintext CODE >452:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+C4 maintext CODE >454:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+C6 maintext CODE >455:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+C7 maintext CODE >456:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+C8 maintext CODE >458:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+CC maintext CODE >460:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+CD maintext CODE >463:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+CF maintext CODE >465:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+DC maintext CODE >471:/home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -187,7 +195,7 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_status_routine 25E 0 CODE 0 text1 dist/main.obj
+__end_of_status_routine 266 0 CODE 0 text1 dist/main.obj
 _GO F9 0 ABS 0 - dist/main.obj
 __Hstrings 7FE 0 ABS 0 strings -
 _indicator 28 0 BANK0 1 bssBANK0 dist/main.obj
@@ -222,6 +230,7 @@ _TRISIO1 429 0 ABS 0 - dist/main.obj
 _TRISIO2 42A 0 ABS 0 - dist/main.obj
 _TRISIO3 42B 0 ABS 0 - dist/main.obj
 _TRISIO4 42C 0 ABS 0 - dist/main.obj
+_TRISIO5 42D 0 ABS 0 - dist/main.obj
 _ADRESH 1E 0 ABS 0 - dist/main.obj
 _ADRESL 9E 0 ABS 0 - dist/main.obj
 __Lmaintext 7FE 0 ABS 0 maintext -
@@ -262,11 +271,12 @@ _GP1 29 0 ABS 0 - dist/main.obj
 _GP2 2A 0 ABS 0 - dist/main.obj
 _GP3 2B 0 ABS 0 - dist/main.obj
 _GP4 2C 0 ABS 0 - dist/main.obj
+_GP5 2D 0 ABS 0 - dist/main.obj
 _PS0 408 0 ABS 0 - dist/main.obj
 _PS1 409 0 ABS 0 - dist/main.obj
 _PS2 40A 0 ABS 0 - dist/main.obj
 _PSA 40B 0 ABS 0 - dist/main.obj
-__S0 12F 0 ABS 0 - -
+__S0 133 0 ABS 0 - -
 __S1 31 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
@@ -293,7 +303,7 @@ __Losccal 7FE 0 CODE 0 osccal -
 __Lstrings 7FE 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
 __HbssBANK0 7FE 0 ABS 0 bssBANK0 -
-__ptext1 1C4 0 CODE 0 text1 dist/main.obj
+__ptext1 1CC 0 CODE 0 text1 dist/main.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -301,14 +311,14 @@ __end_of__initialization 34 0 CODE 0 cinit dist/main.obj
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 7FE 0 ABS 0 clrtext -
 __Hend_init 20 0 CODE 0 end_init -
-__end_of_main 1C4 0 CODE 0 maintext dist/main.obj
+__end_of_main 1CC 0 CODE 0 maintext dist/main.obj
 _ADCS0 4FC 0 ABS 0 - dist/main.obj
 _ADCS1 4FD 0 ABS 0 - dist/main.obj
 _ADCS2 4FE 0 ABS 0 - dist/main.obj
 _ANSEL 9F 0 ABS 0 - dist/main.obj
 _CMCON 19 0 ABS 0 - dist/main.obj
 _VRCON 99 0 ABS 0 - dist/main.obj
-_status_routine 1C4 0 CODE 0 text1 dist/main.obj
+_status_routine 1CC 0 CODE 0 text1 dist/main.obj
 __Hram 7FE 0 ABS 0 ram -
 __Lram 7FE 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/main.obj
@@ -340,7 +350,7 @@ __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/main.obj
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intentry 0 4 8 12B 2
+intentry 0 4 8 12F 2
 reset_vec 0 0 0 1 2
 bssBANK0 1 20 20 11 1
 # %NOTES Section

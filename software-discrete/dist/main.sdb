@@ -13,7 +13,7 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "287 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 [v _main main `(v  1 e 1 0 ]
-"483
+"500
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 "72 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -59,6 +59,8 @@
 [v _GP3 GP3 `VEb  1 e 0 @43 ]
 "1597
 [v _GP4 GP4 `VEb  1 e 0 @44 ]
+"1600
+[v _GP5 GP5 `VEb  1 e 0 @45 ]
 "1678
 [v _PS0 PS0 `VEb  1 e 0 @1032 ]
 "1681
@@ -83,6 +85,8 @@
 [v _TRISIO3 TRISIO3 `VEb  1 e 0 @1067 ]
 "1759
 [v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
+"1762
+[v _TRISIO5 TRISIO5 `VEb  1 e 0 @1069 ]
 "1765
 [v _VCFG VCFG `VEb  1 e 0 @254 ]
 "230 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
@@ -97,10 +101,10 @@
 "287
 [v _main main `(v  1 e 1 0 ]
 {
-"460
+"477
 } 0
-"483
+"500
 [v _status_routine status_routine `II(v  1 e 1 0 ]
 {
-"511
+"528
 } 0

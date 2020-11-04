@@ -1071,18 +1071,22 @@ ADCS1 = 0x01;
 ADCS2 = 0x00;
 
 # 335
-TRISIO1 = 0x00;
-GP1 = 0x00;
-
-# 342
 TRISIO2 = 0x00;
 GP2 = 0x00;
 
+# 342
+TRISIO1 = 0x00;
+GP1 = 0x00;
+
 # 349
+TRISIO5 = 0x00;
+GP5 = 0x00;
+
+# 356
 TRISIO3 = 0x00;
 GP3 = 0x00;
 
-# 356
+# 363
 TRISIO4 = 0x00;
 GP4 = 0x00;
 
@@ -1126,6 +1130,14 @@ while (0x1) {
 
 
 
+GP2 = 0x00;
+
+GP1 = 0x01;
+GP5 = 0x00;
+GP3 = 0x00;
+
+
+
 _delay((unsigned long)((0x64)*(4000000/4000.0)));
 
 GO = 0x01;
@@ -1139,6 +1151,8 @@ conversion = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
 
 
 
+GP2 = 0x01;
+
 if (conversion < 80) {
 
 indicator = 4;;
@@ -1147,7 +1161,7 @@ indicator = 4;;
 else if (conversion < 820) {
 
 GP1 = 0x01;
-GP2 = 0x00;
+GP5 = 0x00;
 GP3 = 0x00;
 
 indicator = 1;
@@ -1156,7 +1170,7 @@ indicator = 1;
 else if (conversion < 990) {
 
 GP1 = 0x00;
-GP2 = 0x01;
+GP5 = 0x01;
 GP3 = 0x00;
 
 indicator = 2;
@@ -1165,7 +1179,7 @@ indicator = 2;
 else if (conversion < 1020) {
 
 GP1 = 0x00;
-GP2 = 0x00;
+GP5 = 0x00;
 GP3 = 0x01;
 
 indicator = 3;
@@ -1175,13 +1189,13 @@ else {
 
 indicator = 0x00;
 
-_delay((unsigned long)((4500)*(4000000/4000.0)));
+_delay((unsigned long)((450)*(4000000/4000.0)));
 
 }
 
 
 
-_delay((unsigned long)((1500)*(4000000/4000.0)));
+_delay((unsigned long)((150)*(4000000/4000.0)));
 
 }
 
@@ -1189,7 +1203,7 @@ _delay((unsigned long)((1500)*(4000000/4000.0)));
 
 }
 
-# 483
+# 500
 void __interrupt() status_routine()
 {
 
