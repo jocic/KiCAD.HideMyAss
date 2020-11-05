@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                                           Tue Nov  3 20:38:54 2020
+                                                                                                           Wed Nov  4 16:56:27 2020
 
 
      1                           	processor	12F675
@@ -32,62 +32,61 @@ Microchip MPLAB XC8 Assembler V2.20 build 20200408173844
     26                           	psect	reset_vec
     27  0000                     reset_vec:
     28                           
-    29                           ; No powerup routine
-    30                           ; jump to start
-    31  0000  280B               	goto	(start& (0+2047))| (reset_vec& (0+-2048))
-    32                           
-    33                           	psect	maintext
-    34                           
-    35                           ; Microchip MPLAB XC8 C Compiler V2.20
-    36                           ; Copyright (C) 2020 Microchip Technology Inc.
-    37                           ; Auto-generated runtime startup code for final link stage.
+    29                           	psect	maintext
+    30                           
+    31                           ; Microchip MPLAB XC8 C Compiler V2.20
+    32                           ; Copyright (C) 2020 Microchip Technology Inc.
+    33                           ; Auto-generated runtime startup code for final link stage.
+    34                           ;
+    35                           ; Compiler options:
+    36                           ;
+    37                           ; source/main.c --outdir=dist
     38                           ;
-    39                           ; Compiler options:
-    40                           ;
-    41                           ; source/main.c --outdir=dist
-    42                           ;
-    43  0000                     C	set	0
-    44  0002                     Z	set	2
-    45  0002                     PCL	set	2
-    46  0000                     INDF	set	0
-    47  0090                     
-    48                           	psect	osccal
-    49  03FF                     ___osccal_val:
-    50                           
-    51                           ;oscillator constant would be pre-programmed here
-    52  000A                     
-    53                           	psect	functab
-    54  0000                     intlevel0:
-    55  0000                     intlevel1:
-    56  0000                     intlevel2:
-    57  0000                     intlevel3:
-    58  0000                     intlevel4:
-    59  0000                     intlevel5:
-    60                           
-    61                           	psect	init
-    62  000B                     start:
-    63                           
-    64                           	psect	end_init
-    65  000B  1683               	bsf	3,5	;select bank 1
-    66  000C  23FF               	fcall	___osccal_val
-    67  000D  0090               	movwf	16
-    68  000E  1283               	bcf	3,5	;select bank 0
-    69  000F  2810               	ljmp	start_initialization	;jump to C runtime clear & initialization
-    70                           
-    71                           	psect	clrtext
-    72  0004                     FSR	set	4
-    73                           
-    74                           	psect	strings
-    75  0000                     
-    76                           	psect	stack
-    77  0000                     ___sp:
-    78  0000                     ___int_sp:
+    39  0000                     C	set	0
+    40  0002                     Z	set	2
+    41  0002                     PCL	set	2
+    42  0000                     INDF	set	0
+    43  0090                     
+    44                           	psect	osccal
+    45  03FF                     ___osccal_val:
+    46                           
+    47                           ;oscillator constant would be pre-programmed here
+    48  000A                     
+    49                           	psect	functab
+    50  0000                     intlevel0:
+    51  0000                     intlevel1:
+    52  0000                     intlevel2:
+    53  0000                     intlevel3:
+    54  0000                     intlevel4:
+    55  0000                     intlevel5:
+    56                           
+    57                           	psect	init
+    58  0000                     start:	
+    59                           ; No powerup routine
+    60                           ; No interrupt routine
+    61                           
+    62                           
+    63                           	psect	end_init
+    64  0000  1683               	bsf	3,5	;select bank 1
+    65  0001  23FF               	fcall	___osccal_val
+    66  0002  0090               	movwf	16
+    67  0003  1283               	bcf	3,5	;select bank 0
+    68  0004  2BF3               	ljmp	start_initialization	;jump to C runtime clear & initialization
+    69                           
+    70                           	psect	clrtext
+    71  0004                     FSR	set	4
+    72                           
+    73                           	psect	strings
+    74  0000                     
+    75                           	psect	stack
+    76  0000                     ___sp:
+    77  0000                     ___int_sp:
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                               Tue Nov  3 20:38:54 2020
+Symbol Table                                                                                               Wed Nov  4 16:56:27 2020
 
-               ___sp 0000                 _main 001C                 start 000B                STATUS 0003  
-       ___osccal_val 03FF  start_initialization 0010            ___stackhi 0000            ___stacklo 0000  
+               ___sp 0000                 _main 02E6                 start 0000                STATUS 0003  
+       ___osccal_val 03FF  start_initialization 03F3            ___stackhi 0000            ___stacklo 0000  
            ___int_sp 0000             intlevel0 0000             intlevel1 0000             intlevel2 0000  
            intlevel3 0000             intlevel4 0000             intlevel5 0000             reset_vec 0000  

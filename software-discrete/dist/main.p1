@@ -4,10 +4,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 "92 /opt/microchip/xc8/v2.20/pic/include/pic.h
 [v __delay `JF540 ~T0 @X0 0 e ]
 [p i __delay ]
-"1702 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
-[v _T0IE `Vb ~T0 @X0 0 e@93 ]
-"1573
+"1573 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [v _GIE `Vb ~T0 @X0 0 e@95 ]
+"1702
+[v _T0IE `Vb ~T0 @X0 0 e@93 ]
+"1738
+[v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
+"1492
+[v _ADIE `Vb ~T0 @X0 0 e@1126 ]
+"1675
+[v _PEIE `Vb ~T0 @X0 0 e@94 ]
+"1555
+[v _CMIE `Vb ~T0 @X0 0 e@1123 ]
+"1627
+[v _INTE `Vb ~T0 @X0 0 e@92 ]
+"1603
+[v _GPIE `Vb ~T0 @X0 0 e@91 ]
+"1034
+[v _IOC `Vuc ~T0 @X0 0 e@150 ]
+"1567
+[v _EEIE `Vb ~T0 @X0 0 e@1127 ]
 "1699
 [v _T0CS `Vb ~T0 @X0 0 e@1037 ]
 "72
@@ -58,10 +74,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISIO5 `Vb ~T0 @X0 0 e@1069 ]
 "1600
 [v _GP5 `Vb ~T0 @X0 0 e@45 ]
-"1756
-[v _TRISIO3 `Vb ~T0 @X0 0 e@1067 ]
-"1594
-[v _GP3 `Vb ~T0 @X0 0 e@43 ]
 "1759
 [v _TRISIO4 `Vb ~T0 @X0 0 e@1068 ]
 "1597
@@ -76,10 +88,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 "623
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-[t ~ __interrupt . k ]
-[t T4 __interrupt  ]
-"1705
-[v _T0IF `Vb ~T0 @X0 0 e@90 ]
 "54 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [; <" INDF equ 00h ;# ">
 "74
@@ -158,22 +166,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x CP=OFF ]
 "87
 [p x CPD=OFF ]
-"230
+"232
 [v _conversion `i ~T0 @X0 1 e ]
 [i _conversion
 -> 0 `i
 ]
-"238
+"240
 [v _indicator `uc ~T0 @X0 1 e ]
 [i _indicator
 -> -> 0 `i `uc
 ]
-"246
-[v _ticks_t0 `Vui ~T0 @X0 1 e ]
-[i _ticks_t0
+"248
+[v _io_stack `Vui ~T0 @X0 1 e ]
+[i _io_stack
 -> -> 0 `i `ui
 ]
-"258
+"260
 [v _i `ui ~T0 @X0 1 e ]
 [i _i
 -> -> 0 `i `ui
@@ -183,312 +191,193 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"287
+"289
 [v _main `(v ~T0 @X0 1 ef ]
-"288
+"290
 {
 [e :U _main ]
 [f ]
 "291
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "295
-[e = _T0IE -> -> 1 `i `b ]
-"296
 [e = _GIE -> -> 1 `i `b ]
+"296
+[e = _T0IE -> -> 0 `i `b ]
+"297
+[e = _TMR1IE -> -> 0 `i `b ]
+"298
+[e = _ADIE -> -> 1 `i `b ]
+"299
+[e = _PEIE -> -> 0 `i `b ]
 "300
-[e = _T0CS -> -> 0 `i `b ]
+[e = _CMIE -> -> 0 `i `b ]
 "301
-[e = _TMR0 -> -> 0 `i `uc ]
+[e = _INTE -> -> 0 `i `b ]
 "302
-[e = _PSA -> -> 0 `i `b ]
-"306
-[e = _PS2 -> -> 0 `i `b ]
-"307
-[e = _PS1 -> -> 0 `i `b ]
+[e = _GPIE -> -> 0 `i `b ]
+"303
+[e = _IOC -> -> 0 `i `uc ]
+"304
+[e = _EEIE -> -> 0 `i `b ]
 "308
-[e = _PS0 -> -> 1 `i `b ]
-"312
-[e = _ANSEL -> -> 0 `i `uc ]
-"313
-[e = _CMCON -> -> 7 `i `uc ]
+[e = _T0CS -> -> 0 `i `b ]
+"309
+[e = _TMR0 -> -> 0 `i `uc ]
+"310
+[e = _PSA -> -> 0 `i `b ]
 "314
-[e = _VRCON -> -> 0 `i `uc ]
+[e = _PS2 -> -> 0 `i `b ]
 "315
-[e = _ADFM -> -> 1 `i `b ]
+[e = _PS1 -> -> 0 `i `b ]
 "316
-[e = _VCFG -> -> 0 `i `b ]
+[e = _PS0 -> -> 1 `i `b ]
+"320
+[e = _ANSEL -> -> 0 `i `uc ]
+"321
+[e = _CMCON -> -> 7 `i `uc ]
 "322
-[e = _TRISIO0 -> -> 1 `i `b ]
+[e = _VRCON -> -> 0 `i `uc ]
 "323
-[e = _GP0 -> -> 0 `i `b ]
+[e = _ADFM -> -> 1 `i `b ]
 "324
+[e = _VCFG -> -> 0 `i `b ]
+"330
+[e = _TRISIO0 -> -> 1 `i `b ]
+"331
+[e = _GP0 -> -> 0 `i `b ]
+"332
 [e = _ANS0 -> -> 1 `i `b ]
-"325
+"333
 [e = _CHS0 -> -> 0 `i `b ]
-"326
+"334
 [e = _CHS1 -> -> 0 `i `b ]
-"327
-[e = _ADCS0 -> -> 1 `i `b ]
-"328
-[e = _ADCS1 -> -> 1 `i `b ]
-"329
-[e = _ADCS2 -> -> 0 `i `b ]
 "335
-[e = _TRISIO2 -> -> 0 `i `b ]
+[e = _ADCS0 -> -> 1 `i `b ]
 "336
-[e = _GP2 -> -> 0 `i `b ]
-"342
-[e = _TRISIO1 -> -> 0 `i `b ]
+[e = _ADCS1 -> -> 1 `i `b ]
+"337
+[e = _ADCS2 -> -> 0 `i `b ]
 "343
-[e = _GP1 -> -> 0 `i `b ]
-"349
-[e = _TRISIO5 -> -> 0 `i `b ]
-"350
-[e = _GP5 -> -> 0 `i `b ]
-"356
-[e = _TRISIO3 -> -> 0 `i `b ]
-"357
-[e = _GP3 -> -> 0 `i `b ]
-"363
-[e = _TRISIO4 -> -> 0 `i `b ]
-"364
-[e = _GP4 -> -> 0 `i `b ]
-"368
-[e = _ADON -> -> 1 `i `b ]
-"370
-[e $ ! != -> 0 `i -> 0 `i 82  ]
-{
-"372
-[e :U 84 ]
-{
-"374
-[e ++ _j -> -> 1 `i `ui ]
-"376
-[e $ ! == _j -> -> 1 `i `ui 86  ]
-{
-"377
-[e = _GPIO -> -> 0 `i `uc ]
-"378
-}
-[e $U 87  ]
-"379
-[e :U 86 ]
-[e $ ! == _j -> -> 2 `i `ui 88  ]
-{
-"380
-[e = _GPIO -> -> 2 `i `uc ]
-"381
-}
-[e $U 89  ]
-"382
-[e :U 88 ]
-[e $ ! == _j -> -> 3 `i `ui 90  ]
-{
-"383
-[e = _GPIO -> -> 4 `i `uc ]
-"384
-}
-[e $U 91  ]
-"385
-[e :U 90 ]
-[e $ ! == _j -> -> 4 `i `ui 92  ]
-{
-"386
-[e = _GPIO -> -> 8 `i `uc ]
-"387
-}
-[e :U 92 ]
-"389
-[e :U 91 ]
-[e :U 89 ]
-[e :U 87 ]
-[e = _indicator -> _j `uc ]
-"391
-[e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"393
-[e $ ! > _j -> -> 4 `i `ui 93  ]
-{
-"394
-[e = _j -> -> 0 `i `ui ]
-"395
-}
-[e :U 93 ]
-"397
-}
-[e :U 83 ]
-"372
-[e $U 84  ]
-[e :U 85 ]
-"399
-}
-[e $U 94  ]
-"400
-[e :U 82 ]
-{
-"402
-[e :U 96 ]
-{
-"406
+[e = _TRISIO2 -> -> 0 `i `b ]
+"344
 [e = _GP2 -> -> 0 `i `b ]
-"408
-[e = _GP1 -> -> 1 `i `b ]
-"409
+"350
+[e = _TRISIO1 -> -> 0 `i `b ]
+"351
+[e = _GP1 -> -> 0 `i `b ]
+"357
+[e = _TRISIO5 -> -> 0 `i `b ]
+"358
 [e = _GP5 -> -> 0 `i `b ]
-"410
-[e = _GP3 -> -> 0 `i `b ]
-"414
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"416
-[e = _GO -> -> 1 `i `b ]
-"418
-[e $U 98  ]
-[e :U 99 ]
-"419
+"364
+[e = _TRISIO4 -> -> 0 `i `b ]
+"365
+[e = _GP4 -> -> 0 `i `b ]
+"369
+[e = _ADON -> -> 1 `i `b ]
+"371
+[e :U 83 ]
 {
-"420
+"375
+[e = _io_stack -> -> 0 `i `ui ]
+"379
+[e = _GPIO -> _io_stack `uc ]
+"381
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"385
+[e = _GO -> -> 1 `i `b ]
+"387
+[e $U 85  ]
+[e :U 86 ]
+"388
+{
+"389
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"390
+}
+[e :U 85 ]
+"387
+[e $ == -> _GO `i -> 1 `i 86  ]
+[e :U 87 ]
+"392
+[e = _conversion | & -> _ADRESL `i -> 255 `i << & -> _ADRESH `i -> 3 `i -> 8 `i ]
+"396
+[e $ ! < _conversion -> 80 `i 88  ]
+{
+"398
+[e = _indicator -> -> 4 `i `uc ]
+"400
+}
+[e :U 88 ]
+"401
+[e $ ! < _conversion -> 820 `i 89  ]
+{
+"403
+[e =| _io_stack -> -> 6 `i `ui ]
+"405
+[e = _indicator -> -> 1 `i `uc ]
+"407
+}
+[e $U 90  ]
+"408
+[e :U 89 ]
+[e $ ! || < _conversion -> 990 `i < _conversion -> 1020 `i 91  ]
+{
+"410
+[e =| _io_stack -> -> 36 `i `ui ]
+"412
+[e = _indicator -> -> 3 `i `uc ]
+"414
+}
+[e $U 92  ]
+"415
+[e :U 91 ]
+{
+"417
+[e = _indicator -> -> 0 `i `uc ]
+"419
+[e ( __delay (1 -> * -> -> 4500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "421
 }
-[e :U 98 ]
-"418
-[e $ == -> _GO `i -> 1 `i 99  ]
-[e :U 100 ]
+[e :U 92 ]
+[e :U 90 ]
 "423
-[e = _conversion | & -> _ADRESL `i -> 255 `i << & -> _ADRESH `i -> 3 `i -> 8 `i ]
+[e = _GPIO -> _io_stack `uc ]
 "427
-[e = _GP2 -> -> 1 `i `b ]
-"429
-[e $ ! < _conversion -> 80 `i 101  ]
-{
-"431
-[e = _indicator -> -> 4 `i `uc ]
-"433
-}
-[e $U 102  ]
-"434
-[e :U 101 ]
-[e $ ! < _conversion -> 820 `i 103  ]
-{
-"436
-[e = _GP1 -> -> 1 `i `b ]
-"437
-[e = _GP5 -> -> 0 `i `b ]
-"438
-[e = _GP3 -> -> 0 `i `b ]
-"440
-[e = _indicator -> -> 1 `i `uc ]
-"442
-}
-[e $U 104  ]
-"443
-[e :U 103 ]
-[e $ ! < _conversion -> 990 `i 105  ]
-{
-"445
-[e = _GP1 -> -> 0 `i `b ]
-"446
-[e = _GP5 -> -> 1 `i `b ]
-"447
-[e = _GP3 -> -> 0 `i `b ]
-"449
-[e = _indicator -> -> 2 `i `uc ]
-"451
-}
-[e $U 106  ]
-"452
-[e :U 105 ]
-[e $ ! < _conversion -> 1020 `i 107  ]
-{
-"454
-[e = _GP1 -> -> 0 `i `b ]
-"455
-[e = _GP5 -> -> 0 `i `b ]
-"456
-[e = _GP3 -> -> 1 `i `b ]
-"458
-[e = _indicator -> -> 3 `i `uc ]
-"460
-}
-[e $U 108  ]
-"461
-[e :U 107 ]
-{
-"463
-[e = _indicator -> -> 0 `i `uc ]
-"465
-[e ( __delay (1 -> * -> -> 450 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"467
-}
-[e :U 108 ]
-[e :U 106 ]
-[e :U 104 ]
-[e :U 102 ]
-"471
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"473
-}
-[e :U 95 ]
-"402
-[e $U 96  ]
-[e :U 97 ]
-"475
-}
-[e :U 94 ]
-"477
-[e :UE 81 ]
-}
-[v $root$_status_routine `(v ~T0 @X0 0 e ]
-"500
-[v _status_routine `(v ~T4 @X0 1 ef ]
-"501
-{
-[e :U _status_routine ]
-[f ]
-"504
-[e $ ! _T0IF 110  ]
-"505
-{
-"506
-[e ++ _ticks_t0 -> -> 1 `i `ui ]
-"508
-[e = _TMR0 -> -> 5 `i `uc ]
-"509
-[e = _T0IF -> -> 0 `i `b ]
-"511
-[e $ ! >= _ticks_t0 -> -> 2000 `i `ui 111  ]
-"512
-{
-"513
 {
 [e = _i -> -> 0 `i `ui ]
-[e $U 115  ]
-[e :U 112 ]
+[e $U 96  ]
+[e :U 93 ]
 {
-"515
-[e = _GP4 -> -> 1 `i `b ]
-"517
+"429
+[e =| _io_stack -> -> 16 `i `ui ]
+"431
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"519
-[e = _GP4 -> -> 0 `i `b ]
-"521
+"433
+[e = _GPIO -> _io_stack `uc ]
+"435
+[e =& _io_stack -> -> 47 `i `ui ]
+"437
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"523
+"439
+[e = _GPIO -> _io_stack `uc ]
+"441
 }
-"513
+"427
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 115 ]
-[e $ < _i -> _indicator `ui 112  ]
-[e :U 113 ]
-"523
+[e :U 96 ]
+[e $ < _i -> _indicator `ui 93  ]
+[e :U 94 ]
+"441
 }
-"525
-[e = _ticks_t0 -> -> 0 `i `ui ]
-"526
+"445
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"447
 }
-[e :U 111 ]
-"527
-}
-[e :U 110 ]
-"528
-[e :UE 109 ]
+[e :U 82 ]
+"371
+[e $U 83  ]
+[e :U 84 ]
+"449
+[e :UE 81 ]
 }

@@ -1016,29 +1016,35 @@ extern __bank0 __bit __timeout;
 # 87
 #pragma config CPD = OFF
 
-# 230
+# 232
 int conversion = 0x00;
 
-# 238
+# 240
 unsigned char indicator = 0x00;
 
-# 246
-unsigned volatile int ticks_t0 = 0x00;
+# 248
+unsigned volatile int io_stack = 0x00;
 
-# 258
+# 260
 unsigned int i = 0x00, j = 0x00;
 
-# 287
+# 289
 void main()
 {
-
-
 _delay((unsigned long)((0x3E8)*(4000000/4000.0)));
 
 
 
-T0IE = 0x01;
 GIE = 0x01;
+T0IE = 0x00;
+TMR1IE = 0x00;
+ADIE = 0x01;
+PEIE = 0x00;
+CMIE = 0x00;
+INTE = 0x00;
+GPIE = 0x00;
+IOC = 0x00;
+EEIE = 0x00;
 
 
 
@@ -1060,7 +1066,7 @@ VRCON = 0x00;
 ADFM = 0x01;
 VCFG = 0x00;
 
-# 322
+# 330
 TRISIO0 = 0x01;
 GP0 = 0x00;
 ANS0 = 0x01;
@@ -1070,23 +1076,19 @@ ADCS0 = 0x01;
 ADCS1 = 0x01;
 ADCS2 = 0x00;
 
-# 335
+# 343
 TRISIO2 = 0x00;
 GP2 = 0x00;
 
-# 342
+# 350
 TRISIO1 = 0x00;
 GP1 = 0x00;
 
-# 349
+# 357
 TRISIO5 = 0x00;
 GP5 = 0x00;
 
-# 356
-TRISIO3 = 0x00;
-GP3 = 0x00;
-
-# 363
+# 364
 TRISIO4 = 0x00;
 GP4 = 0x00;
 
@@ -1094,51 +1096,19 @@ GP4 = 0x00;
 
 ADON = 0x01;
 
-if (0x00) {
-
-while (0x1) {
-
-j++;
-
-if (j == 1) {
-GPIO = 0x00;
-}
-else if (j == 2) {
-GPIO = 0x02;
-}
-else if (j == 3) {
-GPIO = 0x04;
-}
-else if (j == 4) {
-GPIO = 0x08;
-}
-
-indicator = j;
-
-_delay((unsigned long)((0x2710)*(4000000/4000.0)));
-
-if (j > 4) {
-j = 0;
-}
-
-}
-
-}
-else {
-
 while (0x1) {
 
 
 
-GP2 = 0x00;
-
-GP1 = 0x01;
-GP5 = 0x00;
-GP3 = 0x00;
+io_stack = 0x0;
 
 
 
-_delay((unsigned long)((0x64)*(4000000/4000.0)));
+GPIO = io_stack;
+
+_delay((unsigned long)((1000)*(4000000/4000.0)));
+
+
 
 GO = 0x01;
 
@@ -1151,36 +1121,21 @@ conversion = ((ADRESL & 0xFF) | ((ADRESH & 0x03) << 0x08));
 
 
 
-GP2 = 0x01;
-
 if (conversion < 80) {
 
-indicator = 4;;
+indicator = 4;
 
 }
-else if (conversion < 820) {
+if (conversion < 820) {
 
-GP1 = 0x01;
-GP5 = 0x00;
-GP3 = 0x00;
+io_stack |= 0b000110;
 
 indicator = 1;
 
 }
-else if (conversion < 990) {
+else if (conversion < 990 || conversion < 1020) {
 
-GP1 = 0x00;
-GP5 = 0x01;
-GP3 = 0x00;
-
-indicator = 2;
-
-}
-else if (conversion < 1020) {
-
-GP1 = 0x00;
-GP5 = 0x00;
-GP3 = 0x01;
+io_stack |= 0b100100;
 
 indicator = 3;
 
@@ -1189,47 +1144,35 @@ else {
 
 indicator = 0x00;
 
-_delay((unsigned long)((450)*(4000000/4000.0)));
+_delay((unsigned long)((4500)*(4000000/4000.0)));
 
 }
 
+GPIO = io_stack;
 
 
-_delay((unsigned long)((150)*(4000000/4000.0)));
 
-}
-
-}
-
-}
-
-# 500
-void __interrupt() status_routine()
-{
-
-
-if (T0IF)
-{
-ticks_t0 ++;
-
-TMR0 = 0x05;
-T0IF = 0x00;
-
-if (ticks_t0 >= 2000)
-{
 for (i = 0x00; i < indicator; i ++) {
 
-GP4 = 0x01;
+io_stack |= 0b010000;
 
 _delay((unsigned long)((200)*(4000000/4000.0)));
 
-GP4 = 0x00;
+GPIO = io_stack;
+
+io_stack &= 0b101111;
 
 _delay((unsigned long)((200)*(4000000/4000.0)));
 
+GPIO = io_stack;
+
 }
 
-ticks_t0 = 0x00;
+
+
+_delay((unsigned long)((3000)*(4000000/4000.0)));
+
 }
+
 }
-}
+

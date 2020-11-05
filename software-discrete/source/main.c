@@ -100,6 +100,14 @@
 #define _XTAL_FREQ 4000000
 
 /**
+ * Debug flag. Alternative constants will be used when/if set.
+ * 
+ * @type integer
+ */
+
+#define DEBUG 0
+
+/**
  * Delay in milliseconds between the status intervals.
  * 
  * @type integer
@@ -190,7 +198,7 @@
  * is no battery at all.
  */
 
-#define DEAD_INDICATOR 4;
+#define DEAD_INDICATOR 4
 
 /*********************\
 |* BATTERY CONSTANTS *|
@@ -201,7 +209,7 @@
  * intervals. Length of that interval in milliseconds.
  */
 
-#define MONITOR_INTERVAL 150
+#define MONITOR_INTERVAL 3000
 
 /**
  * Number of milliseconds that the battery charging will be
@@ -209,7 +217,7 @@
  * has been reached/passed.
  */
 
-#define CHARGING_TIMEOUT 450
+#define CHARGING_TIMEOUT 4500
 
 /******************\
 |* CORE VARIABLES *|
@@ -232,12 +240,12 @@
 unsigned char indicator = 0x00;
 
 /**
- * Number of <i>timer 0</i> ticks, each representing a millisecond.
+ * IO stack containing L/H data that is pushed each cycle.
  * 
  * @type unsigned volatile int
  */
 
-unsigned volatile int ticks_t0 = 0x00;
+unsigned volatile int io_stack = 0x00;
 
 /*******************\
 |* OTHER VARIABLES *|
@@ -280,14 +288,20 @@ unsigned int i = 0x00, j = 0x00;
 
 void main()
 {
-    // Mandatory Delay To Avoid OSCCAL Value Corruption
-    
     __delay_ms(0x3E8);
     
     // Interrupts
     
-    T0IE = 0x01; // Enable TMR0 Interrupts
-    GIE  = 0x01; // Enable Global Interrupts
+    GIE    = 0x01; // Enable Global Interrupts
+    T0IE   = 0x00; // Disable TMR0 Interrupts
+    TMR1IE = 0x00; // Disable TMR1 Interrupts
+    ADIE   = 0x01; // Enable ADC Interrupts
+    PEIE   = 0x00; // Disable Peripheral Interrupts
+    CMIE   = 0x00; // Disable Comparator Interrupts
+    INTE   = 0x00; // Disable GPIO2 External Interrupts
+    GPIE   = 0x00; // Disable Port Change Interrupts
+    IOC    = 0x00; // Disable Interrupts On Change
+    EEIE   = 0x00; // Disable Write Complete Interrupts
     
     // Timer 0
     
@@ -344,13 +358,6 @@ void main()
     GP5     = 0x00; // Set GPIO To Low
     
     /**
-     * Switch for Float stage.
-     */
-    
-    TRISIO3 = 0x00; // Make GPIO An Output
-    GP3     = 0x00; // Set GPIO To Low
-    
-    /**
      * Indicator Status.
      */
     
@@ -360,18 +367,18 @@ void main()
     // Logic
     
     ADON = 0x01; // Enable ADC
-    
+
     while (0x1) {
+        
+        // Clear I/O Stack
+        
+        io_stack = 0x0;
         
         // Turn Off Charging & Deactivate Current Sources
         
-        GP2 = 0x00;
+        GPIO = io_stack;
         
-        GP1 = 0x00;
-        GP5 = 0x00;
-        GP3 = 0x00;
-        
-        __delay_ms(0x64); // Take Into The Account GPIO & BJT Turn Off Time
+        __delay_ms(1000); // Take Into The Account GPIO & BJT Turn Off Time
         
         // Start Conversion & Check Voltage
         
@@ -386,36 +393,21 @@ void main()
         
         // Turn On Charging & Activate Current Source
         
-        GP2 = 0x01;
-        
         if (conversion < DEAD_VOLTAGE) {
             
             indicator = DEAD_INDICATOR;
             
         }
-        else if (conversion < CCCV_VOLTAGE) {
+        if (conversion < CCCV_VOLTAGE) {
             
-            GP1 = 0x01;
-            GP5 = 0x00;
-            GP3 = 0x00;
+            io_stack |= 0b000110;
             
             indicator = CCCV_INDICATOR;
             
         }
-        else if (conversion < TOPPING_VOLTAGE) {
+        else if (conversion < TOPPING_VOLTAGE || conversion < FLOAT_VOLTAGE) {
             
-            GP1 = 0x00;
-            GP5 = 0x01;
-            GP3 = 0x00;
-            
-            indicator = TOPPING_INDICATOR;
-            
-        }
-        else if (conversion < FLOAT_VOLTAGE) {
-            
-            GP1 = 0x00;
-            GP5 = 0x00;
-            GP3 = 0x01;
+            io_stack |= 0b100100;
             
             indicator = FLOAT_INDICATOR;
             
@@ -425,6 +417,26 @@ void main()
             indicator = 0x00;
             
             __delay_ms(CHARGING_TIMEOUT);
+            
+        }
+        
+        GPIO = io_stack;
+        
+        // Flash Indicator
+  
+        for (i = 0x00; i < indicator; i ++) { // Flash LED X Times
+            
+            io_stack |= 0b010000;
+            
+            __delay_ms(STS_DELAY);
+            
+            GPIO = io_stack;
+            
+            io_stack &= 0b101111;
+            
+            __delay_ms(STS_DELAY);
+            
+            GPIO = io_stack;
             
         }
         
@@ -446,43 +458,4 @@ void main()
 |* OTHER FUNCTIONS *|
 \*******************/
 
-/**
- * Interrupt procedure for timer <i>0</i> which is
- * used for driving the <i>STATUS</i> LED.
- * 
- * @author    Djordje Jocic <office@djordjejocic.com>
- * @copyright 2020 All Rights Reserved
- * @version   1.0.0
- * 
- * @return void
- */
-
-void __interrupt() status_routine()
-{
-    // Logic
-    
-    if (T0IF) // Timer Overflow Interrupt (After 1 MS)
-    {
-        ticks_t0 ++;
-        
-        TMR0 = 0x05; // Preload Timer For 1 MS Interrupt
-        T0IF = 0x00; // Clear Interrupt Flag
-        
-        if (ticks_t0 >= STS_TIMEOUT) // Time For Visual Indicator
-        {
-            for (i = 0x00; i < indicator; i ++) { // Flash LED X Times
-                
-                GP4 = 0x01;
-                
-                __delay_ms(STS_DELAY);
-                
-                GP4 = 0x00;
-                
-                __delay_ms(STS_DELAY);
-            
-            }
-            
-            ticks_t0 = 0x00;
-        }
-    }
-}
+// OTHER FUNCTIONS GO HERE

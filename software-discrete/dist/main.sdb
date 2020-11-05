@@ -11,10 +11,8 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"287 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+"289 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 [v _main main `(v  1 e 1 0 ]
-"500
-[v _status_routine status_routine `II(v  1 e 1 0 ]
 "72 /opt/microchip/xc8/v2.20/pic/include/proc/pic12f675.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "218
@@ -23,6 +21,8 @@
 [v _CMCON CMCON `VEuc  1 e 1 @25 ]
 "623
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1034
+[v _IOC IOC `VEuc  1 e 1 @150 ]
 "1208
 [v _VRCON VRCON `VEuc  1 e 1 @153 ]
 "1384
@@ -37,6 +37,8 @@
 [v _ADCS2 ADCS2 `VEb  1 e 0 @1278 ]
 "1489
 [v _ADFM ADFM `VEb  1 e 0 @255 ]
+"1492
+[v _ADIE ADIE `VEb  1 e 0 @1126 ]
 "1498
 [v _ADON ADON `VEb  1 e 0 @248 ]
 "1501
@@ -45,6 +47,10 @@
 [v _CHS0 CHS0 `VEb  1 e 0 @250 ]
 "1537
 [v _CHS1 CHS1 `VEb  1 e 0 @251 ]
+"1555
+[v _CMIE CMIE `VEb  1 e 0 @1123 ]
+"1567
+[v _EEIE EEIE `VEb  1 e 0 @1127 ]
 "1573
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "1576
@@ -55,12 +61,16 @@
 [v _GP1 GP1 `VEb  1 e 0 @41 ]
 "1591
 [v _GP2 GP2 `VEb  1 e 0 @42 ]
-"1594
-[v _GP3 GP3 `VEb  1 e 0 @43 ]
 "1597
 [v _GP4 GP4 `VEb  1 e 0 @44 ]
 "1600
 [v _GP5 GP5 `VEb  1 e 0 @45 ]
+"1603
+[v _GPIE GPIE `VEb  1 e 0 @91 ]
+"1627
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"1675
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
 "1678
 [v _PS0 PS0 `VEb  1 e 0 @1032 ]
 "1681
@@ -73,38 +83,30 @@
 [v _T0CS T0CS `VEb  1 e 0 @1037 ]
 "1702
 [v _T0IE T0IE `VEb  1 e 0 @93 ]
-"1705
-[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"1738
+[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
 "1747
 [v _TRISIO0 TRISIO0 `VEb  1 e 0 @1064 ]
 "1750
 [v _TRISIO1 TRISIO1 `VEb  1 e 0 @1065 ]
 "1753
 [v _TRISIO2 TRISIO2 `VEb  1 e 0 @1066 ]
-"1756
-[v _TRISIO3 TRISIO3 `VEb  1 e 0 @1067 ]
 "1759
 [v _TRISIO4 TRISIO4 `VEb  1 e 0 @1068 ]
 "1762
 [v _TRISIO5 TRISIO5 `VEb  1 e 0 @1069 ]
 "1765
 [v _VCFG VCFG `VEb  1 e 0 @254 ]
-"230 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
+"232 /home/developer/KiCAD.HideMyAss/software-discrete/source/main.c
 [v _conversion conversion `i  1 e 2 0 ]
-"238
+"240
 [v _indicator indicator `uc  1 e 1 0 ]
-"246
-[v _ticks_t0 ticks_t0 `VEui  1 e 2 0 ]
-"258
+"248
+[v _io_stack io_stack `VEui  1 e 2 0 ]
+"260
 [v _i i `ui  1 e 2 0 ]
-[v _j j `ui  1 e 2 0 ]
-"287
+"289
 [v _main main `(v  1 e 1 0 ]
 {
-"477
-} 0
-"500
-[v _status_routine status_routine `II(v  1 e 1 0 ]
-{
-"528
+"449
 } 0

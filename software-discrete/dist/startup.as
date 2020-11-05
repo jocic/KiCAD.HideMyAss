@@ -62,11 +62,7 @@ intlevel5:
 	psect	reset_vec
 reset_vec:
 	; No powerup routine
-	global start
-
-; jump to start
-	goto	start & 0x7FF | (reset_vec & not 0x7FF)
-
+	; No interrupt routine
 
 
 	psect	init
