@@ -13,11 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Connection ~ 2200 6300
 Connection ~ 2200 5400
-Connection ~ 2700 6300
-Wire Wire Line
-	2200 6300 2700 6300
 Connection ~ 2700 5400
 Wire Wire Line
 	2200 5400 2700 5400
@@ -206,28 +202,9 @@ Wire Wire Line
 Wire Wire Line
 	1500 5400 1650 5400
 Wire Wire Line
-	2200 6000 2200 6300
-Wire Wire Line
 	2200 5400 2200 5700
-$Comp
-L Device:D_Zener D11
-U 1 1 60078BB2
-P 2200 5850
-F 0 "D11" V 2154 5930 50  0000 L CNN
-F 1 "18V" V 2245 5930 50  0000 L CNN
-F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2200 5850 50  0001 C CNN
-F 3 "~" H 2200 5850 50  0001 C CNN
-	1    2200 5850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2200 6300 1850 6300
 Wire Wire Line
 	2050 5400 2200 5400
-Wire Wire Line
-	1850 6300 1850 6150
-Wire Wire Line
-	1850 5700 1850 5850
 Wire Wire Line
 	4700 4950 4700 5400
 Wire Wire Line
@@ -267,17 +244,6 @@ F 1 "1mF" H 2818 5805 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 2738 5700 50  0001 C CNN
 F 3 "~" H 2700 5850 50  0001 C CNN
 	1    2700 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 600796D8
-P 1850 6000
-F 0 "R10" H 1920 6046 50  0000 L CNN
-F 1 "100k" H 1920 5955 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 6000 50  0001 C CNN
-F 3 "~" H 1850 6000 50  0001 C CNN
-	1    1850 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -988,4 +954,38 @@ F 3 "" H 5950 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5950 5050 5950 4950
+Connection ~ 2700 6300
+$Comp
+L Device:R R10
+U 1 1 600796D8
+P 1850 6000
+F 0 "R10" H 1920 6046 50  0000 L CNN
+F 1 "100k" H 1920 5955 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 6000 50  0001 C CNN
+F 3 "~" H 1850 6000 50  0001 C CNN
+	1    1850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5700 1850 5850
+Wire Wire Line
+	1850 6300 1850 6150
+Wire Wire Line
+	2200 6300 1850 6300
+$Comp
+L Device:D_Zener D11
+U 1 1 60078BB2
+P 2200 5850
+F 0 "D11" V 2154 5930 50  0000 L CNN
+F 1 "18V" V 2245 5930 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2200 5850 50  0001 C CNN
+F 3 "~" H 2200 5850 50  0001 C CNN
+	1    2200 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2200 6000 2200 6300
+Wire Wire Line
+	2200 6300 2700 6300
+Connection ~ 2200 6300
 $EndSCHEMATC

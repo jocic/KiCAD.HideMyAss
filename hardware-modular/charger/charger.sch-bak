@@ -1529,6 +1529,8 @@ NoConn ~ 4150 6300
 NoConn ~ 4050 6300
 Wire Wire Line
 	3700 6000 3850 6000
+Text GLabel 4750 5900 2    50   Input ~ 0
+REF
 Wire Wire Line
 	3400 6200 3400 7350
 $Comp
@@ -1566,12 +1568,21 @@ F 3 "http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DAT
 $EndComp
 Text GLabel 4250 5600 1    50   Input ~ 0
 DC
+Wire Wire Line
+	4450 6100 4600 6100
+Wire Wire Line
+	4600 5750 4600 6100
+Wire Wire Line
+	4450 5900 4750 5900
+Wire Wire Line
+	4600 6100 4600 6250
+Connection ~ 4600 6100
 $Comp
 L Device:R R18
 U 1 1 60C7723C
 P 4600 5600
 F 0 "R18" H 4530 5554 50  0000 R CNN
-F 1 "220" H 4530 5645 50  0000 R CNN
+F 1 "10" H 4530 5645 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 5600 50  0001 C CNN
 F 3 "~" H 4600 5600 50  0001 C CNN
 	1    4600 5600
@@ -1663,7 +1674,7 @@ L Device:R R19
 U 1 1 60C5DDC0
 P 4600 6400
 F 0 "R19" H 4530 6354 50  0000 R CNN
-F 1 "10" H 4530 6445 50  0000 R CNN
+F 1 "220" H 4530 6445 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 6400 50  0001 C CNN
 F 3 "~" H 4600 6400 50  0001 C CNN
 	1    4600 6400
@@ -1693,15 +1704,4 @@ Wire Wire Line
 Connection ~ 2800 7950
 Text Notes 5050 9000 0    50   ~ 0
 Charger
-Wire Wire Line
-	4450 6100 4750 6100
-Text GLabel 4750 6100 2    50   Input ~ 0
-REF
-Connection ~ 4600 5900
-Wire Wire Line
-	4600 5900 4600 6250
-Wire Wire Line
-	4600 5750 4600 5900
-Wire Wire Line
-	4450 5900 4600 5900
 $EndSCHEMATC
