@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name CVCO)(type Legacy)(uri ${KIPRJMOD}/../../other/symbols/CVCO.lib)(options "")(descr ""))
-)
