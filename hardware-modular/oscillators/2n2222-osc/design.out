@@ -1,0 +1,145 @@
+************************************************************************************************************************
+***                                                                                                                  ***
+*** EE-Sim OASIS Simulator Version 8.20q (x86) - 1/26/2021 7:00 PM                                                   ***
+*** Platform: Windows 10                                                                                             ***
+*** Architecture: x64                                                                                                ***
+*** Serial Number:                                                                                                   ***
+*** User:                                                                                                            ***
+***                                                                                                                  ***
+*** TITLE:   * C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\oscillators\2n2222-osc\simulation.wxsch***
+*** NETLIST: C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\oscillators\2n2222-osc\design.net         ***
+***                                                                                                                  ***
+************************************************************************************************************************
+
+********************************************************************************
+***                                                                          ***
+***                                Input Deck                                ***
+***                                                                          ***
+********************************************************************************
+
+.options allowdivzero=1
+.options initCondMode=2
+.options icres=0.002
+.options inhibitAttoISource=1
+#SIMETRIX
+V1 V1_P 0 3.3
+R1 V1_P C2_N 150
+R2 V1_P L1_N 1.8k
+R3 L1_N 0 1.8k
+L1 C2_N L1_N 200n   
+R4 C2_P 0 50
+R5 R8_N 0 580
+R6 Q2_E 0 17
+R7 V1_P R7_N 50
+R8 V1_P R8_N 620
+Q1 C2_N L1_N C2_P 0 Q2N2222
+Q2 R7_N R8_N Q2_E 0 Q2N2222
+C1 C2_P 0 50p   
+C2 C2_P C2_N 2.2p   
+C3 L1_N C2_P 2.2p   
+C4 R8_N C2_N 111n   
+C5 Q2_E 0 50p   
+.TRAN 10u 10m
+.model Q2N2222 npn ( IS=2.48E-13 VAF=73.9 BF=400 IKF=0.1962 NE=1.2069
++    ISE=3.696E-14 IKR=0.02 ISC=5.00E-09 NC=2 NR=1 BR=5 RC=0.3 CJC=7.00E-12
++    FC=0.5 MJC=0.5 VJC=0.5 CJE=1.80E-11 MJE=0.5 VJE=1 TF=4.00E-10
++    ITF=2 VTF=10 XTF=10 RE=0.4 TR=4.00E-08)
+* 2N2222 with less gain
+
+********************************************************************************
+***                                                                          ***
+*** Starting Transient analysis at 7:00 PM                                   ***
+***                                                                          ***
+*** Analysis card: .TRAN 10u 10m                                             ***
+***                                                                          ***
+********************************************************************************
+********************************************************************************
+***                                                                          ***
+***                            Simulation Options                            ***
+***                                                                          ***
+********************************************************************************
+RELTOL                    0.001
+ABSTOL                    1e-12
+VNTOL                     1e-06
+POINTTOL                  0.001
+TEMPERATURE               27C
+GMIN                      1e-12
+Matrix Solver             UF KLU Version 1.1
+
+
+
+********************************************************************************
+***                                                                          ***
+***                             Device parameters                            ***
+***                                                                          ***
+********************************************************************************
+Model parameters for devices of type BJT
+========================================
+Model:       Q2N2222      
+
+_is          248f         
+bf           400          
+br           5            
+cjc          7p           
+cje          18p          
+fc           500m         
+ikf          196.2m       
+ikr          20m          
+isc          5n           
+ise          36.96f       
+itf          2            
+mjc          500m         
+mje          500m         
+nc           2            
+ne           1.2069       
+nr           1            
+rc           300m         
+re           400m         
+tf           400p         
+tr           40n          
+vaf          73.9         
+vjc          500m         
+vje          1            
+vtf          10           
+xtf          10           
+
+
+Analysis statistics
+===================
+
+Nominal temperature = 27
+Operating temperature = 27
+Total iterations = 123
+Transient iterations = 114
+Transient timepoints = 58
+Accepted timepoints = 58
+Total analysis time = 0.031
+Transient time = 0
+Matrix reordering time = 0
+L-U decomposition time = 0
+Matrix solve time = 0
+Load time = 0
+Transient L-U decomp time = 0
+Transient solve time = 0
+Circuit build time = 0.016
+Simulator initialise time = 0
+Data write time = 0
+Convergence test time = 0
+LTE time = 0
+JI2 Iterations = 9
+Diag. GMIN stepping iterations = 0
+Junc. GMIN stepping iterations = 0
+Source stepping iterations = 0
+PTA iterations = 0
+Number of matrix fill ins = -5
+Number of initial matrix elements = 52
+Circuit equations = 14
+State vector size = 100
+Number of write buffer faults = 0
+
+Run statistics
+==============
+
+Netlist read in time = 0
+Total run time = 0.063 seconds
+Analysis concluded 1/26/2021 7:00 PM

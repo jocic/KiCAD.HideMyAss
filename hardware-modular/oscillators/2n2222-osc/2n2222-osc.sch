@@ -1,0 +1,170 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 6032C29C
+P 3600 3400
+F 0 "Q?" H 3790 3446 50  0000 L CNN
+F 1 "PN2222A" H 3790 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3800 3325 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 3600 3400 50  0001 L CNN
+	1    3600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:PN2222A Q?
+U 1 1 6032C740
+P 5850 3350
+F 0 "Q?" H 6040 3396 50  0000 L CNN
+F 1 "PN2222A" H 6040 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6050 3275 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PN2222-D.PDF" H 5850 3350 50  0001 L CNN
+	1    5850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032CDA7
+P 2750 2650
+F 0 "R?" H 2820 2696 50  0000 L CNN
+F 1 "1.8k" H 2820 2605 50  0000 L CNN
+F 2 "" V 2680 2650 50  0001 C CNN
+F 3 "~" H 2750 2650 50  0001 C CNN
+	1    2750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032D100
+P 2750 3900
+F 0 "R?" H 2820 3946 50  0000 L CNN
+F 1 "1.8k" H 2820 3855 50  0000 L CNN
+F 2 "" V 2680 3900 50  0001 C CNN
+F 3 "~" H 2750 3900 50  0001 C CNN
+	1    2750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032D259
+P 5400 2500
+F 0 "R?" H 5470 2546 50  0000 L CNN
+F 1 "R" H 5470 2455 50  0000 L CNN
+F 2 "" V 5330 2500 50  0001 C CNN
+F 3 "~" H 5400 2500 50  0001 C CNN
+	1    5400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032D55B
+P 5400 3950
+F 0 "R?" H 5470 3996 50  0000 L CNN
+F 1 "R" H 5470 3905 50  0000 L CNN
+F 2 "" V 5330 3950 50  0001 C CNN
+F 3 "~" H 5400 3950 50  0001 C CNN
+	1    5400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032D967
+P 3700 4050
+F 0 "R?" H 3770 4096 50  0000 L CNN
+F 1 "50" H 3770 4005 50  0000 L CNN
+F 2 "" V 3630 4050 50  0001 C CNN
+F 3 "~" H 3700 4050 50  0001 C CNN
+	1    3700 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032DC3D
+P 6000 4050
+F 0 "R?" H 6070 4096 50  0000 L CNN
+F 1 "R" H 6070 4005 50  0000 L CNN
+F 2 "" V 5930 4050 50  0001 C CNN
+F 3 "~" H 6000 4050 50  0001 C CNN
+	1    6000 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6032E064
+P 6050 2500
+F 0 "R?" H 6120 2546 50  0000 L CNN
+F 1 "R" H 6120 2455 50  0000 L CNN
+F 2 "" V 5980 2500 50  0001 C CNN
+F 3 "~" H 6050 2500 50  0001 C CNN
+	1    6050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6032E3AA
+P 4850 2700
+F 0 "C?" V 4598 2700 50  0000 C CNN
+F 1 "C" V 4689 2700 50  0000 C CNN
+F 2 "" H 4888 2550 50  0001 C CNN
+F 3 "~" H 4850 2700 50  0001 C CNN
+	1    4850 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6032EA65
+P 4350 2700
+F 0 "C?" V 4098 2700 50  0000 C CNN
+F 1 "C" V 4189 2700 50  0000 C CNN
+F 2 "" H 4388 2550 50  0001 C CNN
+F 3 "~" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 6032FA02
+P 4600 2200
+F 0 "L?" V 4419 2200 50  0000 C CNN
+F 1 "L" V 4510 2200 50  0000 C CNN
+F 2 "" H 4600 2200 50  0001 C CNN
+F 3 "~" H 4600 2200 50  0001 C CNN
+	1    4600 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60331A5E
+P 3700 2650
+F 0 "R?" H 3770 2696 50  0000 L CNN
+F 1 "150.00" H 3770 2605 50  0000 L CNN
+F 2 "" V 3630 2650 50  0001 C CNN
+F 3 "~" H 3700 2650 50  0001 C CNN
+	1    3700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60331E33
+P 4250 4000
+F 0 "C?" H 4135 3954 50  0000 R CNN
+F 1 "50pF" H 4135 4045 50  0000 R CNN
+F 2 "" H 4288 3850 50  0001 C CNN
+F 3 "~" H 4250 4000 50  0001 C CNN
+	1    4250 4000
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
