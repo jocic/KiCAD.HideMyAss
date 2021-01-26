@@ -731,10 +731,6 @@ Wire Notes Line
 Text Notes 10150 1600 0    50   ~ 0
 Battery Management
 Wire Wire Line
-	7500 3350 7350 3350
-Text GLabel 7350 3350 0    50   Input ~ 0
-SWITCH
-Wire Wire Line
 	3650 3400 3650 3500
 $Comp
 L power:GND #PWR08
@@ -1726,4 +1722,5 @@ F 3 "~" H 3100 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2950 6750 2800 6750
+NoConn ~ 7500 3350
 $EndSCHEMATC
