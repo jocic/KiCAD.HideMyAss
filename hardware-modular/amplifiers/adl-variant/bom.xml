@@ -1,0 +1,11 @@
+Reference, Quantity, Value, Footprint, Datasheet
+C1 C2 ,2,"1μF","Capacitor_SMD:C_0805_2012Metric","~"
+C3 C4 ,2,"1.2nF","Capacitor_SMD:C_0805_2012Metric","~"
+C5 C6 ,2,"68pF","Capacitor_SMD:C_0805_2012Metric","~"
+C7 C8 ,2,"0.1μF","Capacitor_SMD:C_0805_2012Metric","~"
+H1 H2 H3 H4 ,4,"Mounting Pad","MountingHole:MountingHole_3.2mm_M3_Pad_Via","~"
+J1 ,1,"DC_IN","TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal","~"
+J2 ,1,"RF_IN","Connector_Coaxial:SMA_Amphenol_132289_EdgeMount"," ~"
+J3 ,1,"RF_OUT","Connector_Coaxial:SMA_Amphenol_132289_EdgeMount"," ~"
+L1 ,1,"470μH","Inductor_SMD:L_0805_2012Metric","~"
+U1 ,1,"ADL5602","Package_TO_SOT_SMD:SOT-89-3","https://www.analog.com/media/en/technical-documentation/data-sheets/ADL5610.pdf"
