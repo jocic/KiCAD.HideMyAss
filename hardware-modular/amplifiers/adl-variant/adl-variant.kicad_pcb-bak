@@ -536,7 +536,7 @@
   )
 
   (module Icons:OSHW (layer F.Cu) (tedit 600C134A) (tstamp 60194C40)
-    (at 125 77.5)
+    (at 116 75)
     (fp_text reference G*** (at 0 -6.35) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)))
     )
@@ -1519,11 +1519,11 @@
       (net 2 GND))
   )
 
-  (gr_text "REV: 1.0.0" (at 115 85) (layer F.SilkS) (tstamp 60195183)
-    (effects (font (size 1 1) (thickness 0.15)))
+  (gr_text "REV: 1.0.0" (at 125.25 86.5) (layer F.SilkS) (tstamp 60195183)
+    (effects (font (size 1 1) (thickness 0.12)))
   )
-  (gr_text "ADL VARIANT" (at 149.75 73.5) (layer F.SilkS)
-    (effects (font (size 1 1) (thickness 0.15)))
+  (gr_text "ADL VARIANT" (at 125.25 84.75) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.12)))
   )
   (gr_text + (at 142.5 88.5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.12)))
