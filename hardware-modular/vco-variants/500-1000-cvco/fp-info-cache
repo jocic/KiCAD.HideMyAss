@@ -1,4 +1,4 @@
-19040504875557577
+19048521471228693
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -2273,6 +2273,34 @@ Speaker, 30mW, 300-7000Hz, IP67 face, 12x6x2,25mm, https://www.cuidevices.com/pr
 speaker CUI
 0
 2
+2
+CVCO
+2-2.54mm-Horizontal-Molex
+
+
+0
+2
+2
+CVCO
+CVCO55
+
+
+0
+16
+16
+CVCO
+Micro-X-4
+
+
+0
+4
+4
+CVCO
+SMA-Edge
+http://www.amphenolrf.com/132289.html
+SMA
+0
+5
 2
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
@@ -51724,6 +51752,13 @@ Switch
 0
 Icons
 Thermometer
+
+
+0
+0
+0
+Icons
+VCO_Module_Label
 
 
 0

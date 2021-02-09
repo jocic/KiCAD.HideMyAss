@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name Icons)(type KiCad)(uri C:/Users/WOW/Documents/stuff/KiCAD.HideMyAss/other/footprints/Icons.pretty)(options "")(descr ""))
+  (lib (name Icons)(type KiCad)(uri ${KIPRJMOD}/../../../other/footprints/Icons.pretty)(options "")(descr ""))
+  (lib (name CVCO)(type KiCad)(uri ${KIPRJMOD}/../../../other/footprints/CVCO.pretty)(options "")(descr ""))
 )
