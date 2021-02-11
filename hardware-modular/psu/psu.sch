@@ -288,16 +288,16 @@ Text GLabel 6200 5400 2    50   Input ~ 0
 OUT
 Text Notes 950  4750 0    50   ~ 0
 Regulator
-Text Notes 3700 1200 0    50   ~ 0
+Text Notes 4100 1250 0    50   ~ 0
 Splitter
 Wire Notes Line
-	9750 4200 9750 1050
+	9750 4150 9750 1100
 Wire Notes Line
-	9750 1050 3650 1050
+	9750 1100 4050 1100
 Wire Notes Line
-	3650 1050 3650 4200
+	4050 1100 4050 4150
 Wire Notes Line
-	3650 4200 9750 4200
+	4050 4150 9750 4150
 Wire Notes Line
 	6550 6800 6550 4600
 Wire Notes Line
@@ -326,39 +326,6 @@ F 1 "+7.5V" H 1515 6073 50  0000 C CNN
 F 2 "" H 1500 5900 50  0001 C CNN
 F 3 "" H 1500 5900 50  0001 C CNN
 	1    1500 5900
-	1    0    0    -1  
-$EndComp
-Connection ~ 4350 2050
-Wire Wire Line
-	4250 2050 4350 2050
-Wire Wire Line
-	3950 2050 4050 2050
-Wire Wire Line
-	3950 2200 3950 2050
-Wire Wire Line
-	3950 2650 3950 2500
-Wire Wire Line
-	4350 2650 3950 2650
-$Comp
-L Device:Jumper_NO_Small JP5
-U 1 1 60093A03
-P 4150 2050
-F 0 "JP5" H 4150 2235 50  0000 C CNN
-F 1 "GATE" H 4150 2144 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4150 2050 50  0001 C CNN
-F 3 "~" H 4150 2050 50  0001 C CNN
-	1    4150 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 60093359
-P 3950 2350
-F 0 "R1" H 3881 2396 50  0000 R CNN
-F 1 "100" H 3881 2305 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3880 2350 50  0001 C CNN
-F 3 "~" H 3950 2350 50  0001 C CNN
-	1    3950 2350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -742,7 +709,7 @@ U 1 1 6018C0B1
 P 4800 3200
 F 0 "R6" H 4730 3154 50  0000 R CNN
 F 1 "2.2" H 4730 3245 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 3200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4730 3200 50  0001 C CNN
 F 3 "~" H 4800 3200 50  0001 C CNN
 	1    4800 3200
 	-1   0    0    1   
@@ -782,8 +749,6 @@ Wire Wire Line
 	4350 3450 4350 3550
 Wire Wire Line
 	4350 3550 4600 3550
-Wire Wire Line
-	4800 2850 4800 3050
 Wire Wire Line
 	4800 3350 4800 3550
 Wire Wire Line
@@ -988,4 +953,42 @@ Wire Wire Line
 Wire Wire Line
 	2200 6300 2700 6300
 Connection ~ 2200 6300
+Connection ~ 4800 3550
+Wire Wire Line
+	5250 3550 5250 3350
+Wire Wire Line
+	4800 3550 4950 3550
+Wire Wire Line
+	5250 2950 5250 3050
+$Comp
+L Device:R R1
+U 1 1 60093359
+P 5250 3200
+F 0 "R1" H 5320 3246 50  0000 L CNN
+F 1 "2.2" H 5320 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 5180 3200 50  0001 C CNN
+F 3 "~" H 5250 3200 50  0001 C CNN
+	1    5250 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP5
+U 1 1 60093A03
+P 5050 3550
+F 0 "JP5" H 5050 3735 50  0000 C CNN
+F 1 "GATE" H 5050 3644 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5050 3550 50  0001 C CNN
+F 3 "~" H 5050 3550 50  0001 C CNN
+	1    5050 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3550 5250 3550
+Wire Wire Line
+	4800 2950 5250 2950
+Wire Wire Line
+	4800 2850 4800 2950
+Connection ~ 4800 2950
+Wire Wire Line
+	4800 2950 4800 3050
 $EndSCHEMATC

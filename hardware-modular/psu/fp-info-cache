@@ -1,4 +1,4 @@
-19038892665318180
+19042119362021214
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -51667,6 +51667,13 @@ heatsink
 2
 1
 Icons
+Amplifier_Module_Label
+
+
+0
+0
+0
+Icons
 Battery
 
 
@@ -51717,6 +51724,13 @@ Switch
 0
 Icons
 Thermometer
+
+
+0
+0
+0
+Icons
+VCO_Module_Label
 
 
 0
