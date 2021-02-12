@@ -15,26 +15,56 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"49 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-[v _setup setup `(v  1 e 1 0 ]
-"90
-[v _set_pwm_cycle set_pwm_cycle `(v  1 e 1 0 ]
-"100
-[v _set_pwm_enabled set_pwm_enabled `(v  1 e 1 0 ]
-"126
+"195 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
 [v _pwm_routine pwm_routine `II(v  1 e 1 0 ]
-"153
+"236
+[v _setup setup `(v  1 e 1 0 ]
+"299
+[v _set_pwm_cycle set_pwm_cycle `(v  1 e 1 0 ]
+"410
+[v _probe_bat probe_bat `(v  1 e 1 0 ]
+"438
 [v _charge charge `(v  1 e 1 0 ]
-"163
+"444
 [v _main main `(v  1 e 1 0 ]
-"825 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f687.h
+"723 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f687.h
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"825
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"2220
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2614
 [v _ANSEL ANSEL `VEuc  1 e 1 @286 ]
 "2676
 [v _ANSELH ANSELH `VEuc  1 e 1 @287 ]
+"2831
+[v _ADCS0 ADCS0 `VEb  1 e 0 @1276 ]
+"2834
+[v _ADCS1 ADCS1 `VEb  1 e 0 @1277 ]
+"2837
+[v _ADCS2 ADCS2 `VEb  1 e 0 @1278 ]
+"2843
+[v _ADFM ADFM `VEb  1 e 0 @255 ]
+"2846
+[v _ADIE ADIE `VEb  1 e 0 @1126 ]
+"2852
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2963
+[v _C1ON C1ON `VEb  1 e 0 @2255 ]
+"2996
+[v _C2ON C2ON `VEb  1 e 0 @2263 ]
+"3020
+[v _CHS0 CHS0 `VEb  1 e 0 @250 ]
+"3023
+[v _CHS1 CHS1 `VEb  1 e 0 @251 ]
+"3026
+[v _CHS2 CHS2 `VEb  1 e 0 @252 ]
+"3029
+[v _CHS3 CHS3 `VEb  1 e 0 @253 ]
 "3065
 [v _GIE GIE `VEb  1 e 0 @95 ]
+"3068
+[v _GO GO `VEb  1 e 0 @249 ]
 "3077
 [v _HTS HTS `VEb  1 e 0 @1146 ]
 "3092
@@ -61,6 +91,8 @@
 [v _RABIE RABIE `VEb  1 e 0 @91 ]
 "3251
 [v _RB4 RB4 `VEb  1 e 0 @52 ]
+"3263
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
 "3326
 [v _SCS SCS `VEb  1 e 0 @1144 ]
 "3380
@@ -71,72 +103,44 @@
 [v _T0IF T0IF `VEb  1 e 0 @90 ]
 "3446
 [v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
-"44 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+"3458
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
+"3521
+[v _VCFG VCFG `VEb  1 e 0 @254 ]
+"141 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+[v _ADC_TEMP ADC_TEMP `i  1 e 2 0 ]
+"147
+[v _ADC_REF ADC_REF `ui  1 e 2 0 ]
+"158
 [v _PWM_TICKS PWM_TICKS `VEui  1 e 2 0 ]
-"45
+"164
 [v _PWM_ENABLED PWM_ENABLED `b  1 e 0 0 ]
-"46
+"171
 [v _PWM_ON PWM_ON `ui  1 e 2 0 ]
-"47
+"178
 [v _PWM_OFF PWM_OFF `ui  1 e 2 0 ]
-"163
+"444
 [v _main main `(v  1 e 1 0 ]
 {
-"177
+"457
 } 0
-"49
+"236
 [v _setup setup `(v  1 e 1 0 ]
 {
-"88
+"285
 } 0
-"100
-[v _set_pwm_enabled set_pwm_enabled `(v  1 e 1 0 ]
+"410
+[v _probe_bat probe_bat `(v  1 e 1 0 ]
 {
-[v set_pwm_enabled@enabled enabled `uc  1 a 1 wreg ]
-[v set_pwm_enabled@enabled enabled `uc  1 a 1 wreg ]
-"104
-[v set_pwm_enabled@enabled enabled `uc  1 a 1 9 ]
-"113
+"432
 } 0
-"90
-[v _set_pwm_cycle set_pwm_cycle `(v  1 e 1 0 ]
-{
-[v set_pwm_cycle@cycle cycle `uc  1 a 1 wreg ]
-[v set_pwm_cycle@cycle cycle `uc  1 a 1 wreg ]
-"94
-[v set_pwm_cycle@cycle cycle `uc  1 a 1 8 ]
-"98
-} 0
-"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 6 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
-"53
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"5
-[v ___awdiv@divisor divisor `i  1 p 2 0 ]
-[v ___awdiv@dividend dividend `i  1 p 2 2 ]
-"41
-} 0
-"153 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+"438
 [v _charge charge `(v  1 e 1 0 ]
 {
-"161
+"442
 } 0
-"126
+"195
 [v _pwm_routine pwm_routine `II(v  1 e 1 0 ]
 {
-"151
+"220
 } 0

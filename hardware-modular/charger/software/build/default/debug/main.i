@@ -7,13 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
-
-
-
-
-
-
+# 34 "main.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1939,8 +1933,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 8 "main.c" 2
-# 26 "main.c"
+# 34 "main.c" 2
+# 115 "main.c"
 #pragma config FOSC = INTRCIO
 
 #pragma config WDTE = OFF
@@ -1958,78 +1952,37 @@ extern __bank0 __bit __timeout;
 #pragma config IESO = OFF
 
 #pragma config FCMEN = OFF
+# 141 "main.c"
+ int ADC_TEMP = 0x0;
 
+
+
+
+
+unsigned int ADC_REF = 0x0;
+# 158 "main.c"
 volatile unsigned int PWM_TICKS = 0;
-                 __bit PWM_ENABLED = 0;
-         unsigned int PWM_ON = 0;
-         unsigned int PWM_OFF = 0;
-
-void setup() {
 
 
 
-    IRCF0 = 0x1;
-    IRCF1 = 0x1;
-    IRCF2 = 0x1;
-    OSTS = 0x0;
-    HTS = 0x1;
-    LTS = 0x1;
-    SCS = 0x1;
+
+
+__bit PWM_ENABLED = 0;
 
 
 
-    OPTION_REG = 0x80;
 
 
 
-    GIE = 0x1;
-    PEIE = 0x0;
-    T0IE = 0x1;
-    INTE = 0x0;
-    RABIE = 0x0;
+unsigned int PWM_ON = 0;
 
 
 
-    T0CS = 0x0;
-    PS2 = 0x0;
-    PS1 = 0x1;
-    PS0 = 0x0;
 
 
 
-    ANSEL = 0x0;
-    ANSELH = 0x0;
-
-
-
-    TRISB4 = 0x0;
-}
-
-void set_pwm_cycle(unsigned char cycle) {
-
-
-
-    PWM_TICKS = 0x0;
-    PWM_ON = ((cycle * 10) / 100);
-    PWM_OFF = 10 - PWM_ON;
-
-}
-
-void set_pwm_enabled(unsigned char enabled) {
-
-
-
-    PWM_ENABLED = (enabled & 0x1);
-    PWM_TICKS = 0x0;
-
-    if (PWM_ON == 0x0 && PWM_OFF == 0x0) {
-        set_pwm_cycle(50);
-    }
-
-    RB4 = (enabled & 0x1);
-
-}
-# 126 "main.c"
+unsigned int PWM_OFF = 0;
+# 195 "main.c"
 void __attribute__((picinterrupt(("")))) pwm_routine(void) {
 
 
@@ -2056,14 +2009,151 @@ void __attribute__((picinterrupt(("")))) pwm_routine(void) {
         T0IF = 0x0;
     }
 }
+# 236 "main.c"
+void setup(void) {
 
-void charge() {
+
+
+    IRCF0 = 0x1;
+    IRCF1 = 0x1;
+    IRCF2 = 0x1;
+    OSTS = 0x0;
+    HTS = 0x1;
+    LTS = 0x1;
+    SCS = 0x1;
+
+
+
+    OPTION_REG = 0x80;
+    C1ON = 0x0;
+    C2ON = 0x0;
+
+
+
+    GIE = 0x1;
+    PEIE = 0x1;
+    T0IE = 0x1;
+    INTE = 0x0;
+    RABIE = 0x0;
+    ADIE = 0x0;
+
+
+
+    T0CS = 0x0;
+    PS2 = 0x0;
+    PS1 = 0x1;
+    PS0 = 0x0;
+
+
+
+    ADFM = 0x1;
+    VCFG = 0x0;
+    ADON = 0x0;
+    ADCS2 = 0x0;
+    ADCS1 = 0x1;
+    ADCS0 = 0x1;
+    ANSEL = 0xC;
+    ANSELH = 0x0;
+
+
 
     TRISB4 = 0x0;
-    RB4 = 0x1;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
-    RB4 = 0x0;
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    TRISC0 = 0x0;
+}
+# 299 "main.c"
+void set_pwm_cycle(unsigned char cycle) {
+
+
+
+    PWM_TICKS = 0x0;
+    PWM_ON = ((cycle * 100) / 100);
+    PWM_OFF = 100 - PWM_ON;
+
+}
+# 322 "main.c"
+void set_pwm_enabled(unsigned char enabled) {
+
+
+
+    PWM_ENABLED = (enabled & 0x1);
+    PWM_TICKS = 0x0;
+
+    if (PWM_ON == 0x0 && PWM_OFF == 0x0) {
+        set_pwm_cycle(50);
+    }
+
+    RB4 = (enabled & 0x1);
+}
+# 348 "main.c"
+void blink(unsigned char n) {
+
+
+
+    while (n --) {
+
+        RC0 = 0x1;
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+        RC0 = 0x0;
+        _delay((unsigned long)((200)*(4000000/4000.0)));
+    }
+}
+# 376 "main.c"
+void probe_temp() {
+
+
+
+    CHS3 = 0x0;
+    CHS2 = 0x0;
+    CHS1 = 0x1;
+    CHS0 = 0x1;
+
+    ADC_TEMP = 0x0;
+
+    ADON = 0x1;
+
+    _delay((unsigned long)((30)*(4000000/4000.0)));
+
+    GO = 0x1;
+
+    while (!GO) {
+        _delay((unsigned long)((10)*(4000000/4000000.0)));
+    }
+
+    ADC_TEMP = (ADRESH << 8) | ADRESL;
+}
+# 410 "main.c"
+void probe_bat() {
+
+
+
+    CHS3 = 0x0;
+    CHS2 = 0x0;
+    CHS1 = 0x1;
+    CHS0 = 0x0;
+
+    ADC_TEMP = 0x0;
+
+    ADON = 0x1;
+
+    _delay((unsigned long)((30)*(4000000/4000.0)));
+
+    GO = 0x1;
+
+    while (!GO) {
+        _delay((unsigned long)((10)*(4000000/4000000.0)));
+    }
+
+    ADC_REF = (ADRESH << 8) | ADRESL;
+}
+
+
+
+
+
+void charge(void) {
+
+
 
 }
 
@@ -2073,12 +2163,11 @@ void main(void) {
 
     setup();
 
-    set_pwm_enabled(0x1);
-    set_pwm_enabled(0x0);
+
+
 
     while (0x1) {
+    probe_bat();
         charge();
     }
-
-    return;
 }

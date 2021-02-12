@@ -54,6 +54,55 @@
 
 #define _PWM_PERIOD 100
 
+/**
+ * Delay between each flash of the status indicator.
+ */
+
+#define _STS_DELAY 200
+
+/*********************\
+|* BATTERY CONSTANTS *|
+\*********************/
+
+/**
+ * Capacity of the connected battery in <i>mAh</i> used in
+ * the control loop for preventing overcharing.
+ */
+
+#define _BTR_CAPACITY 3000
+
+/*********************\
+|* BATTERY CONSTANTS *|
+\*********************/
+
+/**
+ * Code used for indicating that the NTC thermistor
+ * is either not connected or failed.
+ */
+
+#define _CD_THERM_FAIL 4
+
+/**
+ * Code used for indicating that the temperature is
+ * too high to safely charge the battery.
+ */
+
+#define _CD_TEMP_HIGH 4
+
+/**
+ * Code used for indicating that the temperature is
+ * too low to safely charge the battery.
+ */
+
+#define _CD_TEMP_LOW 3
+
+/**
+ * Code used for indicating that the battery
+ * is  being charged.
+ */
+
+#define _CD_CHARGING 2
+
 /**********************\
 |* CONFIGURATION BITS *|
 \**********************/
@@ -80,6 +129,22 @@
 #pragma config IESO = OFF
 
 #pragma config FCMEN = OFF
+
+/*****************\
+|* PWM VARIABLES *|
+\*****************/
+
+/**
+ * Last analog conversion of the temperature probe.
+ */
+
+ int ADC_TEMP = 0x0;
+
+/**
+ * Last analog conversion of the reference voltage.
+ */
+
+unsigned int ADC_REF = 0x0;
 
 /*****************\
 |* PWM VARIABLES *|
@@ -183,14 +248,17 @@ void setup(void) {
     // General Configuration
     
     OPTION_REG = 0x80;
+    C1ON       = 0x0;
+    C2ON       = 0x0;
     
     // Interrupts
     
     GIE   = 0x1;
-    PEIE  = 0x0;
+    PEIE  = 0x1;
     T0IE  = 0x1;
     INTE  = 0x0;
     RABIE = 0x0;
+    ADIE  = 0x0;
     
     // Timers
     
@@ -201,12 +269,19 @@ void setup(void) {
     
     // Analog Ports
     
-    ANSEL  = 0x0;
+    ADFM   = 0x1;
+    VCFG   = 0x0;
+    ADON   = 0x0;
+    ADCS2  = 0x0;
+    ADCS1  = 0x1;
+    ADCS0  = 0x1;
+    ANSEL  = 0xC;
     ANSELH = 0x0;
     
     // Digital Ports
     
     TRISB4 = 0x0;
+    TRISC0 = 0x0;
 }
 
 /**
@@ -259,6 +334,100 @@ void set_pwm_enabled(unsigned char enabled) {
 }
 
 /**
+ * Flashes an indicator <i>n</i> times.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @param unsigned char n
+ *   Number of times that the indicator should be flashed.
+ * @return void
+ */
+
+void blink(unsigned char n) {
+    
+    // Logic
+    
+    while (n --) {
+        
+        RC0 = 0x1;
+        __delay_ms(_STS_DELAY);
+        
+        RC0 = 0x0;
+        __delay_ms(_STS_DELAY);
+    }
+}
+
+/**
+ * Performs A/D conversion procedure for the temperature.
+ * 
+ * Correlation between temperature and voltage:
+ *   - 5C  => 1.47V
+ *   - 45C => 3.33V
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @return void
+ */
+
+void probe_temp() {
+    
+    // Logic
+    
+    CHS3 = 0x0;
+    CHS2 = 0x0;
+    CHS1 = 0x1;
+    CHS0 = 0x1;
+    
+    ADON = 0x1;
+    
+    __delay_ms(30);
+    
+    GO = 0x1;
+    
+    while (!GO) {
+        __delay_us(10);
+    } 
+            
+    ADC_TEMP = (ADRESH << 8) | ADRESL;
+}
+
+/**
+ * Performs A/D conversion procedure for the battery voltage.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @return void
+ */
+
+void probe_bat() {
+    
+    // Logic
+    
+    CHS3 = 0x0;
+    CHS2 = 0x0;
+    CHS1 = 0x1;
+    CHS0 = 0x0;
+    
+    ADON = 0x1;
+    
+    __delay_ms(30);
+    
+    GO = 0x1;
+    
+    while (!GO) {
+        __delay_us(10);
+    } 
+            
+    ADC_REF = (ADRESH << 8) | ADRESL;
+}
+
+/**
  * Does nothing right now.
  */
 
@@ -274,9 +443,11 @@ void main(void) {
     
     setup();
     
+    //blink(3);
     //set_pwm_enabled(0x1);
     
     while (0x1) {
+    probe_bat();
         charge();
     }
 }
