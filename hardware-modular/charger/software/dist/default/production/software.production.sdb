@@ -1,0 +1,142 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F687 ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"49 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+[v _setup setup `(v  1 e 1 0 ]
+"90
+[v _set_pwm_cycle set_pwm_cycle `(v  1 e 1 0 ]
+"100
+[v _set_pwm_enabled set_pwm_enabled `(v  1 e 1 0 ]
+"126
+[v _pwm_routine pwm_routine `II(v  1 e 1 0 ]
+"153
+[v _charge charge `(v  1 e 1 0 ]
+"163
+[v _main main `(v  1 e 1 0 ]
+"825 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f687.h
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"2614
+[v _ANSEL ANSEL `VEuc  1 e 1 @286 ]
+"2676
+[v _ANSELH ANSELH `VEuc  1 e 1 @287 ]
+"3065
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"3077
+[v _HTS HTS `VEb  1 e 0 @1146 ]
+"3092
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"3149
+[v _IRCF0 IRCF0 `VEb  1 e 0 @1148 ]
+"3152
+[v _IRCF1 IRCF1 `VEb  1 e 0 @1149 ]
+"3155
+[v _IRCF2 IRCF2 `VEb  1 e 0 @1150 ]
+"3161
+[v _LTS LTS `VEb  1 e 0 @1145 ]
+"3203
+[v _OSTS OSTS `VEb  1 e 0 @1147 ]
+"3206
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"3209
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"3212
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"3215
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"3245
+[v _RABIE RABIE `VEb  1 e 0 @91 ]
+"3251
+[v _RB4 RB4 `VEb  1 e 0 @52 ]
+"3326
+[v _SCS SCS `VEb  1 e 0 @1144 ]
+"3380
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"3383
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"3386
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"3446
+[v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
+"44 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+[v _PWM_TICKS PWM_TICKS `VEui  1 e 2 0 ]
+"45
+[v _PWM_ENABLED PWM_ENABLED `b  1 e 0 0 ]
+"46
+[v _PWM_ON PWM_ON `ui  1 e 2 0 ]
+"47
+[v _PWM_OFF PWM_OFF `ui  1 e 2 0 ]
+"163
+[v _main main `(v  1 e 1 0 ]
+{
+"177
+} 0
+"49
+[v _setup setup `(v  1 e 1 0 ]
+{
+"88
+} 0
+"100
+[v _set_pwm_enabled set_pwm_enabled `(v  1 e 1 0 ]
+{
+[v set_pwm_enabled@enabled enabled `uc  1 a 1 wreg ]
+[v set_pwm_enabled@enabled enabled `uc  1 a 1 wreg ]
+"104
+[v set_pwm_enabled@enabled enabled `uc  1 a 1 9 ]
+"113
+} 0
+"90
+[v _set_pwm_cycle set_pwm_cycle `(v  1 e 1 0 ]
+{
+[v set_pwm_cycle@cycle cycle `uc  1 a 1 wreg ]
+[v set_pwm_cycle@cycle cycle `uc  1 a 1 wreg ]
+"94
+[v set_pwm_cycle@cycle cycle `uc  1 a 1 8 ]
+"98
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 6 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"153 C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+[v _charge charge `(v  1 e 1 0 ]
+{
+"161
+} 0
+"126
+[v _pwm_routine pwm_routine `II(v  1 e 1 0 ]
+{
+"151
+} 0
