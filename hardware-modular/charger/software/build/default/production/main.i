@@ -1934,7 +1934,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 34 "main.c" 2
-# 101 "main.c"
+# 122 "main.c"
 #pragma config FOSC = INTRCIO
 
 #pragma config WDTE = OFF
@@ -1952,15 +1952,15 @@ extern __bank0 __bit __timeout;
 #pragma config IESO = OFF
 
 #pragma config FCMEN = OFF
-# 127 "main.c"
- int ADC_TEMP = 0x0;
+# 148 "main.c"
+int ADC_TEMP = 0x0;
 
 
 
 
 
-unsigned int ADC_REF = 0x0;
-# 144 "main.c"
+int ADC_REF = 0x0;
+# 165 "main.c"
 volatile unsigned int PWM_TICKS = 0;
 
 
@@ -1982,7 +1982,7 @@ unsigned int PWM_ON = 0;
 
 
 unsigned int PWM_OFF = 0;
-# 181 "main.c"
+# 202 "main.c"
 void __attribute__((picinterrupt(("")))) pwm_routine(void) {
 
 
@@ -2009,7 +2009,7 @@ void __attribute__((picinterrupt(("")))) pwm_routine(void) {
         T0IF = 0x0;
     }
 }
-# 222 "main.c"
+# 243 "main.c"
 void setup(void) {
 
 
@@ -2031,10 +2031,11 @@ void setup(void) {
 
 
     GIE = 0x1;
-    PEIE = 0x0;
+    PEIE = 0x1;
     T0IE = 0x1;
     INTE = 0x0;
     RABIE = 0x0;
+    ADIE = 0x0;
 
 
 
@@ -2045,7 +2046,7 @@ void setup(void) {
 
 
 
-    ADFM = 0x0;
+    ADFM = 0x1;
     VCFG = 0x0;
     ADON = 0x0;
     ADCS2 = 0x0;
@@ -2056,20 +2057,21 @@ void setup(void) {
 
 
 
+    TRISA5 = 0x1;
     TRISB4 = 0x0;
     TRISC0 = 0x0;
 }
-# 284 "main.c"
+# 307 "main.c"
 void set_pwm_cycle(unsigned char cycle) {
 
 
 
     PWM_TICKS = 0x0;
-    PWM_ON = ((cycle * 100) / 100);
-    PWM_OFF = 100 - PWM_ON;
+    PWM_ON = ((cycle * 500) / 100);
+    PWM_OFF = 500 - PWM_ON;
 
 }
-# 307 "main.c"
+# 330 "main.c"
 void set_pwm_enabled(unsigned char enabled) {
 
 
@@ -2083,22 +2085,49 @@ void set_pwm_enabled(unsigned char enabled) {
 
     RB4 = (enabled & 0x1);
 }
-# 333 "main.c"
+# 356 "main.c"
+unsigned char calc_cycle(unsigned char charge) {
+
+
+
+    unsigned int current = 350;
+
+
+
+    if (350 > 3000) {
+        current = 3000;
+    }
+
+    return (unsigned char)((100 * (current * (charge / 100))) / current);
+}
+# 383 "main.c"
 void blink(unsigned char n) {
+
+
+
+    unsigned int i = 0;
+    unsigned char delay = (unsigned char)(3000 / n);
 
 
 
     while (n --) {
 
         RC0 = 0x1;
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+        for (i = 0; i < delay; i++) {
+            _delay((unsigned long)((1)*(4000000/4000.0)));
+
+        }
 
         RC0 = 0x0;
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+
+        for (i = 0; i < delay; i++) {
+            _delay((unsigned long)((1)*(4000000/4000.0)));
+        }
     }
 }
-
-__bit probe_temp() {
+# 423 "main.c"
+void probe_temp() {
 
 
 
@@ -2109,7 +2138,7 @@ __bit probe_temp() {
 
     ADON = 0x1;
 
-
+    _delay((unsigned long)((30)*(4000000/4000.0)));
 
     GO = 0x1;
 
@@ -2117,37 +2146,159 @@ __bit probe_temp() {
         _delay((unsigned long)((10)*(4000000/4000000.0)));
     }
 
-    ADC_TEMP = (ADRESH) | (ADRESL >> 8);
+    ADC_TEMP = (ADRESH << 8) | ADRESL;
+}
+# 455 "main.c"
+void probe_bat() {
 
-    if (ADC_TEMP == 0x0) {
-        return 0x0;
+
+
+    CHS3 = 0x0;
+    CHS2 = 0x0;
+    CHS1 = 0x1;
+    CHS0 = 0x0;
+
+    ADON = 0x1;
+
+    _delay((unsigned long)((30)*(4000000/4000.0)));
+
+    GO = 0x1;
+
+    while (!GO) {
+        _delay((unsigned long)((10)*(4000000/4000000.0)));
     }
 
-    return 0x1;
-# 394 "main.c"
+    ADC_REF = (ADRESH << 8) | ADRESL;
 }
+# 490 "main.c"
+unsigned char read_data(unsigned char address)
+{
+
+
+    GIE = 0x0;
+    EEADR = address;
+    EECON1 = 0x1;
+    RD = 0x1;
+
+    while (RD == 0x1)
+    _delay((unsigned long)((30)*(4000000/4000.0)));
+
+    GIE = 0x1;
+
+    return EEDAT;
+}
+# 522 "main.c"
+unsigned char write_data(unsigned char address, unsigned char value)
+{
+
+
+    while (WR == 0x1)
+    {
+        _delay((unsigned long)((10)*(4000000/4000000.0)));
+    }
+
+    EEADR = address;
+    EEDAT = value;
+    GIE = 0x0;
+    WREN = 0x1;
+    EECON2 = 0x55;
+    EECON2 = 0xAA;
+    WR = 0x1;
+    WREN = 0x0;
+    GIE = 0x1;
+
+    return WRERR;
+}
+# 556 "main.c"
+__bit is_shutdown() {
 
 
 
+    if (PWM_ENABLED == 0x1) {
 
+        while (RB4 == 0x0) {
+            _delay((unsigned long)((10)*(4000000/4000000.0)));
+        }
 
-void charge(void) {
+        return RB5 == 0x0;
 
+    }
 
-
+    return 0x0;
 }
 
 void main(void) {
+
+
+
+    unsigned char cycle = read_data(0x0);
+
+
 
     _delay((unsigned long)((1000)*(4000000/4000.0)));
 
     setup();
 
-
-
-
     while (0x1) {
-    probe_temp();
-        charge();
+
+
+
+        set_pwm_enabled(0x0);
+        set_pwm_cycle(0x0);
+
+
+
+        probe_temp();
+
+        if (ADC_TEMP == 1023) {
+            blink(4);
+        }
+        else if (ADC_TEMP < 305) {
+            blink(3);
+        }
+        else if (ADC_TEMP > 680) {
+            blink(4);
+        }
+        else {
+            set_pwm_enabled(0x1);
+        }
+
+
+
+        if (PWM_ENABLED) {
+
+
+
+            RB4 = 0x1;
+
+            probe_bat();
+
+            RB4 = 0x0;
+
+
+
+            if (ADC_REF > 285) {
+                set_pwm_cycle(calc_cycle(20));
+            }
+            else if (ADC_REF > 45) {
+                set_pwm_cycle(calc_cycle(80));
+            }
+            else if (ADC_REF > 20) {
+
+                if (cycle == 0xFF) {
+                    cycle = calc_cycle(80);
+                }
+
+                while (cycle --) {
+
+                    set_pwm_cycle(cycle);
+
+                    write_data(0x0, cycle);
+
+                }
+            }
+        }
+
+        blink(2);
     }
 }

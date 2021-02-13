@@ -52,13 +52,20 @@
  * internal oscillator is set to <i>4 MHz</i>.
  */
 
-#define _PWM_PERIOD 100
+#define _PWM_PERIOD 500
 
 /**
- * Delay between each flash of the status indicator.
+ * Period within which status indicator may blink.
  */
 
-#define _STS_DELAY 200
+#define _STS_PERIOD 3000
+
+/**
+ * Maximum current that the charger can supply to the battery,
+ * expressed in <i>mA</i>.
+ */
+
+#define _CHG_CURRENT 350
 
 /*********************\
 |* BATTERY CONSTANTS *|
@@ -69,7 +76,7 @@
  * the control loop for preventing overcharing.
  */
 
-#define _BTR_CAPACITY 3000
+#define _BAT_CAPACITY 3000
 
 /*********************\
 |* BATTERY CONSTANTS *|
@@ -138,13 +145,13 @@
  * Last analog conversion of the temperature probe.
  */
 
- int ADC_TEMP = 0x0;
+int ADC_TEMP = 0x0;
 
 /**
  * Last analog conversion of the reference voltage.
  */
 
-unsigned int ADC_REF = 0x0;
+int ADC_REF = 0x0;
 
 /*****************\
 |* PWM VARIABLES *|
@@ -280,6 +287,7 @@ void setup(void) {
     
     // Digital Ports
     
+    TRISA5 = 0x1;
     TRISB4 = 0x0;
     TRISC0 = 0x0;
 }
@@ -334,6 +342,33 @@ void set_pwm_enabled(unsigned char enabled) {
 }
 
 /**
+ * Calculates the required PWM cycle for a given charge.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @param unsigned char charge
+ *   Charge of the battery, ex. <i>20</i> for <i>0.2C</i>.
+ * @return void
+ */
+
+unsigned char calc_cycle(unsigned char charge) {
+    
+    // Core Variables
+    
+    unsigned int current = _CHG_CURRENT;
+    
+    // Logic
+    
+    if (_CHG_CURRENT > _BAT_CAPACITY) {
+        current = _BAT_CAPACITY;
+    }
+    
+    return (unsigned char)((100 * (current * (charge / 100))) / current);
+}
+
+/**
  * Flashes an indicator <i>n</i> times.
  * 
  * @author    Djordje Jocic <office@djordjejocic.com>
@@ -347,15 +382,27 @@ void set_pwm_enabled(unsigned char enabled) {
 
 void blink(unsigned char n) {
     
+    // Core Variables
+    
+    unsigned int  i     = 0;
+    unsigned char delay = (unsigned char)(_STS_PERIOD / n);
+    
     // Logic
     
     while (n --) {
         
         RC0 = 0x1;
-        __delay_ms(_STS_DELAY);
         
+        for (i = 0; i < delay; i++) {
+            __delay_ms(1);
+
+        }
+
         RC0 = 0x0;
-        __delay_ms(_STS_DELAY);
+        
+        for (i = 0; i < delay; i++) {
+            __delay_ms(1);
+        }
     }
 }
 
@@ -428,26 +475,188 @@ void probe_bat() {
 }
 
 /**
- * Does nothing right now.
+ * Reads available 8-bit value from the specified EEPROM address.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @param unsigned char address
+ *   Address that should be used during the procedure.
+ * @return unsigned char
+ *   8-bit value from the address.
  */
 
-void charge(void) {
+unsigned char read_data(unsigned char address)
+{
+    // Logic
     
-    // TBI
+    GIE    = 0x0;
+    EEADR  = address;
+    EECON1 = 0x1;
+    RD     = 0x1;
+
+    while (RD == 0x1) {
+        __delay_us(10);
+    }
     
+    GIE = 0x1;
+    
+    return EEDAT;
 }
 
+/**
+ * Writes an arbitrary 8-bit value to the specified EEPROM address.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @param unsigned char address
+ *   Address that should be used during the procedure.
+ * @param unsigned char value
+ *   8-bit value that should be written.
+ * @return unsigned char
+ *   Value <i>0</i> if procedure was successful, and vice versa.
+ */
+
+unsigned char write_data(unsigned char address, unsigned char value)
+{
+    // Logic
+    
+    while (WR == 0x1) // Wait For Last Write Procedure
+    {
+        __delay_us(10);
+    }
+    
+    EEADR  = address;
+    EEDAT  = value;
+    GIE    = 0x0;
+    WREN   = 0x1;
+    EECON2 = 0x55; // Mandatory Step During The Write Procedure
+    EECON2 = 0xAA; // Mandatory Step During The Write Procedure
+    WR     = 0x1;
+    WREN   = 0x0;
+    GIE    = 0x1;
+    
+    return WRERR;
+}
+
+/**
+ * Checks whether the charging was shutdown by the
+ * external security measure to prevent overcharging.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @return __bit
+ *   Value <i>1</i> if charging was shutdown, and vice versa.
+ */
+
+__bit is_shutdown() {
+    
+    // Logic
+    
+    if (PWM_ENABLED == 0x1) {
+        
+        while (RB4 == 0x0) {
+            __delay_us(10);
+        }
+        
+        return RB5 == 0x0;
+        
+    }
+    
+    return 0x0;
+}
+
+/**
+ * Generic main method for the charger.
+ * 
+ * @author    Djordje Jocic <office@djordjejocic.com>
+ * @copyright 2021 All Rights Reserved
+ * @version   1.0.0
+ * 
+ * @return void
+ */
+
 void main(void) {
+    
+    // Core Variables
+    
+    unsigned char cycle = read_data(0x0);
+    
+    // Logic
     
     __delay_ms(1000);
     
     setup();
     
-    //blink(3);
-    //set_pwm_enabled(0x1);
-    
     while (0x1) {
-    probe_bat();
-        charge();
+        
+        // Disable PWM & Reset PWM Cycle
+        
+        set_pwm_enabled(0x0);
+        set_pwm_cycle(0x0);
+        
+        // Probe Temperature & Enable PWM If It's Safe
+        
+        probe_temp();
+        
+        if (ADC_TEMP == 1023) {
+            blink(_CD_THERM_FAIL);
+        }
+        else if (ADC_TEMP < 305) {
+            blink(_CD_TEMP_LOW);
+        }
+        else if (ADC_TEMP > 680) {
+            blink(_CD_TEMP_HIGH);
+        }
+        else {
+            set_pwm_enabled(0x1);
+        }
+        
+        // PWM Management
+        
+        if (PWM_ENABLED) {
+            
+            // Probe Battery
+            
+            RB4 = 0x1;
+
+            probe_bat();
+
+            RB4 = 0x0;
+            
+            // Process ADC Conversion
+            
+            if (ADC_REF > 285) { // Pre-Conditioning Stage
+                set_pwm_cycle(calc_cycle(20));
+            }
+            else if (ADC_REF > 45) { // Constant Current Stage
+                set_pwm_cycle(calc_cycle(80));
+            }
+            else if (ADC_REF > 20) { // Constant Voltage Stage
+                
+                if (cycle == 0xFF) {
+                    cycle = calc_cycle(80);
+                }
+                
+                while (cycle --) {
+                    
+                    set_pwm_cycle(cycle);
+                    
+                    write_data(0x0, cycle);
+                    
+                }
+            }
+        }
+        
+        // Charging Indicator
+        
+        if (cycle != 0x0 || is_shutdown()) {
+            blink(_CD_CHARGING);
+        }
     }
 }

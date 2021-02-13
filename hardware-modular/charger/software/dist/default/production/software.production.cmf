@@ -13,19 +13,27 @@
 %PSECTS
 $dist/default/production\software.production.o
 cinit CODE 0 B B F 2
-text1 CODE 0 58 58 2E 2
-text2 CODE 0 86 86 20 2
-text3 CODE 0 BA BA 1 2
-text4 CODE 0 1A 1A 3E 2
-maintext CODE 0 A6 A6 14 2
-cstackCOMMON COMMON 1 76 76 4 1
-cstackBANK0 BANK0 1 24 24 3 1
+text1 CODE 0 367 367 1E 2
+text2 CODE 0 252 252 30 2
+text3 CODE 0 2B1 2B1 26 2
+text4 CODE 0 282 282 2F 2
+text5 CODE 0 348 348 1F 2
+text6 CODE 0 2D7 2D7 26 2
+text7 CODE 0 2FD 2FD 26 2
+text8 CODE 0 21A 21A 38 2
+text9 CODE 0 323 323 25 2
+text10 CODE 0 196 196 46 2
+text11 CODE 0 134 134 62 2
+text12 CODE 0 CB CB 69 2
+text13 CODE 0 1DC 1DC 3E 2
+maintext CODE 0 1A 1A B1 2
+cstackCOMMON COMMON 1 70 70 B 1
+cstackBANK0 BANK0 1 20 20 1A 1
 intentry CODE 0 4 4 6 2
-bitbssCOMMON COMMON 1 3D0 7A 1 1
-bssBANK0 BANK0 1 20 20 4 1
-bssCOMMON COMMON 1 70 70 6 1
+bitbssCOMMON COMMON 1 3D8 7B 1 1
+bssBANK0 BANK0 1 3A 3A A 1
 config CONFIG 4 2007 2007 1 2
-$C:\Users\WOW\AppData\Local\Temp\sc58.o
+$C:\Users\WOW\AppData\Local\Temp\s58g.o
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 A A 1 2
 config CONFIG 4 2007 2007 1 2
@@ -35,28 +43,28 @@ config CONFIG 4 2007 2007 1 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 27-6F 1
+RAM 44-6F 1
 RAM A0-BF 1
-BANK0 27-6F 1
+BANK0 44-6F 1
 BANK1 A0-BF 1
 CONST 1-3 2
-CONST BB-7FF 2
+CONST 385-7FF 2
 ENTRY 1-3 2
-ENTRY BB-7FF 2
+ENTRY 385-7FF 2
 IDLOC 2000-2003 2
-STACK 27-6F 1
+STACK 44-6F 1
 CODE 1-3 2
-CODE BB-7FF 2
+CODE 385-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-16F 1
 SFR3 180-1EF 1
-COMMON 7B-7D 1
+COMMON 7C-7D 1
 EEDATA 2100-21FF 2
 STRCODE 1-3 2
-STRCODE BB-7FF 2
+STRCODE 385-7FF 2
 STRING 1-3 2
-STRING BB-7FF 2
+STRING 385-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -71,91 +79,240 @@ STRING BB-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\software.production.o
-B cinit CODE >441:C:\Users\WOW\AppData\Local\Temp\sc58.s
-B cinit CODE >444:C:\Users\WOW\AppData\Local\Temp\sc58.s
-B cinit CODE >476:C:\Users\WOW\AppData\Local\Temp\sc58.s
-C cinit CODE >479:C:\Users\WOW\AppData\Local\Temp\sc58.s
-D cinit CODE >480:C:\Users\WOW\AppData\Local\Temp\sc58.s
-E cinit CODE >481:C:\Users\WOW\AppData\Local\Temp\sc58.s
-F cinit CODE >482:C:\Users\WOW\AppData\Local\Temp\sc58.s
-10 cinit CODE >483:C:\Users\WOW\AppData\Local\Temp\sc58.s
-11 cinit CODE >484:C:\Users\WOW\AppData\Local\Temp\sc58.s
-12 cinit CODE >487:C:\Users\WOW\AppData\Local\Temp\sc58.s
-13 cinit CODE >488:C:\Users\WOW\AppData\Local\Temp\sc58.s
-14 cinit CODE >489:C:\Users\WOW\AppData\Local\Temp\sc58.s
-15 cinit CODE >490:C:\Users\WOW\AppData\Local\Temp\sc58.s
-16 cinit CODE >491:C:\Users\WOW\AppData\Local\Temp\sc58.s
-17 cinit CODE >492:C:\Users\WOW\AppData\Local\Temp\sc58.s
-18 cinit CODE >498:C:\Users\WOW\AppData\Local\Temp\sc58.s
-18 cinit CODE >500:C:\Users\WOW\AppData\Local\Temp\sc58.s
-19 cinit CODE >501:C:\Users\WOW\AppData\Local\Temp\sc58.s
-4 intentry CODE >181:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-1A text4 CODE >181:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-1A text4 CODE >185:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-1E text4 CODE >187:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-22 text4 CODE >189:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-32 text4 CODE >190:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-33 text4 CODE >191:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-35 text4 CODE >192:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-36 text4 CODE >193:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-44 text4 CODE >194:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-46 text4 CODE >198:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-4C text4 CODE >199:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-4D text4 CODE >200:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-4D text4 CODE >201:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-50 text4 CODE >202:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-50 text4 CODE >204:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-51 text4 CODE >206:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-BA text3 CODE >400:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-BA text3 CODE >404:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-86 text2 CODE >347:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-86 text2 CODE >351:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-89 text2 CODE >352:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8A text2 CODE >353:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8B text2 CODE >354:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8C text2 CODE >356:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8D text2 CODE >360:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8E text2 CODE >362:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-8F text2 CODE >363:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-93 text2 CODE >362:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-99 text2 CODE >366:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-A5 text2 CODE >394:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-58 text1 CODE >222:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-58 text1 CODE >226:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-5B text1 CODE >227:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-5C text1 CODE >228:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-5D text1 CODE >229:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-5E text1 CODE >230:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-5F text1 CODE >231:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-60 text1 CODE >232:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-61 text1 CODE >236:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-63 text1 CODE >237:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-66 text1 CODE >238:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-67 text1 CODE >242:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-68 text1 CODE >243:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-69 text1 CODE >244:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-6A text1 CODE >245:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-6B text1 CODE >246:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-6C text1 CODE >250:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-6F text1 CODE >251:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-70 text1 CODE >252:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-71 text1 CODE >253:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-72 text1 CODE >257:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-75 text1 CODE >258:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-76 text1 CODE >259:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-77 text1 CODE >260:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-7A text1 CODE >261:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-7B text1 CODE >262:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-7C text1 CODE >263:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-80 text1 CODE >264:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-81 text1 CODE >268:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-84 text1 CODE >269:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-85 text1 CODE >270:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-A6 maintext CODE >406:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-A6 maintext CODE >408:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-B5 maintext CODE >410:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-B6 maintext CODE >416:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
-B7 maintext CODE >417:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+B cinit CODE >477:C:\Users\WOW\AppData\Local\Temp\s58g.s
+B cinit CODE >480:C:\Users\WOW\AppData\Local\Temp\s58g.s
+B cinit CODE >509:C:\Users\WOW\AppData\Local\Temp\s58g.s
+C cinit CODE >512:C:\Users\WOW\AppData\Local\Temp\s58g.s
+D cinit CODE >513:C:\Users\WOW\AppData\Local\Temp\s58g.s
+E cinit CODE >514:C:\Users\WOW\AppData\Local\Temp\s58g.s
+F cinit CODE >515:C:\Users\WOW\AppData\Local\Temp\s58g.s
+10 cinit CODE >516:C:\Users\WOW\AppData\Local\Temp\s58g.s
+11 cinit CODE >517:C:\Users\WOW\AppData\Local\Temp\s58g.s
+12 cinit CODE >518:C:\Users\WOW\AppData\Local\Temp\s58g.s
+13 cinit CODE >519:C:\Users\WOW\AppData\Local\Temp\s58g.s
+14 cinit CODE >520:C:\Users\WOW\AppData\Local\Temp\s58g.s
+15 cinit CODE >521:C:\Users\WOW\AppData\Local\Temp\s58g.s
+16 cinit CODE >522:C:\Users\WOW\AppData\Local\Temp\s58g.s
+17 cinit CODE >523:C:\Users\WOW\AppData\Local\Temp\s58g.s
+18 cinit CODE >529:C:\Users\WOW\AppData\Local\Temp\s58g.s
+18 cinit CODE >531:C:\Users\WOW\AppData\Local\Temp\s58g.s
+19 cinit CODE >532:C:\Users\WOW\AppData\Local\Temp\s58g.s
+4 intentry CODE >202:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1DC text13 CODE >202:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1DC text13 CODE >206:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1E0 text13 CODE >208:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1E4 text13 CODE >210:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1F4 text13 CODE >211:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1F5 text13 CODE >212:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1F7 text13 CODE >213:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1F8 text13 CODE >214:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+206 text13 CODE >215:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+208 text13 CODE >219:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+20E text13 CODE >220:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+20F text13 CODE >221:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+20F text13 CODE >222:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+212 text13 CODE >223:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+212 text13 CODE >225:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+213 text13 CODE >227:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+CB text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+CB text12 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+CE text12 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D2 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D7 text12 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+D9 text12 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+DD text12 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+E2 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+E6 text12 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+E8 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+EE text12 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+F0 text12 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+F1 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+F8 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+FC text12 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+100 text12 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+107 text12 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+111 text12 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+117 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+118 text12 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+11F text12 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+125 text12 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+12A text12 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+12F text12 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+133 text12 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+134 text11 CODE >383:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+137 text11 CODE >387:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+137 text11 CODE >388:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+149 text11 CODE >392:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+14A text11 CODE >394:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+14B text11 CODE >396:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+14E text11 CODE >397:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+157 text11 CODE >399:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+16C text11 CODE >401:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+16D text11 CODE >403:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+170 text11 CODE >404:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+179 text11 CODE >405:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+18E text11 CODE >392:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+195 text11 CODE >407:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+196 text10 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+196 text10 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+19A text10 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1A0 text10 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1A2 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1A3 text10 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1AA text10 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1AE text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1B2 text10 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1B9 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1C3 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1C9 text10 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1CA text10 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1D1 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1D7 text10 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+1DB text10 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+323 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+323 text9 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+325 text9 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+329 text9 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+32F text9 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+336 text9 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+33D text9 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+343 text9 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+347 text9 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+21A text8 CODE >356:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+21D text8 CODE >360:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+21D text8 CODE >368:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+251 text8 CODE >369:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2FD text7 CODE >455:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2FD text7 CODE >459:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+300 text7 CODE >460:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+301 text7 CODE >461:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+302 text7 CODE >462:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+303 text7 CODE >464:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+304 text7 CODE >466:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+30C text7 CODE >468:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+30F text7 CODE >470:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+310 text7 CODE >471:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+314 text7 CODE >470:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+31A text7 CODE >474:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+322 text7 CODE >475:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2D7 text6 CODE >423:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2D7 text6 CODE >427:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2DA text6 CODE >428:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2DB text6 CODE >429:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2DC text6 CODE >430:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2DD text6 CODE >432:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2DE text6 CODE >434:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2E6 text6 CODE >436:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2E9 text6 CODE >438:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2EA text6 CODE >439:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2EE text6 CODE >438:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2F4 text6 CODE >442:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2FC text6 CODE >443:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+348 text5 CODE >490:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+349 text5 CODE >494:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+34A text5 CODE >495:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+34E text5 CODE >496:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+352 text5 CODE >497:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+353 text5 CODE >499:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+354 text5 CODE >500:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+35C text5 CODE >499:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+362 text5 CODE >502:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+363 text5 CODE >504:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+366 text5 CODE >505:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+282 text4 CODE >307:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+285 text4 CODE >311:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+287 text4 CODE >312:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2A4 text4 CODE >313:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2B0 text4 CODE >315:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2B1 text3 CODE >330:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2B4 text3 CODE >334:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2B8 text3 CODE >335:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2BC text3 CODE >337:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2C8 text3 CODE >338:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2CA text3 CODE >341:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+2D6 text3 CODE >342:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+252 text2 CODE >243:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+252 text2 CODE >247:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+255 text2 CODE >248:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+256 text2 CODE >249:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+257 text2 CODE >250:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+258 text2 CODE >251:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+259 text2 CODE >252:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+25A text2 CODE >253:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+25B text2 CODE >257:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+25D text2 CODE >258:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+260 text2 CODE >259:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+261 text2 CODE >263:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+262 text2 CODE >264:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+263 text2 CODE >265:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+264 text2 CODE >266:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+265 text2 CODE >267:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+266 text2 CODE >268:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+269 text2 CODE >272:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+26A text2 CODE >273:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+26B text2 CODE >274:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+26C text2 CODE >275:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+26D text2 CODE >279:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+270 text2 CODE >280:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+271 text2 CODE >281:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+272 text2 CODE >282:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+275 text2 CODE >283:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+276 text2 CODE >284:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+277 text2 CODE >285:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+27B text2 CODE >286:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+27C text2 CODE >290:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+27F text2 CODE >291:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+280 text2 CODE >292:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+281 text2 CODE >293:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+367 text1 CODE >522:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+368 text1 CODE >526:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+369 text1 CODE >528:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+36D text1 CODE >526:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+373 text1 CODE >531:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+377 text1 CODE >532:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+379 text1 CODE >533:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+37A text1 CODE >534:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+37D text1 CODE >535:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+37F text1 CODE >536:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+381 text1 CODE >537:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+382 text1 CODE >538:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+383 text1 CODE >539:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+384 text1 CODE >541:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+384 text1 CODE >542:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1A maintext CODE >573:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+1A maintext CODE >577:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+21 maintext CODE >581:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+30 maintext CODE >583:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+31 maintext CODE >589:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+33 maintext CODE >590:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+35 maintext CODE >594:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+36 maintext CODE >596:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+40 maintext CODE >597:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+42 maintext CODE >598:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+43 maintext CODE >599:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+50 maintext CODE >600:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+52 maintext CODE >601:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+53 maintext CODE >602:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+62 maintext CODE >603:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+64 maintext CODE >604:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+65 maintext CODE >606:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+67 maintext CODE >611:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+6B maintext CODE >615:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+6E maintext CODE >617:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+6F maintext CODE >619:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+72 maintext CODE >623:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+7F maintext CODE >624:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+82 maintext CODE >625:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+83 maintext CODE >626:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+92 maintext CODE >627:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+95 maintext CODE >628:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+96 maintext CODE >629:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+A5 maintext CODE >631:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+AC maintext CODE >632:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+B4 maintext CODE >637:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+B6 maintext CODE >639:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+BE maintext CODE >635:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
+C7 maintext CODE >645:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modular\charger\software\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -170,17 +327,24 @@ B7 maintext CODE >417:C:\Users\WOW\Documents\stuff\KiCAD.HideMyAss\hardware-modu
 %SYMTAB
 __size_of_pwm_routine 0 0 ABS 0 - dist/default/production\software.production.o
 ___latbits 0 0 ABS 0 - dist/default/production\software.production.o
-__Hspace_0 BB 0 ABS 0 - -
-__Hspace_1 3D1 0 ABS 0 - -
+___awdiv@counter 24 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__Hspace_0 385 0 ABS 0 - -
+__Hspace_1 3D9 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
-_PWM_OFF 70 0 COMMON 1 bssCOMMON dist/default/production\software.production.o
+_set_pwm_enabled 562 0 CODE 0 text3 dist/default/production\software.production.o
+__end_of_write_data 70A 0 CODE 0 text1 dist/default/production\software.production.o
+_PWM_OFF 3A 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_probe_temp 14C 0 CODE 0 text2 dist/default/production\software.production.o
+__end_of_probe_temp 5FA 0 CODE 0 text6 dist/default/production\software.production.o
 _GO F9 0 ABS 0 - dist/default/production\software.production.o
+_RD C60 0 ABS 0 - dist/default/production\software.production.o
+_WR C61 0 ABS 0 - dist/default/production\software.production.o
 __Hstrings 0 0 ABS 0 strings -
+write_data@address 74 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
 _ADFM FF 0 ABS 0 - dist/default/production\software.production.o
+_ADIE 466 0 ABS 0 - dist/default/production\software.production.o
 _ADON F8 0 ABS 0 - dist/default/production\software.production.o
 _C1ON 8CF 0 ABS 0 - dist/default/production\software.production.o
 _C2ON 8D7 0 ABS 0 - dist/default/production\software.production.o
@@ -195,48 +359,71 @@ _T0CS 40D 0 ABS 0 - dist/default/production\software.production.o
 _T0IE 5D 0 ABS 0 - dist/default/production\software.production.o
 _T0IF 5A 0 ABS 0 - dist/default/production\software.production.o
 _VCFG FE 0 ABS 0 - dist/default/production\software.production.o
-___sp 0 0 STACK 2 stack C:\Users\WOW\AppData\Local\Temp\sc58.o
-_main 14C 0 CODE 0 maintext dist/default/production\software.production.o
+_WREN C62 0 ABS 0 - dist/default/production\software.production.o
+___sp 0 0 STACK 2 stack C:\Users\WOW\AppData\Local\Temp\s58g.o
+_main 34 0 CODE 0 maintext dist/default/production\software.production.o
 btemp 7E 0 ABS 0 - dist/default/production\software.production.o
-start 14 0 CODE 0 init C:\Users\WOW\AppData\Local\Temp\sc58.o
+start 14 0 CODE 0 init C:\Users\WOW\AppData\Local\Temp\s58g.o
+__size_of___awdiv 0 0 ABS 0 - dist/default/production\software.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\software.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\software.production.o
+?___wmul 72 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__pbitbssCOMMON 3D0 -356 COMMON 1 bitbssCOMMON dist/default/production\software.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\sc58.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__pbitbssCOMMON 3D8 -35D COMMON 1 bitbssCOMMON dist/default/production\software.production.o
+__end_of_probe_bat 646 0 CODE 0 text7 dist/default/production\software.production.o
+__size_of_probe_bat 0 0 ABS 0 - dist/default/production\software.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\WOW\AppData\Local\Temp\s58g.o
 wtemp0 7E 0 ABS 0 - dist/default/production\software.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+___awdiv@sign 25 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
+_probe_bat 5FA 0 CODE 0 text7 dist/default/production\software.production.o
+___wmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
+calc_cycle@charge 31 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\software.production.o
 _ADRESL 9E 0 ABS 0 - dist/default/production\software.production.o
 _ANSELH 11F 0 ABS 0 - dist/default/production\software.production.o
+___awdiv@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__size_of_set_pwm_enabled 0 0 ABS 0 - dist/default/production\software.production.o
+__end_of___wmul 690 0 CODE 0 text9 dist/default/production\software.production.o
+_EECON1 18C 0 ABS 0 - dist/default/production\software.production.o
+_EECON2 18D 0 ABS 0 - dist/default/production\software.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_ADC_TEMP 22 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
-__end_of_charge 176 0 CODE 0 text3 dist/default/production\software.production.o
+_ADC_TEMP 42 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
+___awdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__end_of___awdiv 268 0 CODE 0 text12 dist/default/production\software.production.o
+__end_of___lwdiv 3B8 0 CODE 0 text10 dist/default/production\software.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\software.production.o
-___stackhi 0 0 ABS 0 - C:\Users\WOW\AppData\Local\Temp\sc58.o
-___stacklo 0 0 ABS 0 - C:\Users\WOW\AppData\Local\Temp\sc58.o
+___stackhi 0 0 ABS 0 - C:\Users\WOW\AppData\Local\Temp\s58g.o
+___stacklo 0 0 ABS 0 - C:\Users\WOW\AppData\Local\Temp\s58g.o
+___lwdiv@quotient 2D 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__size_of_blink 0 0 ABS 0 - dist/default/production\software.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\software.production.o
 start_initialization 16 0 CODE 0 cinit dist/default/production\software.production.o
-_pwm_routine 34 0 CODE 0 text4 dist/default/production\software.production.o
-_PWM_ON 72 0 COMMON 1 bssCOMMON dist/default/production\software.production.o
+_pwm_routine 3B8 0 CODE 0 text13 dist/default/production\software.production.o
+_PWM_ON 3C 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
+__size_of_write_data 0 0 ABS 0 - dist/default/production\software.production.o
+_ADC_REF 40 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
 __size_of_probe_temp 0 0 ABS 0 - dist/default/production\software.production.o
-__pcstackBANK0 24 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+_TRISA5 42D 0 ABS 0 - dist/default/production\software.production.o
 _TRISB4 434 0 ABS 0 - dist/default/production\software.production.o
 _TRISC0 438 0 ABS 0 - dist/default/production\software.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\WOW\AppData\Local\Temp\sc58.o
+_set_pwm_cycle 504 0 CODE 0 text4 dist/default/production\software.production.o
+_calc_cycle$731 32 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\WOW\AppData\Local\Temp\s58g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
 __Hbank3 0 0 BANK3 1 bank3 -
 __Hcinit 34 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
+___lwdiv@counter 2C 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 4 config -
@@ -244,8 +431,9 @@ __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 BANK2 1 bank2 -
 __Lbank3 0 0 BANK3 1 bank3 -
+_calc_cycle 434 0 CODE 0 text8 dist/default/production\software.production.o
 __Lcinit 16 0 CODE 0 cinit -
-_PWM_TICKS 74 0 COMMON 1 bssCOMMON dist/default/production\software.production.o
+_PWM_TICKS 3E 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
 __Lstack 0 0 STACK 2 stack -
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -263,6 +451,8 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+___wmul 646 0 CODE 0 text9 dist/default/production\software.production.o
+set_pwm_enabled@enabled 29 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\software.production.o
@@ -272,69 +462,107 @@ _PS0 408 0 ABS 0 - dist/default/production\software.production.o
 _PS1 409 0 ABS 0 - dist/default/production\software.production.o
 _PS2 40A 0 ABS 0 - dist/default/production\software.production.o
 _RB4 34 0 ABS 0 - dist/default/production\software.production.o
+_RB5 35 0 ABS 0 - dist/default/production\software.production.o
 _RC0 38 0 ABS 0 - dist/default/production\software.production.o
 _SCS 478 0 ABS 0 - dist/default/production\software.production.o
-__S0 BB 0 ABS 0 - -
-__S1 7B 0 ABS 0 - -
+__S0 385 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
+blink@i 2D 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+blink@n 2B 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\software.production.o
-_charge 174 0 CODE 0 text3 dist/default/production\software.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\WOW\AppData\Local\Temp\sc58.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\WOW\AppData\Local\Temp\s58g.o
+__end_of_calc_cycle 4A4 0 CODE 0 text8 dist/default/production\software.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\software.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-__size_of_charge 0 0 ABS 0 - dist/default/production\software.production.o
-__pmaintext 14C 0 CODE 0 maintext dist/default/production\software.production.o
+__size_of_set_pwm_cycle 0 0 ABS 0 - dist/default/production\software.production.o
+__ptext10 32C 0 CODE 0 text10 dist/default/production\software.production.o
+__ptext11 268 0 CODE 0 text11 dist/default/production\software.production.o
+__ptext12 196 0 CODE 0 text12 dist/default/production\software.production.o
+__ptext13 3B8 0 CODE 0 text13 dist/default/production\software.production.o
+___awdiv 196 0 CODE 0 text12 dist/default/production\software.production.o
+___lwdiv 32C 0 CODE 0 text10 dist/default/production\software.production.o
+__pmaintext 34 0 CODE 0 maintext dist/default/production\software.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+___wmul@multiplier 72 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
+main@cycle 39 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+___lwdiv@divisor 28 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__end_of_set_pwm_cycle 562 0 CODE 0 text4 dist/default/production\software.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\software.production.o
 __HbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 14 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization 30 0 CODE 0 cinit dist/default/production\software.production.o
-__end_of_pwm_routine B0 0 CODE 0 text4 dist/default/production\software.production.o
+__end_of_pwm_routine 434 0 CODE 0 text13 dist/default/production\software.production.o
 __Hintentry 14 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-_PWM_ENABLED 3D0 -356 COMMON 1 bitbssCOMMON dist/default/production\software.production.o
+___awdiv@quotient 26 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+?___awdiv 20 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+___lwdiv@dividend 2A 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+_PWM_ENABLED 3D8 -35D COMMON 1 bitbssCOMMON dist/default/production\software.production.o
+?___lwdiv 28 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+write_data@value 72 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
 __Hreset_vec 2 0 CODE 0 reset_vec -
+blink@delay 2C 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 B0 0 CODE 0 text1 dist/default/production\software.production.o
-__ptext2 10C 0 CODE 0 text2 dist/default/production\software.production.o
-__ptext3 174 0 CODE 0 text3 dist/default/production\software.production.o
-__ptext4 34 0 CODE 0 text4 dist/default/production\software.production.o
+set_pwm_cycle@cycle 28 0 BANK0 1 cstackBANK0 dist/default/production\software.production.o
+__ptext1 6CE 0 CODE 0 text1 dist/default/production\software.production.o
+__ptext2 4A4 0 CODE 0 text2 dist/default/production\software.production.o
+__ptext3 562 0 CODE 0 text3 dist/default/production\software.production.o
+__ptext4 504 0 CODE 0 text4 dist/default/production\software.production.o
+__ptext5 690 0 CODE 0 text5 dist/default/production\software.production.o
+__ptext6 5AE 0 CODE 0 text6 dist/default/production\software.production.o
+__ptext7 5FA 0 CODE 0 text7 dist/default/production\software.production.o
+__ptext8 434 0 CODE 0 text8 dist/default/production\software.production.o
+__ptext9 646 0 CODE 0 text9 dist/default/production\software.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization 30 0 CODE 0 cinit dist/default/production\software.production.o
+__end_of_read_data 6CE 0 CODE 0 text5 dist/default/production\software.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
+__size_of_read_data 0 0 ABS 0 - dist/default/production\software.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 76 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
+__size_of_calc_cycle 0 0 ABS 0 - dist/default/production\software.production.o
+_write_data 6CE 0 CODE 0 text1 dist/default/production\software.production.o
 __Hend_init 16 0 CODE 0 end_init -
-_probe_temp 10C 0 CODE 0 text2 dist/default/production\software.production.o
-__end_of_main 174 0 CODE 0 maintext dist/default/production\software.production.o
+_read_data 690 0 CODE 0 text5 dist/default/production\software.production.o
+_probe_temp 5AE 0 CODE 0 text6 dist/default/production\software.production.o
+__end_of_set_pwm_enabled 5AE 0 CODE 0 text3 dist/default/production\software.production.o
+__end_of_main 196 0 CODE 0 maintext dist/default/production\software.production.o
 _ADCS0 4FC 0 ABS 0 - dist/default/production\software.production.o
 _ADCS1 4FD 0 ABS 0 - dist/default/production\software.production.o
 _ADCS2 4FE 0 ABS 0 - dist/default/production\software.production.o
 _ANSEL 11E 0 ABS 0 - dist/default/production\software.production.o
+_EEADR 10D 0 ABS 0 - dist/default/production\software.production.o
+_EEDAT 10C 0 ABS 0 - dist/default/production\software.production.o
+__end_of_blink 32C 0 CODE 0 text11 dist/default/production\software.production.o
 _IRCF0 47C 0 ABS 0 - dist/default/production\software.production.o
 _IRCF1 47D 0 ABS 0 - dist/default/production\software.production.o
 _IRCF2 47E 0 ABS 0 - dist/default/production\software.production.o
 _RABIE 5B 0 ABS 0 - dist/default/production\software.production.o
-__end_of_setup 10C 0 CODE 0 text1 dist/default/production\software.production.o
+_WRERR C63 0 ABS 0 - dist/default/production\software.production.o
+__end_of_setup 504 0 CODE 0 text2 dist/default/production\software.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+_blink 268 0 CODE 0 text11 dist/default/production\software.production.o
 interrupt_function 8 0 CODE 0 intentry dist/default/production\software.production.o
-_setup B0 0 CODE 0 text1 dist/default/production\software.production.o
+_setup 4A4 0 CODE 0 text2 dist/default/production\software.production.o
+read_data@address 74 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\software.production.o
 __LbitbssCOMMON 0 0 ABS 0 bitbssCOMMON -
 __initialization 16 0 CODE 0 cinit dist/default/production\software.production.o
-__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
+__pbssBANK0 3A 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
+___wmul@product 76 0 COMMON 1 cstackCOMMON dist/default/production\software.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -360,10 +588,10 @@ __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\software.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intentry 0 4 8 B7 2
+cstackCOMMON 1 70 70 C 1
+cstackBANK0 1 20 20 24 1
+intentry 0 4 8 381 2
 reset_vec 0 0 0 1 2
-bssBANK0 1 20 20 7 1
-bssCOMMON 1 70 70 B 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
