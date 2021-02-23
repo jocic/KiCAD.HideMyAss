@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name Icons)(type KiCad)(uri ${KIPRJMOD}/../../../other/footprints/Icons.pretty)(options "")(descr ""))
-  (lib (name CVCO)(type KiCad)(uri ${KIPRJMOD}/../../../other/footprints/CVCO.pretty)(options "")(descr ""))
-)
